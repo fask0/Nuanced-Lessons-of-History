@@ -16,6 +16,8 @@ public class QuizManager : MonoBehaviour
     [SerializeField] private Color _correctColor;
     [SerializeField] private Color _wrongColor;
 
+    [SerializeField] private GameObject _gameOverPanel;
+
     private int _currentQuestion = 0;
 
     private void Awake()
@@ -53,15 +55,8 @@ public class QuizManager : MonoBehaviour
         if (answerText == _questionBank[_currentQuestion].correctAnswer)
         {
             //Correct
-            if (_currentQuestion + 1 >= _questionBank.Length)
-            {
-                //Quiz done
-                print("win");
-                StartCoroutine(changeColor(pAnswerGO, _correctColor, false));
-                return;
-            }
             _currentQuestion++;
-            StartCoroutine(changeColor(pAnswerGO, _correctColor));
+            StartCoroutine(changeColor(pAnswerGO, _correctColor, true));
         }
         else
         {
@@ -82,39 +77,50 @@ public class QuizManager : MonoBehaviour
         for (int i = 0; i < _answerGameObjects.Length; i++)
         {
             _answerGameObjects[i].SetActive(false);
-            if (availableAnswers.Count == 0) continue;
+            if (availableAnswers.Count <= i) continue;
 
             _answerGameObjects[i].SetActive(true);
-            int rnd = Random.Range(0, availableAnswers.Count);
-            _answerGameObjects[i].GetComponentInChildren<TextMeshProUGUI>().text = availableAnswers[rnd];
-            availableAnswers.RemoveAt(rnd);
+            _answerGameObjects[i].GetComponentInChildren<TextMeshProUGUI>().text = availableAnswers[i];
+
+            //int rnd = Random.Range(0, availableAnswers.Count);
+            //_answerGameObjects[i].GetComponentInChildren<TextMeshProUGUI>().text = availableAnswers[rnd];
+            //availableAnswers.RemoveAt(rnd);
         }
 
         _currentQuestion = pQuestion;
     }
 
-    private IEnumerator changeColor(GameObject pAnswerGO, Color pColorToChange, bool pNextQuestion = true)
+    private IEnumerator changeColor(GameObject pAnswerGO, Color pColorToChange, bool resetColor = false)
     {
         foreach (GameObject answers in _answerGameObjects)
             answers.GetComponentInChildren<Button>().interactable = false;
 
-        if (pColorToChange == _correctColor)
-        {
-            pAnswerGO.GetComponentInChildren<Image>().color = pColorToChange;
-            yield return new WaitForSeconds(1);
-        }
-        else
-        {
-            pAnswerGO.GetComponentInChildren<Image>().color = pColorToChange;
-            yield return new WaitForSeconds(0.2f);
-        }
-
-        pAnswerGO.GetComponentInChildren<Image>().color = Color.white;
+        pAnswerGO.GetComponentInChildren<Image>().color = pColorToChange;
+        yield return new WaitForSeconds((pColorToChange == _correctColor) ? 1 : 0.2f);
+        pAnswerGO.GetComponentInChildren<Image>().color = Color.gray;
 
         foreach (GameObject answers in _answerGameObjects)
             answers.GetComponentInChildren<Button>().interactable = true;
 
-        if (pNextQuestion)
+        if (resetColor)
+        {
+            foreach (GameObject answers in _answerGameObjects)
+                answers.GetComponentInChildren<Image>().color = Color.white;
+        }
+
+        if (_currentQuestion >= _questionBank.Length)
+        {
+            //Show gameover screen
+            _gameOverPanel.SetActive(true);
+        }
+        else
+        {
             assignQuestion(_currentQuestion);
+        }
+    }
+
+    public void ExitApplication()
+    {
+        Application.Quit();
     }
 }

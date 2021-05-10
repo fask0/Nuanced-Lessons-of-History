@@ -10,6 +10,7 @@ public class DialogueSystem : MonoBehaviour
     public GameObject SpeechPanel => elements.speechPanel;
     public TextMeshProUGUI SpeakerNameText => elements.speakerNameText;
     public TextMeshProUGUI SpeechText => elements.speechText;
+    public GameObject ClickToContinue => elements.clickToContinue;
 
     [SerializeField] private float _timeBetweenSpeechCharacters = 0;
 
@@ -43,6 +44,7 @@ public class DialogueSystem : MonoBehaviour
         SpeechPanel.SetActive(true);
         SpeechText.text = "";
         SpeakerNameText.text = determineSpeaker(pSpeaker);
+        ClickToContinue.SetActive(false);
         isWaitingForUserInput = false;
 
         while (SpeechText.text != pTargetSpeech)
@@ -51,6 +53,7 @@ public class DialogueSystem : MonoBehaviour
             yield return new WaitForSeconds(_timeBetweenSpeechCharacters);
         }
 
+        ClickToContinue.SetActive(true);
         isWaitingForUserInput = true;
         while (isWaitingForUserInput)
             yield return new WaitForEndOfFrame();
@@ -76,5 +79,6 @@ public class DialogueSystem : MonoBehaviour
         public GameObject speechPanel;
         public TextMeshProUGUI speakerNameText;
         public TextMeshProUGUI speechText;
+        public GameObject clickToContinue;
     }
 }

@@ -23,13 +23,15 @@ public class TestDialogue : MonoBehaviour
     void Start()
     {
         _dialogueSystem = DialogueSystem.Instance;
+        say(_dialogue[_index]);
+        _index++;
     }
 
-    void Update()
-    {
-        touchHandler();
-        mouseHandler();
-    }
+    //void Update()
+    //{
+    //touchHandler();
+    //mouseHandler();
+    //}
 
     private void touchHandler()
     {
@@ -81,9 +83,27 @@ public class TestDialogue : MonoBehaviour
     private void loadARScene()
     {
         stopdialogue = true;
-        SceneManager.LoadScene(1, LoadSceneMode.Additive);
+        SceneManager.LoadScene("VuforiaBank", LoadSceneMode.Additive);
         nonAR.SetActive(false);
         cam.SetActive(false);
+    }
+
+    public void NextDialogue()
+    {
+        if (!_dialogueSystem.IsSpeaking || _dialogueSystem.isWaitingForUserInput)
+        {
+            if (_index >= _dialogue.Length)
+            {
+                if (!stopdialogue)
+                    loadARScene();
+                return;
+            }
+            else
+            {
+                say(_dialogue[_index]);
+                _index++;
+            }
+        }
     }
 
     private void say(string pDialogue)
@@ -95,20 +115,42 @@ public class TestDialogue : MonoBehaviour
         _dialogueSystem.Say(speech, speaker);
     }
 
+    public GameObject background;
     public GameObject yes;
     public GameObject no;
+    private bool _answerHasBeenFound = false;
 
     public void CheckTracker(GameObject tracker)
     {
+        if (_answerHasBeenFound) return;
+
         if (tracker.gameObject.name.ToLower().Contains("chair"))
         {
+            //Correct image
             yes.SetActive(true);
             no.SetActive(false);
+            _answerHasBeenFound = true;
+            Invoke(nameof(showGameOver), 2.0f);
         }
         else
         {
+            //Wrong image
             yes.SetActive(false);
             no.SetActive(true);
         }
+    }
+
+    private void showGameOver()
+    {
+        SceneManager.UnloadSceneAsync("VuforiaBank");
+        cam.SetActive(true);
+        background.SetActive(true);
+        yes.SetActive(false);
+        no.SetActive(false);
+    }
+
+    public void ExitApplication()
+    {
+        Application.Quit();
     }
 }

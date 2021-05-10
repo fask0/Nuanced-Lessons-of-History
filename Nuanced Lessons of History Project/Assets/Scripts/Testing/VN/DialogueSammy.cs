@@ -22,13 +22,15 @@ public class DialogueSammy : MonoBehaviour
     void Start()
     {
         _dialogueSystem = DialogueSystem.Instance;
+        say(_dialogue[_index]);
+        _index++;
     }
 
-    void Update()
-    {
-        touchHandler();
-        mouseHandler();
-    }
+    //void Update()
+    //{
+    //    touchHandler();
+    //    mouseHandler();
+    //}
 
     private void touchHandler()
     {
@@ -73,6 +75,24 @@ public class DialogueSammy : MonoBehaviour
                     say(_dialogue[_index]);
                     _index++;
                 }
+            }
+        }
+    }
+
+    public void NextDialogue()
+    {
+        if (!_dialogueSystem.IsSpeaking || _dialogueSystem.isWaitingForUserInput)
+        {
+            if (_index >= _dialogue.Length)
+            {
+                if (!stopdialogue)
+                    startQuiz();
+                return;
+            }
+            else
+            {
+                say(_dialogue[_index]);
+                _index++;
             }
         }
     }
