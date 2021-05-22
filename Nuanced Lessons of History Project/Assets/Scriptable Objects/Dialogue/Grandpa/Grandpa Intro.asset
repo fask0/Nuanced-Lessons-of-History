@@ -1,0 +1,126 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a96c5442fadcc94aaefb0193117d3f9, type: 3}
+  m_Name: Grandpa Intro
+  m_EditorClassIdentifier: 
+  _lines:
+  - _lineCharacters:
+    - _characterScriptableObject: {fileID: 11400000, guid: bfe907f888a308f4eacdb3cdfded4fd2, type: 2}
+      _expression: 0
+      _isSpeaker: 1
+    _localizedString:
+      m_TableReference:
+        m_TableCollectionName: GUID:267432656eafadc4b913952444fabf5f
+      m_TableEntryReference:
+        m_KeyId: 93432705024
+        m_Key: 
+      m_FallbackState: 0
+    _textCharactersPerSecond: 30
+  - _lineCharacters:
+    - _characterScriptableObject: {fileID: 11400000, guid: 90f46d3d93f50ed49bbbff1f6f642309, type: 2}
+      _expression: 0
+      _isSpeaker: 1
+    - _characterScriptableObject: {fileID: 11400000, guid: bfe907f888a308f4eacdb3cdfded4fd2, type: 2}
+      _expression: 0
+      _isSpeaker: 0
+    _localizedString:
+      m_TableReference:
+        m_TableCollectionName: GUID:267432656eafadc4b913952444fabf5f
+      m_TableEntryReference:
+        m_KeyId: 420336758784
+        m_Key: 
+      m_FallbackState: 0
+    _textCharactersPerSecond: 30
+  - _lineCharacters:
+    - _characterScriptableObject: {fileID: 11400000, guid: 90f46d3d93f50ed49bbbff1f6f642309, type: 2}
+      _expression: 1
+      _isSpeaker: 0
+    - _characterScriptableObject: {fileID: 11400000, guid: 90f46d3d93f50ed49bbbff1f6f642309, type: 2}
+      _expression: 1
+      _isSpeaker: 0
+    - _characterScriptableObject: {fileID: 11400000, guid: bfe907f888a308f4eacdb3cdfded4fd2, type: 2}
+      _expression: 1
+      _isSpeaker: 1
+    _localizedString:
+      m_TableReference:
+        m_TableCollectionName: GUID:267432656eafadc4b913952444fabf5f
+      m_TableEntryReference:
+        m_KeyId: 541006884864
+        m_Key: 
+      m_FallbackState: 0
+    _textCharactersPerSecond: 30
+  - _lineCharacters:
+    - _characterScriptableObject: {fileID: 11400000, guid: 90f46d3d93f50ed49bbbff1f6f642309, type: 2}
+      _expression: 2
+      _isSpeaker: 0
+    - _characterScriptableObject: {fileID: 11400000, guid: 90f46d3d93f50ed49bbbff1f6f642309, type: 2}
+      _expression: 2
+      _isSpeaker: 0
+    - _characterScriptableObject: {fileID: 11400000, guid: 90f46d3d93f50ed49bbbff1f6f642309, type: 2}
+      _expression: 2
+      _isSpeaker: 0
+    - _characterScriptableObject: {fileID: 11400000, guid: bfe907f888a308f4eacdb3cdfded4fd2, type: 2}
+      _expression: 2
+      _isSpeaker: 1
+    _localizedString:
+      m_TableReference:
+        m_TableCollectionName: GUID:267432656eafadc4b913952444fabf5f
+      m_TableEntryReference:
+        m_KeyId: 545675145216
+        m_Key: 
+      m_FallbackState: 0
+    _textCharactersPerSecond: 30
+  - _lineCharacters:
+    - _characterScriptableObject: {fileID: 11400000, guid: bfe907f888a308f4eacdb3cdfded4fd2, type: 2}
+      _expression: 2
+      _isSpeaker: 1
+    _localizedString:
+      m_TableReference:
+        m_TableCollectionName: GUID:267432656eafadc4b913952444fabf5f
+      m_TableEntryReference:
+        m_KeyId: 549848477696
+        m_Key: 
+      m_FallbackState: 0
+    _textCharactersPerSecond: 30
+  - _lineCharacters:
+    - _characterScriptableObject: {fileID: 11400000, guid: bfe907f888a308f4eacdb3cdfded4fd2, type: 2}
+      _expression: 0
+      _isSpeaker: 0
+    - _characterScriptableObject: {fileID: 11400000, guid: 2d96134aedbda164c8d2a6bde96797c5, type: 2}
+      _expression: 1
+      _isSpeaker: 1
+    _localizedString:
+      m_TableReference:
+        m_TableCollectionName: GUID:267432656eafadc4b913952444fabf5f
+      m_TableEntryReference:
+        m_KeyId: 559478599680
+        m_Key: 
+      m_FallbackState: 0
+    _textCharactersPerSecond: 30
+  - _lineCharacters:
+    - _characterScriptableObject: {fileID: 11400000, guid: bfe907f888a308f4eacdb3cdfded4fd2, type: 2}
+      _expression: 1
+      _isSpeaker: 0
+    - _characterScriptableObject: {fileID: 11400000, guid: 2d96134aedbda164c8d2a6bde96797c5, type: 2}
+      _expression: 1
+      _isSpeaker: 0
+    - _characterScriptableObject: {fileID: 11400000, guid: 90f46d3d93f50ed49bbbff1f6f642309, type: 2}
+      _expression: 1
+      _isSpeaker: 1
+    _localizedString:
+      m_TableReference:
+        m_TableCollectionName: GUID:267432656eafadc4b913952444fabf5f
+      m_TableEntryReference:
+        m_KeyId: 569284882432
+        m_Key: 
+      m_FallbackState: 0
+    _textCharactersPerSecond: 30
