@@ -19,11 +19,12 @@ MonoBehaviour:
     m_Items: []
   m_TableData:
   - m_Id: 93432705024
-    m_Localized: Hey there, I've never seen you around these lands, who are you?
+    m_Localized: you didnt <color=red>see this coming</color> did ya
     m_Metadata:
       m_Items: []
   - m_Id: 420336758784
-    m_Localized: My name's Jeff. <size=0>|</size>What's your name old man?
+    m_Localized: My name's <color=#0000FF><uppercase>Jeff</uppercase></color>. <size=0>|</size>What's
+      your name old man?
     m_Metadata:
       m_Items: []
   - m_Id: 541006884864
