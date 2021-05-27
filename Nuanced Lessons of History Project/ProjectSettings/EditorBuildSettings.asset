@@ -8,12 +8,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Prototypes/Disclaimer.unity
     guid: 674fd45ebe8856a43ac8ac8f3b1ab398
-  - enabled: 0
-    path: Assets/Scenes/Prototypes/SammyQuiz.unity
-    guid: 49258cf7201154a47999f712792cd150
   - enabled: 1
-    path: Assets/Scenes/Prototypes/JeffAR.unity
-    guid: 78cb06b76224f5243bca61d0b0ae98b9
+    path: Assets/Scenes/Prototypes/Quiz/Quiz v0.2.unity
+    guid: 34b2a7dfd6d3e8949bc715e916919a4f
   - enabled: 1
     path: Assets/Scenes/VuforiaBank.unity
     guid: 9938d3be64f06e942806678168695b9c

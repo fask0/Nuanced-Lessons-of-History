@@ -37,6 +37,18 @@ MonoBehaviour:
     m_SerializedLabels: []
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
+  - m_GUID: ca4569699c9ffae4e9e0b8de09611cec
+    m_Address: Assets/Localization/Tables/Questions/0/Question0 Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 060282cc85ff51d47957c67fd1ba7176
+    m_Address: Assets/Localization/Tables/Questions/1/Question1 Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 7a182c8356cb7ce4a92349c520368361, type: 2}
   m_SchemaSet:

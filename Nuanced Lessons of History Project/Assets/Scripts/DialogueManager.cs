@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class DialogueManager : Singleton<DialogueManager>
 {
     #region Fields
-    #region Speech Panel
+    #region Speech
     [Header("Speech Panel")]
     [SerializeField] private GameObject _speechPanel;
     [SerializeField] private GameObject _charactersContainer;
@@ -17,6 +17,11 @@ public class DialogueManager : Singleton<DialogueManager>
     [SerializeField] private Button _speechBoxButton;
     [SerializeField] private GameObject _clickToContinue;
     private Image[] _characterImages;
+    #endregion
+
+    #region Quiz
+    [Header("Quiz Panel")]
+    [SerializeField] private GameObject _quizPanel;
     #endregion
 
     #region Dialogue
@@ -136,7 +141,7 @@ public class DialogueManager : Singleton<DialogueManager>
                 if (isTag)
                 {
                     currentText = speechText.text;
-                    ENCAPSULATED_TEXT encapsulation = new ENCAPSULATED_TEXT(string.Format("<{0}>", section), speechAndTags, k);
+                    EncapsulatedText encapsulation = new EncapsulatedText(string.Format("<{0}>", section), speechAndTags, k);
                     _speechBoxButton.onClick.AddListener(completeOnClickAction);
                     while (!encapsulation.IsDone)
                     {
@@ -222,7 +227,7 @@ public class DialogueManager : Singleton<DialogueManager>
     }
     #endregion
 
-    private class ENCAPSULATED_TEXT
+    private class EncapsulatedText
     {
         #region Fields
         private string _tag = "";
@@ -233,20 +238,20 @@ public class DialogueManager : Singleton<DialogueManager>
         private bool _isDone = false;
         private string[] _speechAndTags = null;
         private int _speechAndTagsProgress = 0;
-        private ENCAPSULATED_TEXT _encapsulator = null;
-        private ENCAPSULATED_TEXT _subEncapsulator = null;
+        private EncapsulatedText _encapsulator = null;
+        private EncapsulatedText _subEncapsulator = null;
         #endregion
 
         #region Properties
         public string DisplayText => _displayText;
         public bool IsDone => _isDone;
         public int SpeechAndTagsProgress => _speechAndTagsProgress;
-        private ENCAPSULATED_TEXT Encapsulator { get => _encapsulator; set => _encapsulator = value; }
-        private ENCAPSULATED_TEXT SubEncapsulator { get => _subEncapsulator; set => _subEncapsulator = value; }
+        private EncapsulatedText Encapsulator { get => _encapsulator; set => _encapsulator = value; }
+        private EncapsulatedText SubEncapsulator { get => _subEncapsulator; set => _subEncapsulator = value; }
         #endregion
 
         #region Methods
-        public ENCAPSULATED_TEXT(string pTag, string[] pSpeechAndTags, int pSpeechAndTagsProgress)
+        public EncapsulatedText(string pTag, string[] pSpeechAndTags, int pSpeechAndTagsProgress)
         {
             _tag = pTag;
             generateEndTag();
@@ -297,7 +302,7 @@ public class DialogueManager : Singleton<DialogueManager>
                             }
                             else
                             {
-                                _subEncapsulator = new ENCAPSULATED_TEXT(string.Format("<{0}>", nextPart), _speechAndTags, _speechAndTagsProgress + 1) { Encapsulator = this };
+                                _subEncapsulator = new EncapsulatedText(string.Format("<{0}>", nextPart), _speechAndTags, _speechAndTagsProgress + 1) { Encapsulator = this };
                                 updateArrayProgress();
                             }
                         }
