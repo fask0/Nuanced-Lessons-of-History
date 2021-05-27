@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Grandpa_IntroTable_de
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: de
+  m_SharedData: {fileID: 11400000, guid: 267432656eafadc4b913952444fabf5f, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 93432705024
+    m_Localized: Hallo, ich habe dich noch nie in dieser Gegend gesehen, wer bist
+      du?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 420336758784
+    m_Localized: Mein Name ist Jeff. <size=0>I</size>Wie ist dein Name, alter Mann?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 541006884864
+    m_Localized: Oh...ha-ha, nenn mich einfach Opa.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 545675145216
+    m_Localized: "Und das da dr\xFCben auf dem Stuhl ist Oma."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 549848477696
+    m_Localized: Oma! <size=0>|</size>Komm und sag "Hi" zu Jeff!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 559478599680
+    m_Localized: "Jeff? <size=0>|</size>Oh hallo S\xFC\xDFer, tut mir leid, dass
+      ich dich auf dem Weg hierher nicht geh\xF6rt habe, mein Alter holt mich langsam
+      ein. <size=0>|</size>Willst du auf Tee und Kekse reinkommen?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 569284882432
+    m_Localized: Sicherlich!
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 1
