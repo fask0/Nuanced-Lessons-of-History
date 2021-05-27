@@ -1,121 +1,135 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Localization;
+using UnityEngine.Localization.Components;
+using UnityEngine.Localization.Settings;
 using UnityEngine.UI;
 
-public class QuizManager : MonoBehaviour
+public class QuizManager : Singleton<QuizManager>
 {
-    public static QuizManager Instance = null;
-
-    [SerializeField] private QuestionScriptableObject[] _questionBank;
-    public QuestionScriptableObject[] QuestionBank => _questionBank;
-
-    [SerializeField] private GameObject _questionGameObject;
-    [SerializeField] private GameObject[] _answerGameObjects;
+    #region Fields
+    [Header("Quiz Manager")]
+    [SerializeField] private GameObject _questionContainer;
+    [SerializeField] private GameObject _answersContainer;
     [SerializeField] private Color _correctColor;
     [SerializeField] private Color _wrongColor;
-
     [SerializeField] private GameObject _gameOverPanel;
 
+    private QuestionScriptableObject[] _questionBank;
+    private GameObject[] _answerGameObjects;
     private int _currentQuestion = 0;
+    #endregion
 
-    private void Awake()
+    #region Properties
+    #endregion
+
+    #region Methods
+    protected override void OnAwake()
     {
-        if (Instance == null)
-        {
-            Instance = this;
-        }
-        else
-        {
-            Destroy(gameObject);
-            return;
-        }
+        base.OnAwake();
+        _questionBank = Resources.LoadAll<QuestionScriptableObject>("ScriptableObjects/Questions");
     }
 
-    void Start()
+    private void Start()
     {
-        foreach (GameObject answer in _answerGameObjects)
-            answer.GetComponent<Button>().onClick.AddListener(() => checkAnswer(answer));
+        Button[] answers = _answersContainer.GetComponentsInChildren<Button>();
+        _answerGameObjects = new GameObject[answers.Length];
+        for (int i = 0; i < answers.Length; i++)
+        {
+            GameObject aGO = answers[i].gameObject;
+            answers[i].onClick.AddListener(() => checkAnswer(aGO));
+            _answerGameObjects[i] = aGO;
+        }
 
-        assignQuestion(0);
+        prepareQuestion(0);
     }
 
-    private void checkAnswer(GameObject pAnswerGO)
+    private void prepareQuestion(int pQuestion)
     {
-        string answerText = pAnswerGO.GetComponentInChildren<TextMeshProUGUI>().text;
+        _questionContainer.GetComponentInChildren<LocalizeStringEvent>().StringReference = _questionBank[pQuestion].Question;
 
-        if (_currentQuestion >= _questionBank.Length)
+        List<LocalizedString> availableAnswers = new List<LocalizedString>();
+        for (int i = 0; i < _questionBank[pQuestion].WrongAnswers.Length; i++)
+            availableAnswers.Add(_questionBank[pQuestion].WrongAnswers[i]);
+        availableAnswers.Add(_questionBank[pQuestion].CorrectAnswer);
+
+        System.Random rnd = new System.Random();
+        availableAnswers = availableAnswers.OrderBy(pA => rnd.Next()).ToList();
+
+        //Loop in reverse to avoid disabaling a row which should show an answer
+        for (int i = _answerGameObjects.Length - 1; i >= 0; i--)
         {
-            //Quiz done
-            print("win");
-            return;
-        }
+            if (i == 0) Canvas.ForceUpdateCanvases();
 
-        if (answerText == _questionBank[_currentQuestion].correctAnswer)
-        {
-            //Correct
-            _currentQuestion++;
-            StartCoroutine(changeColor(pAnswerGO, _correctColor, true));
-        }
-        else
-        {
-            //Wrong
-            StartCoroutine(changeColor(pAnswerGO, _wrongColor));
-        }
-    }
+            _answerGameObjects[i].gameObject.SetActive(false);
+            _answerGameObjects[i].transform.parent.gameObject.SetActive(false);
 
-    private void assignQuestion(int pQuestion)
-    {
-        _questionGameObject.GetComponentInChildren<TextMeshProUGUI>().text = _questionBank[pQuestion].question;
-
-        List<string> availableAnswers = new List<string>();
-        for (int i = 0; i < _questionBank[pQuestion].wrongAnswers.Length; i++)
-            availableAnswers.Add(_questionBank[pQuestion].wrongAnswers[i]);
-        availableAnswers.Add(_questionBank[pQuestion].correctAnswer);
-
-        for (int i = 0; i < _answerGameObjects.Length; i++)
-        {
-            _answerGameObjects[i].SetActive(false);
             if (availableAnswers.Count <= i) continue;
 
-            _answerGameObjects[i].SetActive(true);
-            _answerGameObjects[i].GetComponentInChildren<TextMeshProUGUI>().text = availableAnswers[i];
-
-            //int rnd = Random.Range(0, availableAnswers.Count);
-            //_answerGameObjects[i].GetComponentInChildren<TextMeshProUGUI>().text = availableAnswers[rnd];
-            //availableAnswers.RemoveAt(rnd);
+            _answerGameObjects[i].gameObject.SetActive(true);
+            _answerGameObjects[i].transform.parent.gameObject.SetActive(true);
+            _answerGameObjects[i].GetComponentInChildren<LocalizeStringEvent>().StringReference = availableAnswers[i];
         }
 
         _currentQuestion = pQuestion;
     }
 
-    private IEnumerator changeColor(GameObject pAnswerGO, Color pColorToChange, bool resetColor = false)
+    private void checkAnswer(GameObject pAnswerGO)
     {
-        foreach (GameObject answers in _answerGameObjects)
-            answers.GetComponentInChildren<Button>().interactable = false;
-
-        pAnswerGO.GetComponentInChildren<Image>().color = pColorToChange;
-        yield return new WaitForSeconds((pColorToChange == _correctColor) ? 1 : 0.2f);
-        pAnswerGO.GetComponentInChildren<Image>().color = Color.gray;
-
-        foreach (GameObject answers in _answerGameObjects)
-            answers.GetComponentInChildren<Button>().interactable = true;
-
-        if (resetColor)
-        {
-            foreach (GameObject answers in _answerGameObjects)
-                answers.GetComponentInChildren<Image>().color = Color.white;
-        }
+        LocalizedString answerString = pAnswerGO.GetComponentInChildren<LocalizeStringEvent>().StringReference;
 
         if (_currentQuestion >= _questionBank.Length)
         {
-            //Show gameover screen
-            _gameOverPanel.SetActive(true);
+            //Quiz done
+            return;
+        }
+
+        if (answerString == _questionBank[_currentQuestion].CorrectAnswer)
+        {
+            //Correct
+            StartCoroutine(handleAnswer(pAnswerGO, _correctColor));
         }
         else
         {
-            assignQuestion(_currentQuestion);
+            //Wrong
+            StartCoroutine(handleAnswer(pAnswerGO, _wrongColor));
+        }
+    }
+
+    private IEnumerator handleAnswer(GameObject pAnswerGO, Color pColorToChange)
+    {
+        foreach (GameObject answers in _answerGameObjects)
+            answers.GetComponentInChildren<Button>().interactable = false;
+        pAnswerGO.GetComponentInChildren<Image>().color = pColorToChange;
+
+        yield return new WaitForSeconds((pColorToChange == _correctColor) ? 1 : 0.2f);
+
+        foreach (GameObject answers in _answerGameObjects)
+            answers.GetComponentInChildren<Button>().interactable = true;
+        pAnswerGO.GetComponentInChildren<Image>().color = Color.gray;
+
+        if (pColorToChange == _wrongColor)
+        {
+        }
+        else if (pColorToChange == _correctColor)
+        {
+            foreach (GameObject answers in _answerGameObjects)
+                answers.GetComponentInChildren<Image>().color = Color.white;
+
+            if (_currentQuestion + 1 >= _questionBank.Length)
+            {
+                //Show gameover screen
+                _gameOverPanel.SetActive(true);
+            }
+            else
+            {
+                //Next Question
+                _currentQuestion++;
+                prepareQuestion(_currentQuestion);
+            }
         }
     }
 
@@ -123,4 +137,5 @@ public class QuizManager : MonoBehaviour
     {
         Application.Quit();
     }
+    #endregion
 }
