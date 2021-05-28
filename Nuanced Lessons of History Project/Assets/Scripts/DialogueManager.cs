@@ -41,7 +41,8 @@ public class DialogueManager : Singleton<DialogueManager>
     {
         _nextLineAction = () => NextLine();
         _speechPanel.SetActive(false);
-        reassignSpeechBoxButtonListeners();
+        _speechBoxButton.onClick.RemoveAllListeners();
+        _speechBoxButton.onClick.AddListener(_nextLineAction);
     }
 
     private void Start()
@@ -167,7 +168,6 @@ public class DialogueManager : Singleton<DialogueManager>
             }
         }
 
-        _speak = null;
         finishSpeak();
 
         #region Local Methods
@@ -196,14 +196,17 @@ public class DialogueManager : Singleton<DialogueManager>
 
     private void finishSpeak()
     {
-        if (_speak != null) { StopCoroutine(_speak); _speak = null; }
+        StopCoroutine(_speak);
 
         _speechText.enabled = true;
         _speechText.StringReference = _currentDialogue.Lines[_dialogueProgress].LocalizedString;
 
         _clickToContinue.SetActive(true);
 
-        reassignSpeechBoxButtonListeners();
+        _speak = null;
+
+        _speechBoxButton.onClick.RemoveAllListeners();
+        _speechBoxButton.onClick.AddListener(_nextLineAction);
     }
 
     private bool progressDialogue()
@@ -221,12 +224,6 @@ public class DialogueManager : Singleton<DialogueManager>
     private void endDialogue()
     {
         _speechPanel.SetActive(false);
-    }
-
-    private void reassignSpeechBoxButtonListeners()
-    {
-        _speechBoxButton.onClick.RemoveAllListeners();
-        _speechBoxButton.onClick.AddListener(_nextLineAction);
     }
     #endregion
 

@@ -27,16 +27,12 @@ public class Line
     [Header("Dialogue")]
     [SerializeField] private LocalizedString _localizedString;
     [Range(10, 60)] [SerializeField] private int _textCharactersPerSecond = 30;
-
-    [Header("Questions")]
-    [SerializeField] private QuestionScriptableObject[] _questions;
     #endregion
 
     #region Properties
     public LineCharacter[] LineCharacters => _lineCharacters;
     public LocalizedString LocalizedString => _localizedString;
     public int TextCharactersPerSecond => (_textCharactersPerSecond == 0) ? 30 : _textCharactersPerSecond;
-    public QuestionScriptableObject[] Questions => _questions;
     #endregion
 
     #region Methods
