@@ -45,9 +45,16 @@ MonoBehaviour:
       m_KeyId: 70267564032
       m_Key: 
     m_FallbackState: 0
-  question: What material is the chair made out of?
-  wrongAnswers:
-  - Stone
-  - Metal
-  - Glass
-  correctAnswer: Wood
+  _hints:
+  - m_TableReference:
+      m_TableCollectionName: GUID:ca4569699c9ffae4e9e0b8de09611cec
+    m_TableEntryReference:
+      m_KeyId: 320095893450752
+      m_Key: 
+    m_FallbackState: 0
+  - m_TableReference:
+      m_TableCollectionName: GUID:ca4569699c9ffae4e9e0b8de09611cec
+    m_TableEntryReference:
+      m_KeyId: 320110539960320
+      m_Key: 
+    m_FallbackState: 0

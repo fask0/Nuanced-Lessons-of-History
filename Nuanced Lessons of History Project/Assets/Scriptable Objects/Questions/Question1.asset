@@ -33,7 +33,10 @@ MonoBehaviour:
       m_KeyId: 13598322688
       m_Key: 
     m_FallbackState: 0
-  question: Is it a rocking chair?
-  wrongAnswers:
-  - Yes
-  correctAnswer: No
+  _hints:
+  - m_TableReference:
+      m_TableCollectionName: GUID:060282cc85ff51d47957c67fd1ba7176
+    m_TableEntryReference:
+      m_KeyId: 336582259634176
+      m_Key: 
+    m_FallbackState: 0

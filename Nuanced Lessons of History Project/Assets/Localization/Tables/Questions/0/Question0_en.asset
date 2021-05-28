@@ -38,5 +38,13 @@ MonoBehaviour:
     m_Localized: Wood
     m_Metadata:
       m_Items: []
+  - m_Id: 320095893450752
+    m_Localized: que?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 320110539960320
+    m_Localized: hint 2 bro handle it
+    m_Metadata:
+      m_Items: []
   references:
     version: 1
