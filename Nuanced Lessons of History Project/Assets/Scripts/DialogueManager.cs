@@ -23,8 +23,15 @@ public class DialogueManager : Singleton<DialogueManager>
     #endregion
 
     #region Quiz
-    [Header("Quiz Panel")]
-    [SerializeField] private GameObject _quizPanel;
+    public enum GameType
+    {
+        Quiz,
+        AR
+    }
+    [Header("Gameplay")]
+    [SerializeField] private GameType _typeOfGame;
+    [DrawIf("_typeOfGame", GameType.Quiz)] [SerializeField] private GameObject _quizPanel;
+    [DrawIf("_typeOfGame", GameType.AR)] [SerializeField] private GameObject _arPanel;
     #endregion
 
     #region Dialogue
@@ -45,7 +52,6 @@ public class DialogueManager : Singleton<DialogueManager>
     {
         _nextLineAction = () => NextLine();
         _speechPanel.SetActive(false);
-        _hintLocalizedStringEvent.gameObject.SetActive(false);
         reassignSpeechBoxButtonListeners();
     }
 

@@ -25,14 +25,14 @@ MonoBehaviour:
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
   - m_GUID: 85a89c6c2ac674c4fbc4ef970f0e4f5b
-    m_Address: Grandma Intro_de
+    m_Address: GrandmaIntro_de
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-de
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
   - m_GUID: e582442e62f837e4587a70d7bf2f7ded
-    m_Address: Grandpa_IntroTable_de
+    m_Address: GrandpaIntro_de
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-de

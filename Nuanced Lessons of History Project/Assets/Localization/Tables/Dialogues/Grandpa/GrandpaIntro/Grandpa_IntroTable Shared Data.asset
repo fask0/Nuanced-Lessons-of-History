@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
   m_Name: Grandpa_IntroTable Shared Data
   m_EditorClassIdentifier: 
-  m_TableCollectionName: Grandpa_IntroTable
+  m_TableCollectionName: GrandpaIntro
   m_TableCollectionNameGuidString: 267432656eafadc4b913952444fabf5f
   m_Entries:
   - m_Id: 93432705024
