@@ -25,6 +25,7 @@ MonoBehaviour:
         m_Key: 
       m_FallbackState: 0
     _textCharactersPerSecond: 20
+    _questions: []
   - _lineCharacters:
     - _characterScriptableObject: {fileID: 11400000, guid: 2d96134aedbda164c8d2a6bde96797c5, type: 2}
       _expression: 1
@@ -37,6 +38,7 @@ MonoBehaviour:
         m_Key: 
       m_FallbackState: 0
     _textCharactersPerSecond: 20
+    _questions: []
   - _lineCharacters:
     - _characterScriptableObject: {fileID: 11400000, guid: 2d96134aedbda164c8d2a6bde96797c5, type: 2}
       _expression: 2
@@ -49,3 +51,4 @@ MonoBehaviour:
         m_Key: 
       m_FallbackState: 0
     _textCharactersPerSecond: 20
+    _questions: []
