@@ -21,20 +21,24 @@ public class LineCharacter
 public class Line
 {
     #region Fields
-    [Header("Characters")]
     [SerializeField] private LineCharacter[] _lineCharacters;
-
-    [Header("Dialogue")]
-    [SerializeField] private LocalizedString _localizedString;
+    [SerializeField] private LocalizedString _lineString;
     [Range(10, 60)] [SerializeField] private int _textCharactersPerSecond = 30;
+    [SerializeField] private Sprite _backgroundSprite = null;
+
+    [Header("Quiz")]
     [SerializeField] private QuestionScriptableObject[] _questions;
+    [Header("AR")]
+    [SerializeField] private ScannableImageScriptableObject[] _imagesToScan;
     #endregion
 
     #region Properties
     public LineCharacter[] LineCharacters => _lineCharacters;
-    public LocalizedString LocalizedString => _localizedString;
+    public LocalizedString LineString => _lineString;
     public int TextCharactersPerSecond => (_textCharactersPerSecond == 0) ? 30 : _textCharactersPerSecond;
+    public Sprite BackgroundSprite => _backgroundSprite;
     public QuestionScriptableObject[] Questions => _questions;
+    public ScannableImageScriptableObject[] ImagesToScan => _imagesToScan;
     #endregion
 
     #region Methods

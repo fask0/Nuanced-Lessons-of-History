@@ -49,6 +49,20 @@ MonoBehaviour:
     m_SerializedLabels: []
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
+  - m_GUID: f6654ccbe4060094cbed314e9fb10b13
+    m_Address: Assets/Localization/Tables/ScannableImages/Chair/ScannableImageChair
+      Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 73ab919fdaa5f3440996342e96e17c1f
+    m_Address: Assets/Localization/Tables/ScannableImages/Heater/ScannableImageHeater
+      Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 7a182c8356cb7ce4a92349c520368361, type: 2}
   m_SchemaSet:

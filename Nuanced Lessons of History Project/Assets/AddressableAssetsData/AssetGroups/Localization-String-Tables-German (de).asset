@@ -52,6 +52,20 @@ MonoBehaviour:
     - Locale-de
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
+  - m_GUID: b295f3cf4dae2844c95ee03363c0eb09
+    m_Address: ScannableImageChair_de
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-de
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 4a4544b65ad6adb4eb80839fa027649f
+    m_Address: ScannableImageHeater_de
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-de
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 7a182c8356cb7ce4a92349c520368361, type: 2}
   m_SchemaSet:

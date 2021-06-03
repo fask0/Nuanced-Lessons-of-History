@@ -12,6 +12,7 @@ public class DialogueManager : Singleton<DialogueManager>
     #region Fields
     #region Speech
     [Header("Speech Panel")]
+    [SerializeField] private Image _backgroundImage;
     [SerializeField] private GameObject _speechPanel;
     [SerializeField] private GameObject _charactersContainer;
     [SerializeField] private TextMeshProUGUI _speechNameText;
@@ -19,6 +20,7 @@ public class DialogueManager : Singleton<DialogueManager>
     [SerializeField] private LocalizeStringEvent _hintLocalizedStringEvent;
     [SerializeField] private Button _speechBoxButton;
     [SerializeField] private GameObject _clickToContinue;
+
     private Image[] _characterImages;
     #endregion
 
@@ -50,7 +52,7 @@ public class DialogueManager : Singleton<DialogueManager>
     #region Methods
     private void Awake()
     {
-        _nextLineAction = () => NextLine();
+        _nextLineAction = () => nextLine();
         _speechPanel.SetActive(false);
         reassignSpeechBoxButtonListeners();
     }
@@ -71,20 +73,43 @@ public class DialogueManager : Singleton<DialogueManager>
         _currentDialogue = pDialogue;
         _dialogueProgress = pDialogueProgress - 1;
         if (_speak != null) { StopCoroutine(_speak); _speak = null; }
-        NextLine();
+        nextLine();
     }
 
-    public void PreviousLine()
+    public void Resume()
+    {
+        reassignSpeechBoxButtonListeners();
+        nextLine();
+    }
+
+    public void Repeat()
+    {
+        reassignSpeechBoxButtonListeners();
+        sameLine();
+    }
+
+    private void previousLine()
     {
         //If _speak is running stop it
         if (_speak != null) { finishSpeak(); return; }
 
         regressDialogue();
 
-        _speechLocalizedStingEvent.StringReference = prepareLine().LocalizedString;
+        _speechLocalizedStingEvent.StringReference = prepareLine().LineString;
     }
 
-    public void NextLine()
+    private void sameLine()
+    {
+        //If _speak is running stop it
+        if (_speak != null) { finishSpeak(); return; }
+
+        //Say the line
+        _speechLocalizedStingEvent.gameObject.SetActive(true);
+        _hintLocalizedStringEvent.gameObject.SetActive(false);
+        _speak = StartCoroutine(speak(prepareLine()));
+    }
+
+    private void nextLine()
     {
         //If _speak is running stop it
         if (_speak != null) { finishSpeak(); return; }
@@ -96,12 +121,6 @@ public class DialogueManager : Singleton<DialogueManager>
         _speechLocalizedStingEvent.gameObject.SetActive(true);
         _hintLocalizedStringEvent.gameObject.SetActive(false);
         _speak = StartCoroutine(speak(prepareLine()));
-    }
-
-    public void Resume()
-    {
-        _speechBoxButton.onClick.AddListener(_nextLineAction);
-        NextLine();
     }
 
     private Line prepareLine()
@@ -127,29 +146,10 @@ public class DialogueManager : Singleton<DialogueManager>
             _characterImages[i].gameObject.SetActive(true);
             _characterImages[i].sprite = line.GetCharacterExpression(i);
         }
+        if (line.BackgroundSprite != null) _backgroundImage.sprite = line.BackgroundSprite;
         _speechNameText.text = line.GetSpeaker().CharacterScriptableObject.Name;
         _clickToContinue.SetActive(false);
         return line;
-    }
-
-    public void ShowHint(LocalizedString pString)
-    {
-        if (_speakHint != null)
-            StopCoroutine(_speakHint);
-
-        _speechLocalizedStingEvent.gameObject.SetActive(false);
-        _hintLocalizedStringEvent.gameObject.SetActive(true);
-        _speakHint = StartCoroutine(speakHint(pString));
-    }
-
-    public void HideHint()
-    {
-        if (_speakHint != null)
-            StopCoroutine(_speakHint);
-        _speakHint = null;
-
-        _speechLocalizedStingEvent.gameObject.SetActive(true);
-        _hintLocalizedStringEvent.gameObject.SetActive(false);
     }
 
     private IEnumerator speak(Line pLine)
@@ -163,7 +163,7 @@ public class DialogueManager : Singleton<DialogueManager>
         speechText.text = "";
         _speechLocalizedStingEvent.enabled = false;
 
-        var operation = pLine.LocalizedString.GetLocalizedString();
+        var operation = pLine.LineString.GetLocalizedString();
         while (!operation.IsDone)
             yield return null;
         string[] targetText = operation.Result.Split(new string[] { "<size=0>|</size>" }, StringSplitOptions.None);
@@ -243,6 +243,49 @@ public class DialogueManager : Singleton<DialogueManager>
         #endregion
     }
 
+    private void finishSpeak()
+    {
+        Line line = _currentDialogue.Lines[_dialogueProgress];
+
+        StopCoroutine(_speak);
+        _speak = null;
+
+        _speechLocalizedStingEvent.enabled = true;
+        _speechLocalizedStingEvent.StringReference = line.LineString;
+
+        _speechBoxButton.onClick.RemoveAllListeners();
+
+        if (_typeOfGame == GameType.Quiz && line.Questions.Length > 0)
+            StartCoroutine(waitForInputBeforeAction(() => QuizManager.Instance.PrepareQuestions(line.Questions)));
+        else if (_typeOfGame == GameType.AR && line.ImagesToScan.Length > 0)
+            StartCoroutine(waitForInputBeforeAction(() => ARManager.Instance.PrepareImagesToScan(line.ImagesToScan)));
+        else
+        {
+            _speechBoxButton.onClick.AddListener(_nextLineAction);
+            _clickToContinue.SetActive(true);
+        }
+    }
+
+    public void ShowHint(LocalizedString pString)
+    {
+        if (_speakHint != null)
+            StopCoroutine(_speakHint);
+
+        _speechLocalizedStingEvent.gameObject.SetActive(false);
+        _hintLocalizedStringEvent.gameObject.SetActive(true);
+        _speakHint = StartCoroutine(speakHint(pString));
+    }
+
+    public void HideHint()
+    {
+        if (_speakHint != null)
+            StopCoroutine(_speakHint);
+        _speakHint = null;
+
+        _speechLocalizedStingEvent.gameObject.SetActive(true);
+        _hintLocalizedStringEvent.gameObject.SetActive(false);
+    }
+
     private IEnumerator speakHint(LocalizedString pString)
     {
         _speechBoxButton.onClick.RemoveAllListeners();
@@ -290,28 +333,6 @@ public class DialogueManager : Singleton<DialogueManager>
         finishSpeakHint(pString);
     }
 
-    private void finishSpeak()
-    {
-        Line line = _currentDialogue.Lines[_dialogueProgress];
-
-        StopCoroutine(_speak);
-        _speak = null;
-
-        _speechLocalizedStingEvent.enabled = true;
-        _speechLocalizedStingEvent.StringReference = line.LocalizedString;
-
-        _speechBoxButton.onClick.RemoveAllListeners();
-        if (line.Questions.Length > 0)
-        {
-            QuizManager.Instance.PrepareQuestions(line.Questions);
-        }
-        else
-        {
-            _speechBoxButton.onClick.AddListener(_nextLineAction);
-            _clickToContinue.SetActive(true);
-        }
-    }
-
     private void finishSpeakHint(LocalizedString pString)
     {
         StopCoroutine(_speakHint);
@@ -319,6 +340,30 @@ public class DialogueManager : Singleton<DialogueManager>
 
         _hintLocalizedStringEvent.enabled = true;
         _hintLocalizedStringEvent.StringReference = pString;
+    }
+
+    private IEnumerator waitForInputBeforeAction(Action pAction)
+    {
+        bool hasClicked = false;
+
+        UnityAction onClickAction = () => onClick();
+        _speechBoxButton.onClick.AddListener(onClickAction);
+        _clickToContinue.SetActive(true);
+
+        while (!hasClicked)
+            yield return new WaitForEndOfFrame();
+
+        _speechBoxButton.onClick.RemoveListener(onClickAction);
+        _clickToContinue.SetActive(false);
+
+        pAction();
+
+        #region Local Methods
+        void onClick()
+        {
+            hasClicked = true;
+        }
+        #endregion
     }
 
     private bool progressDialogue()

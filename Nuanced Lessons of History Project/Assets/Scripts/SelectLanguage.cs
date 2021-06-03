@@ -55,6 +55,7 @@ public class SelectLanguage : MonoBehaviour
             Color oCol = button.transform.parent.GetComponent<Image>().color;
             float alpha = (button == pButton) ? 1 : 0;
             button.transform.parent.GetComponent<Image>().color = new Color(oCol.r, oCol.g, oCol.b, alpha);
+            button.GetComponent<Image>().sprite = (button == pButton) ? button.GetComponent<LanguageIcon>().Selected : button.GetComponent<LanguageIcon>().Unselected;
         }
     }
     #endregion

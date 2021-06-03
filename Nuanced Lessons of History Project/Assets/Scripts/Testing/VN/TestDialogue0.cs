@@ -7,7 +7,7 @@ public class TestDialogue0 : MonoBehaviour
 
     public void Update()
     {
-        if (startNew)
+        if (startNew || Input.GetKeyDown(KeyCode.Space))
         {
             DialogueManager.Instance.StartNewDialogue(dialogue);
             startNew = false;

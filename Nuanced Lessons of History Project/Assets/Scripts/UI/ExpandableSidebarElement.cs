@@ -14,10 +14,13 @@ public class ExpandableSidebarElement : MonoBehaviour, IExpandableUIElement
 
     #region Fields
     [SerializeField] private RectTransform _dummyRect;
+    [SerializeField] private GameObject _symbol;
     private RectTransform _rect;
+    private Vector2 _collapsedSize;
     private Coroutine _transforming;
     private ARManager _arManager;
     private TransitionState _state;
+    private Image _image;
     #endregion
 
     #region Properties
@@ -26,9 +29,17 @@ public class ExpandableSidebarElement : MonoBehaviour, IExpandableUIElement
     #endregion
 
     #region Methods
+    private void Update()
+    {
+        _image.enabled = false;
+        _image.enabled = true;
+    }
+
     public void Init()
     {
         _rect = GetComponent<RectTransform>();
+        _image = GetComponent<Image>();
+        _collapsedSize = _dummyRect.sizeDelta;
         _transforming = null;
         _arManager = ARManager.Instance;
         _state = TransitionState.Collapsed;
@@ -48,11 +59,12 @@ public class ExpandableSidebarElement : MonoBehaviour, IExpandableUIElement
 
         _state = TransitionState.Expanding;
         Vector2 targetSize = _rect.sizeDelta;
-        float timeElapsed = 0;
+        Vector2 startSize = _dummyRect.sizeDelta;
+        float timeElapsed = Time.deltaTime;
+        float closeTime = pTransitionDuration * (Vector2.Distance(startSize, targetSize) / Vector2.Distance(_collapsedSize, targetSize));
         while (Vector2.Distance(_dummyRect.sizeDelta, targetSize) > 0.01f)
         {
-            float closeTime = pTransitionDuration;
-            _dummyRect.sizeDelta = Vector2.Lerp(_dummyRect.sizeDelta, targetSize, timeElapsed / closeTime);
+            _dummyRect.sizeDelta = Vector2.Lerp(startSize, targetSize, timeElapsed / closeTime);
             timeElapsed += Time.deltaTime;
             yield return new WaitForEndOfFrame();
         }
@@ -78,11 +90,12 @@ public class ExpandableSidebarElement : MonoBehaviour, IExpandableUIElement
         gameObject.SetActive(false);
 
         _state = TransitionState.Collapsing;
+        Vector2 startSize = _dummyRect.sizeDelta;
         float timeElapsed = 0;
+        float closeTime = pTransitionDuration * (Vector2.Distance(pTargetSize, startSize) / Vector2.Distance(pTargetSize, _rect.sizeDelta));
         while (Vector2.Distance(pTargetSize, _dummyRect.sizeDelta) > 0.01f)
         {
-            float closeTime = pTransitionDuration;
-            _dummyRect.sizeDelta = Vector2.Lerp(_dummyRect.sizeDelta, pTargetSize, timeElapsed / closeTime);
+            _dummyRect.sizeDelta = Vector2.Lerp(startSize, pTargetSize, timeElapsed / closeTime);
             timeElapsed += Time.deltaTime;
             yield return new WaitForEndOfFrame();
         }

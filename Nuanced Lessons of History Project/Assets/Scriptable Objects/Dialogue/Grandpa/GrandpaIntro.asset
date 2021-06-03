@@ -26,6 +26,7 @@ MonoBehaviour:
       m_FallbackState: 0
     _textCharactersPerSecond: 30
     _questions: []
+    _imagesToScan: []
   - _lineCharacters:
     - _characterScriptableObject: {fileID: 11400000, guid: bfe907f888a308f4eacdb3cdfded4fd2, type: 2}
       _expression: 1
@@ -39,6 +40,9 @@ MonoBehaviour:
       m_FallbackState: 0
     _textCharactersPerSecond: 30
     _questions: []
+    _imagesToScan:
+    - {fileID: 11400000, guid: 647af3b444c5d5944b2f6ad1d73c90b9, type: 2}
+    - {fileID: 11400000, guid: 9eeb6574eb5d119489025d76e222e2f8, type: 2}
   - _lineCharacters:
     - _characterScriptableObject: {fileID: 11400000, guid: bfe907f888a308f4eacdb3cdfded4fd2, type: 2}
       _expression: 2
@@ -52,6 +56,7 @@ MonoBehaviour:
       m_FallbackState: 0
     _textCharactersPerSecond: 30
     _questions: []
+    _imagesToScan: []
   - _lineCharacters:
     - _characterScriptableObject: {fileID: 11400000, guid: bfe907f888a308f4eacdb3cdfded4fd2, type: 2}
       _expression: 0
@@ -68,6 +73,7 @@ MonoBehaviour:
       m_FallbackState: 0
     _textCharactersPerSecond: 30
     _questions: []
+    _imagesToScan: []
   - _lineCharacters:
     - _characterScriptableObject: {fileID: 11400000, guid: bfe907f888a308f4eacdb3cdfded4fd2, type: 2}
       _expression: 1
@@ -87,6 +93,7 @@ MonoBehaviour:
       m_FallbackState: 0
     _textCharactersPerSecond: 30
     _questions: []
+    _imagesToScan: []
   - _lineCharacters:
     - _characterScriptableObject: {fileID: 11400000, guid: bfe907f888a308f4eacdb3cdfded4fd2, type: 2}
       _expression: 0
@@ -100,6 +107,7 @@ MonoBehaviour:
       m_FallbackState: 0
     _textCharactersPerSecond: 10
     _questions: []
+    _imagesToScan: []
   - _lineCharacters:
     - _characterScriptableObject: {fileID: 11400000, guid: bfe907f888a308f4eacdb3cdfded4fd2, type: 2}
       _expression: 0
@@ -118,3 +126,4 @@ MonoBehaviour:
     _questions:
     - {fileID: 11400000, guid: 8c23fe7013390fa4f87641e9871cb508, type: 2}
     - {fileID: 11400000, guid: 0e7b218a1ee5e7b47b60a61c0d955652, type: 2}
+    _imagesToScan: []
