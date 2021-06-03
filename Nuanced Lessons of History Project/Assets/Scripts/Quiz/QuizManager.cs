@@ -50,12 +50,24 @@ public class QuizManager : Singleton<QuizManager>
         _currentQuestionIndex = pQuestionsProgress;
         _currentQuestionHintIndex = -1;
         DialogueManager.Instance.HideHint();
+
         _questionContainer.GetComponentInChildren<LocalizeStringEvent>().StringReference = _currentQuestions[_currentQuestionIndex].Question;
 
+        QuizQuestionScriptableObject quizQuestion = _currentQuestions[_currentQuestionIndex] as QuizQuestionScriptableObject;
+        StoryQuestionScriptableObjcet storyQuestion = _currentQuestions[_currentQuestionIndex] as StoryQuestionScriptableObjcet;
         //Save all the answers in a local list
         List<LocalizedString> availableAnswers = new List<LocalizedString>();
         for (int i = 0; i < _currentQuestions[_currentQuestionIndex].Answers.Length; i++)
             availableAnswers.Add(_currentQuestions[_currentQuestionIndex].Answers[i]);
+        if (quizQuestion != null)
+        {
+            availableAnswers.Add(quizQuestion.CorrectAnswer);
+            _quizPanel.transform.Find("Hint").gameObject.SetActive(true);
+        }
+        else if (storyQuestion != null)
+        {
+            _quizPanel.transform.Find("Hint").gameObject.SetActive(false);
+        }
         //Randomize the list
         System.Random rnd = new System.Random();
         availableAnswers = availableAnswers.OrderBy(pA => rnd.Next()).ToList();
@@ -65,12 +77,12 @@ public class QuizManager : Singleton<QuizManager>
         {
             if (i == 0) Canvas.ForceUpdateCanvases();
 
-            _answerGameObjects[i].gameObject.SetActive(false);
+            _answerGameObjects[i].SetActive(false);
             _answerGameObjects[i].transform.parent.gameObject.SetActive(false);
 
             if (availableAnswers.Count <= i) continue;
 
-            _answerGameObjects[i].gameObject.SetActive(true);
+            _answerGameObjects[i].SetActive(true);
             _answerGameObjects[i].transform.parent.gameObject.SetActive(true);
             _answerGameObjects[i].GetComponentInChildren<LocalizeStringEvent>().StringReference = availableAnswers[i];
         }
@@ -78,13 +90,13 @@ public class QuizManager : Singleton<QuizManager>
 
     private void checkAnswer(GameObject pAnswerGO)
     {
-        string answerString = pAnswerGO.GetComponentInChildren<LocalizeStringEvent>().StringReference.GetLocalizedString();
+        LocalizedString answerLocalizedString = pAnswerGO.GetComponentInChildren<LocalizeStringEvent>().StringReference;
 
         QuizQuestionScriptableObject quizQuestion = _currentQuestions[_currentQuestionIndex] as QuizQuestionScriptableObject;
         StoryQuestionScriptableObjcet storyQuestion = _currentQuestions[_currentQuestionIndex] as StoryQuestionScriptableObjcet;
         if (quizQuestion != null)
         {
-            if (answerString == quizQuestion.CorrectAnswer.GetLocalizedString())
+            if (answerLocalizedString == quizQuestion.CorrectAnswer)
                 StartCoroutine(handleAnswer(pAnswerGO, _correctFeedbackColor));
             else
                 StartCoroutine(handleAnswer(pAnswerGO, _wrongFeedbackColor));
