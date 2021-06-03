@@ -17,52 +17,34 @@ MonoBehaviour:
     m_SerializedData: []
   m_GUID: 1079a07f71d638b439cd5f1e8c873970
   m_SerializeEntries:
-  - m_GUID: aba542ed7fb8e334a9ec4b5b3b090129
-    m_Address: Assets/Localization/Tables/UI Shared Data.asset
-    m_ReadOnly: 1
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: 37b80f267407ac245b019ca1d24d8a28
     m_Address: Assets/Localization/Tables/Dialogues/Grandma/Grandma Intro Shared
       Data.asset
     m_ReadOnly: 1
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: 267432656eafadc4b913952444fabf5f
     m_Address: Assets/Localization/Tables/Dialogues/Grandpa/GrandpaIntro/Grandpa_IntroTable
       Shared Data.asset
     m_ReadOnly: 1
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: ca4569699c9ffae4e9e0b8de09611cec
     m_Address: Assets/Localization/Tables/Questions/0/Question0 Shared Data.asset
     m_ReadOnly: 1
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: 060282cc85ff51d47957c67fd1ba7176
     m_Address: Assets/Localization/Tables/Questions/1/Question1 Shared Data.asset
     m_ReadOnly: 1
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: f6654ccbe4060094cbed314e9fb10b13
     m_Address: Assets/Localization/Tables/ScannableImages/Chair/ScannableImageChair
       Shared Data.asset
     m_ReadOnly: 1
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: 73ab919fdaa5f3440996342e96e17c1f
     m_Address: Assets/Localization/Tables/ScannableImages/Heater/ScannableImageHeater
       Shared Data.asset
     m_ReadOnly: 1
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 7a182c8356cb7ce4a92349c520368361, type: 2}
   m_SchemaSet:

@@ -17,29 +17,36 @@ MonoBehaviour:
     - _characterScriptableObject: {fileID: 11400000, guid: bfe907f888a308f4eacdb3cdfded4fd2, type: 2}
       _expression: 2
       _isSpeaker: 1
-    _localizedString:
+    _lineString:
       m_TableReference:
         m_TableCollectionName: GUID:267432656eafadc4b913952444fabf5f
       m_TableEntryReference:
-        m_KeyId: 545675145216
+        m_KeyId: 93432705024
         m_Key: 
       m_FallbackState: 0
+      m_WaitForCompletion: 1
     _textCharactersPerSecond: 30
-    _questions: []
+    _backgroundSprite: {fileID: 0}
+    _storyQuestions: []
+    _quizQuestions:
+    - {fileID: 11400000, guid: 5f5c45ff3f7eda045a39a37981969f8e, type: 2}
     _imagesToScan: []
   - _lineCharacters:
     - _characterScriptableObject: {fileID: 11400000, guid: bfe907f888a308f4eacdb3cdfded4fd2, type: 2}
       _expression: 1
       _isSpeaker: 1
-    _localizedString:
+    _lineString:
       m_TableReference:
-        m_TableCollectionName: GUID:267432656eafadc4b913952444fabf5f
+        m_TableCollectionName: 
       m_TableEntryReference:
-        m_KeyId: 541006884864
+        m_KeyId: 0
         m_Key: 
       m_FallbackState: 0
+      m_WaitForCompletion: 1
     _textCharactersPerSecond: 30
-    _questions: []
+    _backgroundSprite: {fileID: 0}
+    _storyQuestions: []
+    _quizQuestions: []
     _imagesToScan:
     - {fileID: 11400000, guid: 647af3b444c5d5944b2f6ad1d73c90b9, type: 2}
     - {fileID: 11400000, guid: 9eeb6574eb5d119489025d76e222e2f8, type: 2}
@@ -47,15 +54,18 @@ MonoBehaviour:
     - _characterScriptableObject: {fileID: 11400000, guid: bfe907f888a308f4eacdb3cdfded4fd2, type: 2}
       _expression: 2
       _isSpeaker: 1
-    _localizedString:
+    _lineString:
       m_TableReference:
-        m_TableCollectionName: GUID:267432656eafadc4b913952444fabf5f
+        m_TableCollectionName: 
       m_TableEntryReference:
-        m_KeyId: 549848477696
+        m_KeyId: 0
         m_Key: 
       m_FallbackState: 0
+      m_WaitForCompletion: 1
     _textCharactersPerSecond: 30
-    _questions: []
+    _backgroundSprite: {fileID: 0}
+    _storyQuestions: []
+    _quizQuestions: []
     _imagesToScan: []
   - _lineCharacters:
     - _characterScriptableObject: {fileID: 11400000, guid: bfe907f888a308f4eacdb3cdfded4fd2, type: 2}
@@ -64,15 +74,18 @@ MonoBehaviour:
     - _characterScriptableObject: {fileID: 11400000, guid: 2d96134aedbda164c8d2a6bde96797c5, type: 2}
       _expression: 1
       _isSpeaker: 1
-    _localizedString:
+    _lineString:
       m_TableReference:
-        m_TableCollectionName: GUID:267432656eafadc4b913952444fabf5f
+        m_TableCollectionName: 
       m_TableEntryReference:
-        m_KeyId: 545675145216
+        m_KeyId: 0
         m_Key: 
       m_FallbackState: 0
+      m_WaitForCompletion: 1
     _textCharactersPerSecond: 30
-    _questions: []
+    _backgroundSprite: {fileID: 0}
+    _storyQuestions: []
+    _quizQuestions: []
     _imagesToScan: []
   - _lineCharacters:
     - _characterScriptableObject: {fileID: 11400000, guid: bfe907f888a308f4eacdb3cdfded4fd2, type: 2}
@@ -84,29 +97,35 @@ MonoBehaviour:
     - _characterScriptableObject: {fileID: 11400000, guid: 90f46d3d93f50ed49bbbff1f6f642309, type: 2}
       _expression: 1
       _isSpeaker: 1
-    _localizedString:
+    _lineString:
       m_TableReference:
-        m_TableCollectionName: GUID:267432656eafadc4b913952444fabf5f
+        m_TableCollectionName: 
       m_TableEntryReference:
-        m_KeyId: 549848477696
+        m_KeyId: 0
         m_Key: 
       m_FallbackState: 0
+      m_WaitForCompletion: 1
     _textCharactersPerSecond: 30
-    _questions: []
+    _backgroundSprite: {fileID: 0}
+    _storyQuestions: []
+    _quizQuestions: []
     _imagesToScan: []
   - _lineCharacters:
     - _characterScriptableObject: {fileID: 11400000, guid: bfe907f888a308f4eacdb3cdfded4fd2, type: 2}
       _expression: 0
       _isSpeaker: 1
-    _localizedString:
+    _lineString:
       m_TableReference:
-        m_TableCollectionName: GUID:267432656eafadc4b913952444fabf5f
+        m_TableCollectionName: 
       m_TableEntryReference:
-        m_KeyId: 559478599680
+        m_KeyId: 0
         m_Key: 
       m_FallbackState: 0
+      m_WaitForCompletion: 1
     _textCharactersPerSecond: 10
-    _questions: []
+    _backgroundSprite: {fileID: 0}
+    _storyQuestions: []
+    _quizQuestions: []
     _imagesToScan: []
   - _lineCharacters:
     - _characterScriptableObject: {fileID: 11400000, guid: bfe907f888a308f4eacdb3cdfded4fd2, type: 2}
@@ -115,15 +134,16 @@ MonoBehaviour:
     - _characterScriptableObject: {fileID: 11400000, guid: 90f46d3d93f50ed49bbbff1f6f642309, type: 2}
       _expression: 0
       _isSpeaker: 1
-    _localizedString:
+    _lineString:
       m_TableReference:
-        m_TableCollectionName: GUID:267432656eafadc4b913952444fabf5f
+        m_TableCollectionName: 
       m_TableEntryReference:
-        m_KeyId: 569284882432
+        m_KeyId: 0
         m_Key: 
       m_FallbackState: 0
+      m_WaitForCompletion: 1
     _textCharactersPerSecond: 30
-    _questions:
-    - {fileID: 11400000, guid: 8c23fe7013390fa4f87641e9871cb508, type: 2}
-    - {fileID: 11400000, guid: 0e7b218a1ee5e7b47b60a61c0d955652, type: 2}
+    _backgroundSprite: {fileID: 0}
+    _storyQuestions: []
+    _quizQuestions: []
     _imagesToScan: []

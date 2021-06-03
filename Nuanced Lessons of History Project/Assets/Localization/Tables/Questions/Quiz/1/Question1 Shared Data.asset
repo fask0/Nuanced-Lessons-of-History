@@ -10,37 +10,25 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
-  m_Name: Question0 Shared Data
+  m_Name: Question1 Shared Data
   m_EditorClassIdentifier: 
-  m_TableCollectionName: Question0
-  m_TableCollectionNameGuidString: ca4569699c9ffae4e9e0b8de09611cec
+  m_TableCollectionName: Q_Quiz1
+  m_TableCollectionNameGuidString: 060282cc85ff51d47957c67fd1ba7176
   m_Entries:
-  - m_Id: 8510631936
+  - m_Id: 6287650816
     m_Key: Q
     m_Metadata:
       m_Items: []
-  - m_Id: 25157824512
-    m_Key: W0
+  - m_Id: 10750390272
+    m_Key: A0
     m_Metadata:
       m_Items: []
-  - m_Id: 43788922880
-    m_Key: W1
-    m_Metadata:
-      m_Items: []
-  - m_Id: 58863251456
-    m_Key: W2
-    m_Metadata:
-      m_Items: []
-  - m_Id: 70267564032
+  - m_Id: 13598322688
     m_Key: C
     m_Metadata:
       m_Items: []
-  - m_Id: 320095893450752
+  - m_Id: 336582259634176
     m_Key: H0
-    m_Metadata:
-      m_Items: []
-  - m_Id: 320110539960320
-    m_Key: H1
     m_Metadata:
       m_Items: []
   m_Metadata:
@@ -52,4 +40,4 @@ MonoBehaviour:
     00000000:
       type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
       data:
-        m_CustomEpoch: 1622119906425
+        m_CustomEpoch: 1622120014093

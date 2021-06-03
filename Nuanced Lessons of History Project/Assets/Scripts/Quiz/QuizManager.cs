@@ -54,9 +54,8 @@ public class QuizManager : Singleton<QuizManager>
 
         //Save all the answers in a local list
         List<LocalizedString> availableAnswers = new List<LocalizedString>();
-        for (int i = 0; i < _currentQuestions[_currentQuestionIndex].WrongAnswers.Length; i++)
-            availableAnswers.Add(_currentQuestions[_currentQuestionIndex].WrongAnswers[i]);
-        availableAnswers.Add(_currentQuestions[_currentQuestionIndex].CorrectAnswer);
+        for (int i = 0; i < _currentQuestions[_currentQuestionIndex].Answers.Length; i++)
+            availableAnswers.Add(_currentQuestions[_currentQuestionIndex].Answers[i]);
         //Randomize the list
         System.Random rnd = new System.Random();
         availableAnswers = availableAnswers.OrderBy(pA => rnd.Next()).ToList();
@@ -79,12 +78,21 @@ public class QuizManager : Singleton<QuizManager>
 
     private void checkAnswer(GameObject pAnswerGO)
     {
-        LocalizedString answerString = pAnswerGO.GetComponentInChildren<LocalizeStringEvent>().StringReference;
+        string answerString = pAnswerGO.GetComponentInChildren<LocalizeStringEvent>().StringReference.GetLocalizedString();
 
-        if (answerString == _currentQuestions[_currentQuestionIndex].CorrectAnswer)
-            StartCoroutine(handleAnswer(pAnswerGO, _correctFeedbackColor));
-        else
-            StartCoroutine(handleAnswer(pAnswerGO, _wrongFeedbackColor));
+        QuizQuestionScriptableObject quizQuestion = _currentQuestions[_currentQuestionIndex] as QuizQuestionScriptableObject;
+        StoryQuestionScriptableObjcet storyQuestion = _currentQuestions[_currentQuestionIndex] as StoryQuestionScriptableObjcet;
+        if (quizQuestion != null)
+        {
+            if (answerString == quizQuestion.CorrectAnswer.GetLocalizedString())
+                StartCoroutine(handleAnswer(pAnswerGO, _correctFeedbackColor));
+            else
+                StartCoroutine(handleAnswer(pAnswerGO, _wrongFeedbackColor));
+        }
+        else if (storyQuestion != null)
+        {
+
+        }
     }
 
     private IEnumerator handleAnswer(GameObject pAnswerGO, Color pColorToChange)
@@ -126,17 +134,22 @@ public class QuizManager : Singleton<QuizManager>
 
     public void GiveNextHint()
     {
-        if (_currentQuestions[_currentQuestionIndex].Hints.Length == 0) return;
+        QuizQuestionScriptableObject quizQuestion = _currentQuestions[_currentQuestionIndex] as QuizQuestionScriptableObject;
 
-        if (_currentQuestionHintIndex == -1)
-            _currentQuestionHintIndex++;
-        else if (_currentQuestionHintIndex + 1 < _currentQuestions[_currentQuestionIndex].Hints.Length)
-            _currentQuestionHintIndex++;
+        if (quizQuestion != null)
+        {
+            if (quizQuestion.Hints.Length == 0) return;
 
-        DialogueManager.Instance.ShowHint(_currentQuestions[_currentQuestionIndex].Hints[_currentQuestionHintIndex]);
+            if (_currentQuestionHintIndex == -1)
+                _currentQuestionHintIndex++;
+            else if (_currentQuestionHintIndex + 1 < quizQuestion.Hints.Length)
+                _currentQuestionHintIndex++;
 
-        if (_currentQuestionHintIndex + 1 >= _currentQuestions[_currentQuestionIndex].Hints.Length)
-            _currentQuestionHintIndex = -1;
+            DialogueManager.Instance.ShowHint(quizQuestion.Hints[_currentQuestionHintIndex]);
+
+            if (_currentQuestionHintIndex + 1 >= quizQuestion.Hints.Length)
+                _currentQuestionHintIndex = -1;
+        }
     }
 
     public void ExitApplication()

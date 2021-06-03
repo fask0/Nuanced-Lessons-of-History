@@ -17,55 +17,37 @@ MonoBehaviour:
     m_SerializedData: []
   m_GUID: 5f8097b6eccf681458959e70b3864d08
   m_SerializeEntries:
-  - m_GUID: d7a53368b5a7e584ea626b9ab69b7dad
-    m_Address: UI_en
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-en
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: e629a799a554a304da71be1aaead1dab
-    m_Address: GrandmaIntro_en
+    m_Address: D_GrandmaIntro_en
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-en
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    - Preload
   - m_GUID: ecda2a70e99d30941853b5a694efea36
-    m_Address: GrandpaIntro_en
+    m_Address: D_QrandpaIntro_en
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-en
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: 31220ccd3700d0f4689da16e1fe54379
-    m_Address: Question0_en
+    m_Address: Q_Quiz0_en
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-en
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: 4abcab855714bb5409eca61113cc7f2d
-    m_Address: Question1_en
+    m_Address: Q_Quiz1_en
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-en
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: a603701c58faffe4f8af266211af594b
-    m_Address: ScannableImageChair_en
+    m_Address: S_Chair_en
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-en
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: e7631831f44ad4344abcfc47dd1a188b
-    m_Address: ScannableImageHeater_en
+    m_Address: S_Heater_en
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-en
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 7a182c8356cb7ce4a92349c520368361, type: 2}
   m_SchemaSet:

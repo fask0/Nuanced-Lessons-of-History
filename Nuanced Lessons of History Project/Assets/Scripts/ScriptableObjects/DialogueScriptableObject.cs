@@ -26,8 +26,10 @@ public class Line
     [Range(10, 60)] [SerializeField] private int _textCharactersPerSecond = 30;
     [SerializeField] private Sprite _backgroundSprite = null;
 
+    [Header("Story")]
+    [SerializeField] private StoryQuestionScriptableObjcet[] _storyQuestions;
     [Header("Quiz")]
-    [SerializeField] private QuestionScriptableObject[] _questions;
+    [SerializeField] private QuizQuestionScriptableObject[] _quizQuestions;
     [Header("AR")]
     [SerializeField] private ScannableImageScriptableObject[] _imagesToScan;
     #endregion
@@ -37,7 +39,8 @@ public class Line
     public LocalizedString LineString => _lineString;
     public int TextCharactersPerSecond => (_textCharactersPerSecond == 0) ? 30 : _textCharactersPerSecond;
     public Sprite BackgroundSprite => _backgroundSprite;
-    public QuestionScriptableObject[] Questions => _questions;
+    public StoryQuestionScriptableObjcet[] StoryQuestions => _storyQuestions;
+    public QuizQuestionScriptableObject[] QuizQuestions => _quizQuestions;
     public ScannableImageScriptableObject[] ImagesToScan => _imagesToScan;
     #endregion
 
@@ -80,7 +83,7 @@ public class Line
     #endregion
 }
 
-[CreateAssetMenu(fileName = "Dialogue", menuName = "ScriptableObjects/Dialogue")]
+[CreateAssetMenu(fileName = "Dialogue", menuName = "Scriptable Objects/Dialogue")]
 public class DialogueScriptableObject : ScriptableObject
 {
     #region Fields

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
   m_Name: ScannableImageHeater Shared Data
   m_EditorClassIdentifier: 
-  m_TableCollectionName: ScannableImageHeater
+  m_TableCollectionName: S_Heater
   m_TableCollectionNameGuidString: 73ab919fdaa5f3440996342e96e17c1f
   m_Entries:
   - m_Id: 4949667840

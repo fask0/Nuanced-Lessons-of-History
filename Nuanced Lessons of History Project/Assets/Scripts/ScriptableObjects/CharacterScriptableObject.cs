@@ -21,7 +21,7 @@ public class Expression
     #endregion
 }
 
-[CreateAssetMenu(fileName = "Character", menuName = "ScriptableObjects/Character")]
+[CreateAssetMenu(fileName = "Character", menuName = "Scriptable Objects/Character")]
 public class CharacterScriptableObject : ScriptableObject
 {
     #region Fields

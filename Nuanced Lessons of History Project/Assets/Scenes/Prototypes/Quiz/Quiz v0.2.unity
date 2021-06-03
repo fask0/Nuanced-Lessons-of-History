@@ -123,11 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &55375156 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7101579261508148550, guid: e23b015e9c9df224fa8d8ab96513c7e5, type: 3}
-  m_PrefabInstance: {fileID: 7101579261486934130}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &222529853
 GameObject:
   m_ObjectHideFlags: 0
@@ -206,12 +201,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _persistent: 0
   _quizPanel: {fileID: 0}
-  _hint: {fileID: 0}
   _questionContainer: {fileID: 0}
   _answersContainer: {fileID: 0}
-  _correctColor: {r: 0, g: 1, b: 0, a: 1}
-  _wrongColor: {r: 1, g: 0, b: 0, a: 1}
-  _gameOverPanel: {fileID: 55375156}
+  _correctFeedbackColor: {r: 0, g: 0, b: 0, a: 0}
+  _wrongFeedbackColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &1320627729
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -476,10 +469,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2262094607762631219, guid: e23b015e9c9df224fa8d8ab96513c7e5, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3940489751883747605, guid: e23b015e9c9df224fa8d8ab96513c7e5, type: 3}
-      propertyPath: _typeOfGame
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5045084327291001030, guid: e23b015e9c9df224fa8d8ab96513c7e5, type: 3}
@@ -780,11 +769,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7101579261623586724, guid: e23b015e9c9df224fa8d8ab96513c7e5, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7101579261623586724, guid: e23b015e9c9df224fa8d8ab96513c7e5, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7101579261623586724, guid: e23b015e9c9df224fa8d8ab96513c7e5, type: 3}
       propertyPath: m_SizeDelta.x
@@ -800,7 +789,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7101579261623586724, guid: e23b015e9c9df224fa8d8ab96513c7e5, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -160
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e23b015e9c9df224fa8d8ab96513c7e5, type: 3}

@@ -163,10 +163,11 @@ public class DialogueManager : Singleton<DialogueManager>
         speechText.text = "";
         _speechLocalizedStingEvent.enabled = false;
 
-        var operation = pLine.LineString.GetLocalizedString();
-        while (!operation.IsDone)
-            yield return null;
-        string[] targetText = operation.Result.Split(new string[] { "<size=0>|</size>" }, StringSplitOptions.None);
+        //var operation = pLine.LineString.GetLocalizedString();
+        //while (!operation.IsDone)
+        //    yield return null;
+        //string[] targetText = operation.Result.Split(new string[] { "<size=0>|</size>" }, StringSplitOptions.None);
+        string[] targetText = pLine.LineString.GetLocalizedString().Split(new string[] { "<size=0>|</size>" }, StringSplitOptions.None);
         if (targetText.Length <= 1)
             _speechBoxButton.onClick.AddListener(_nextLineAction);
 
@@ -255,8 +256,8 @@ public class DialogueManager : Singleton<DialogueManager>
 
         _speechBoxButton.onClick.RemoveAllListeners();
 
-        if (_typeOfGame == GameType.Quiz && line.Questions.Length > 0)
-            StartCoroutine(waitForInputBeforeAction(() => QuizManager.Instance.PrepareQuestions(line.Questions)));
+        if (_typeOfGame == GameType.Quiz && line.QuizQuestions.Length > 0)
+            StartCoroutine(waitForInputBeforeAction(() => QuizManager.Instance.PrepareQuestions(line.QuizQuestions)));
         else if (_typeOfGame == GameType.AR && line.ImagesToScan.Length > 0)
             StartCoroutine(waitForInputBeforeAction(() => ARManager.Instance.PrepareImagesToScan(line.ImagesToScan)));
         else
@@ -296,10 +297,11 @@ public class DialogueManager : Singleton<DialogueManager>
         _hintLocalizedStringEvent.enabled = false;
         hintText.text = "";
 
-        var operation = pString.GetLocalizedString();
-        while (!operation.IsDone)
-            yield return null;
-        string targetText = operation.Result;
+        //var operation = pString.GetLocalizedString();
+        //while (!operation.IsDone)
+        //    yield return null;
+        //string targetText = operation.Result;
+        string targetText = pString.GetLocalizedString();
 
         string[] speechAndTags = targetText.Split(new char[2] { '<', '>' });
         for (int i = 0; i < speechAndTags.Length; i++)

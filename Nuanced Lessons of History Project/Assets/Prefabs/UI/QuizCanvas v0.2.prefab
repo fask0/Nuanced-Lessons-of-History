@@ -154,6 +154,7 @@ MonoBehaviour:
       m_KeyId: 6396702720
       m_Key: 
     m_FallbackState: 0
+    m_WaitForCompletion: 1
   m_FormatArguments: []
   m_UpdateString:
     m_PersistentCalls:
@@ -494,7 +495,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 1, b: 0, a: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -570,7 +571,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 1, b: 0, a: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -743,7 +744,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 1, b: 0, a: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -904,6 +905,7 @@ GameObject:
   - component: {fileID: 725003518326571070}
   - component: {fileID: 2066396657701696519}
   - component: {fileID: 3456808235428799107}
+  - component: {fileID: 641291536}
   m_Layer: 5
   m_Name: nl
   m_TagString: Untagged
@@ -1012,6 +1014,20 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &641291536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5864467856297327539}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3dbe71b002c26934fb2ba93a3bacf2ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _selected: {fileID: 21300000, guid: 4a5bc6f79d66fb149bf82ebcc4482e83, type: 3}
+  _unselected: {fileID: 21300000, guid: 91fc321d7149d2343ac494483155457b, type: 3}
 --- !u!1 &6169749542735993140
 GameObject:
   m_ObjectHideFlags: 0
@@ -1024,6 +1040,7 @@ GameObject:
   - component: {fileID: 8782850680728807980}
   - component: {fileID: 5215365479303297918}
   - component: {fileID: 185299655606821006}
+  - component: {fileID: 1594055955}
   m_Layer: 5
   m_Name: de
   m_TagString: Untagged
@@ -1132,6 +1149,20 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1594055955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6169749542735993140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3dbe71b002c26934fb2ba93a3bacf2ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _selected: {fileID: 21300000, guid: e54883cf7e8295d45b7d6f80f94eb37a, type: 3}
+  _unselected: {fileID: 21300000, guid: 2ecf81566f5c8984191eeee078041d95, type: 3}
 --- !u!1 &7101579259818494118
 GameObject:
   m_ObjectHideFlags: 0
@@ -1286,6 +1317,7 @@ MonoBehaviour:
       m_KeyId: 0
       m_Key: 
     m_FallbackState: 0
+    m_WaitForCompletion: 1
   m_FormatArguments: []
   m_UpdateString:
     m_PersistentCalls:
@@ -1456,6 +1488,7 @@ MonoBehaviour:
       m_KeyId: 0
       m_Key: 
     m_FallbackState: 0
+    m_WaitForCompletion: 1
   m_FormatArguments: []
   m_UpdateString:
     m_PersistentCalls:
@@ -1924,6 +1957,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _persistent: 0
+  _backgroundImage: {fileID: 0}
   _speechPanel: {fileID: 7865521238591269288}
   _charactersContainer: {fileID: 7865521239591466346}
   _speechNameText: {fileID: 7865521238970762224}
@@ -1931,7 +1965,9 @@ MonoBehaviour:
   _hintLocalizedStringEvent: {fileID: 2072486367}
   _speechBoxButton: {fileID: 7164720807754426448}
   _clickToContinue: {fileID: 7865521240067289460}
+  _typeOfGame: 0
   _quizPanel: {fileID: 7101579260232759128}
+  _arPanel: {fileID: 0}
 --- !u!114 &6472259506703486680
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1946,12 +1982,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _persistent: 0
   _quizPanel: {fileID: 7101579260232759128}
-  _hint: {fileID: 7101579260608646609}
   _questionContainer: {fileID: 7101579260147029808}
   _answersContainer: {fileID: 7101579261623586727}
-  _correctColor: {r: 0, g: 1, b: 0, a: 1}
-  _wrongColor: {r: 1, g: 0, b: 0, a: 1}
-  _gameOverPanel: {fileID: 7101579261508148550}
+  _correctFeedbackColor: {r: 0, g: 1, b: 0, a: 1}
+  _wrongFeedbackColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!1 &7101579260326133129
 GameObject:
   m_ObjectHideFlags: 0
@@ -2516,6 +2550,7 @@ MonoBehaviour:
       m_KeyId: 0
       m_Key: 
     m_FallbackState: 0
+    m_WaitForCompletion: 1
   m_FormatArguments: []
   m_UpdateString:
     m_PersistentCalls:
@@ -3017,6 +3052,7 @@ MonoBehaviour:
       m_KeyId: 0
       m_Key: 
     m_FallbackState: 0
+    m_WaitForCompletion: 1
   m_FormatArguments: []
   m_UpdateString:
     m_PersistentCalls:
@@ -3263,6 +3299,7 @@ MonoBehaviour:
       m_KeyId: 0
       m_Key: 
     m_FallbackState: 0
+    m_WaitForCompletion: 1
   m_FormatArguments: []
   m_UpdateString:
     m_PersistentCalls:
@@ -4207,6 +4244,7 @@ MonoBehaviour:
       m_KeyId: 6396702720
       m_Key: 
     m_FallbackState: 0
+    m_WaitForCompletion: 1
   m_FormatArguments: []
   m_UpdateString:
     m_PersistentCalls:
@@ -4573,6 +4611,7 @@ GameObject:
   - component: {fileID: 2320232245592693501}
   - component: {fileID: 8138054864228900889}
   - component: {fileID: 1906956284105053334}
+  - component: {fileID: 1611586347}
   m_Layer: 5
   m_Name: en
   m_TagString: Untagged
@@ -4681,3 +4720,17 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1611586347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8644293520477814880}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3dbe71b002c26934fb2ba93a3bacf2ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _selected: {fileID: 21300000, guid: 62ce7285364bc9146b48378bf8cec6b9, type: 3}
+  _unselected: {fileID: 21300000, guid: 68c8f39c83b85f24d8b73fda5b1f60e3, type: 3}

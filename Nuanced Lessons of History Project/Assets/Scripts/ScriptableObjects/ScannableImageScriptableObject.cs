@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.Localization;
 
-[CreateAssetMenu(fileName = "ScannableImage", menuName = "ScriptableObjects/ScannableImage")]
+[CreateAssetMenu(fileName = "ScannableImage", menuName = "Scriptable Objects/ScannableImage")]
 public class ScannableImageScriptableObject : ScriptableObject
 {
     #region Fields
