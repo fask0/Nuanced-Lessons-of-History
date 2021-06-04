@@ -45,6 +45,36 @@ MonoBehaviour:
       Shared Data.asset
     m_ReadOnly: 1
     m_SerializedLabels: []
+  - m_GUID: 0201ef1437a6c1245b7e393f69a4eaf0
+    m_Address: Assets/Localization/Tables/Questions/Quiz/DemoQuestion/Q_QuizDemoQuestion
+      Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+  - m_GUID: 8aea187e5b7d3c846a07ffc41692682c
+    m_Address: Assets/Localization/Tables/ScannableImages/BucketOfManure/S_BucketOfManure
+      Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+  - m_GUID: 58b9ae2c3e65e4040b67ef8441b01604
+    m_Address: Assets/Localization/Tables/Questions/Quiz/FavouriteToyQuestion Shared
+      Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+  - m_GUID: 310b47bd856e34e46851aac6d4f8d191
+    m_Address: Assets/Localization/Tables/Questions/Quiz/MaterialOfFavouriteToy/MaterialOfFavouriteToy
+      Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+  - m_GUID: 492d87ae7e8dcf74c86763f75dc2dcd8
+    m_Address: Assets/Localization/Tables/Questions/Quiz/ColorOfFavouriteToy/ColorOfFavouriteToy
+      Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+  - m_GUID: 656df10e334f5b44faadaacd585a1e53
+    m_Address: Assets/Localization/Tables/ScannableImages/WaterCan/WaterCan Shared
+      Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 7a182c8356cb7ce4a92349c520368361, type: 2}
   m_SchemaSet:

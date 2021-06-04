@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59752de0b75d1a146b65c158fff577e6, type: 3}
+  m_Name: Q_MaterialOfFavouriteToy
+  m_EditorClassIdentifier: 
+  _question:
+    m_TableReference:
+      m_TableCollectionName: GUID:310b47bd856e34e46851aac6d4f8d191
+    m_TableEntryReference:
+      m_KeyId: 34794323968
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 1
+  _answers:
+  - m_TableReference:
+      m_TableCollectionName: GUID:310b47bd856e34e46851aac6d4f8d191
+    m_TableEntryReference:
+      m_KeyId: 45145866240
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+  - m_TableReference:
+      m_TableCollectionName: GUID:310b47bd856e34e46851aac6d4f8d191
+    m_TableEntryReference:
+      m_KeyId: 70391382016
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+  - m_TableReference:
+      m_TableCollectionName: GUID:310b47bd856e34e46851aac6d4f8d191
+    m_TableEntryReference:
+      m_KeyId: 94676402176
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+  _correctAnswer:
+    m_TableReference:
+      m_TableCollectionName: GUID:310b47bd856e34e46851aac6d4f8d191
+    m_TableEntryReference:
+      m_KeyId: 117522776064
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 1
+  _hints:
+  - m_TableReference:
+      m_TableCollectionName: GUID:310b47bd856e34e46851aac6d4f8d191
+    m_TableEntryReference:
+      m_KeyId: 126980931584
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0

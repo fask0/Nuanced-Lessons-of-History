@@ -48,6 +48,36 @@ MonoBehaviour:
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-nl
+  - m_GUID: 9b9bb0ea1001d4540ac205bd748e6885
+    m_Address: Q_QuizDemoQuestion_nl
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-nl
+  - m_GUID: 7c15c0868328b33469204f03772e2264
+    m_Address: S_BucketOfManure_nl
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-nl
+  - m_GUID: c68130432979a8348b5c922267076321
+    m_Address: FavouriteToyQuestion_nl
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-nl
+  - m_GUID: 3112d321af36d5843918291b5439d8ff
+    m_Address: MaterialOfFavouriteToy_nl
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-nl
+  - m_GUID: 5a34b4712419b284bbd22f3b6042fc09
+    m_Address: ColorOfFavouriteToy_nl
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-nl
+  - m_GUID: 1c7997aba32696043b189d3495ed810f
+    m_Address: WaterCan_nl
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-nl
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 7a182c8356cb7ce4a92349c520368361, type: 2}
   m_SchemaSet:
