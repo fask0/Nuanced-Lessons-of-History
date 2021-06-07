@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.Localization;
+using NaughtyAttributes;
 
 [System.Serializable]
 public class LineCharacter
@@ -20,18 +21,26 @@ public class LineCharacter
 [System.Serializable]
 public class Line
 {
+    public enum PlayerInteraction
+    {
+        None,
+        QuizQuestion,
+        StoryQuestion,
+        ImageToScan
+    }
+
     #region Fields
     [SerializeField] private LineCharacter[] _lineCharacters;
+    [HorizontalLine(1)]
     [SerializeField] private LocalizedString _lineString;
     [Range(10, 60)] [SerializeField] private int _textCharactersPerSecond = 30;
+    [HorizontalLine(1)]
     [SerializeField] private Sprite _backgroundSprite = null;
-
-    [Header("Story")]
-    [SerializeField] private StoryQuestionScriptableObjcet[] _storyQuestions;
-    [Header("Quiz")]
-    [SerializeField] private QuizQuestionScriptableObject[] _quizQuestions;
-    [Header("AR")]
-    [SerializeField] private ScannableImageScriptableObject[] _imagesToScan;
+    [HorizontalLine(1)]
+    [SerializeField] private PlayerInteraction _playerInteraction;
+    [AllowNesting] [ShowIf("_playerInteraction", PlayerInteraction.QuizQuestion)] [SerializeField] private QuizQuestionScriptableObject _quizQuestion;
+    [AllowNesting] [ShowIf("_playerInteraction", PlayerInteraction.StoryQuestion)] [SerializeField] private StoryQuestionScriptableObject _storyQuestion;
+    [AllowNesting] [ShowIf("_playerInteraction", PlayerInteraction.ImageToScan)] [SerializeField] private ScannableImageScriptableObject _imageToScan;
     #endregion
 
     #region Properties
@@ -39,12 +48,28 @@ public class Line
     public LocalizedString LineString => _lineString;
     public int TextCharactersPerSecond => (_textCharactersPerSecond == 0) ? 30 : _textCharactersPerSecond;
     public Sprite BackgroundSprite => _backgroundSprite;
-    public StoryQuestionScriptableObjcet[] StoryQuestions => _storyQuestions;
-    public QuizQuestionScriptableObject[] QuizQuestions => _quizQuestions;
-    public ScannableImageScriptableObject[] ImagesToScan => _imagesToScan;
+    public PlayerInteraction Interaction => _playerInteraction;
     #endregion
 
     #region Methods
+    public void HandlePlayerInteraction()
+    {
+        switch (_playerInteraction)
+        {
+            case PlayerInteraction.None:
+                break;
+            case PlayerInteraction.QuizQuestion:
+                QuizManager.Instance.PrepareQuestion(_quizQuestion);
+                break;
+            case PlayerInteraction.StoryQuestion:
+                QuizManager.Instance.PrepareQuestion(_storyQuestion);
+                break;
+            case PlayerInteraction.ImageToScan:
+                //ARManager.Instance.PrepareImagesToScan(_imageToScan);
+                break;
+        }
+    }
+
     public Sprite[] GetAllCharacterExpressions()
     {
         Sprite[] expressions = new Sprite[_lineCharacters.Length];
@@ -91,6 +116,6 @@ public class DialogueScriptableObject : ScriptableObject
     #endregion
 
     #region Properties
-    public Line[] Lines => _lines;
+    public Line[] Lines { get => _lines; set => _lines = value; }
     #endregion
 }

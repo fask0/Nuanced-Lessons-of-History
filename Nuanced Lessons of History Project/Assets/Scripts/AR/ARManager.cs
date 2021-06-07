@@ -1,6 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine.Localization;
 using UnityEngine.Localization.Components;
 using UnityEngine;
 using UnityEngine.UI;
@@ -26,10 +24,9 @@ public class ARManager : Singleton<ARManager>
     [SerializeField] private LocalizeStringEvent _infoLocalizedStringEvent;
     [SerializeField] private LocalizeStringEvent _hintLocalizedStringEvent;
 
-    private ScannableImageScriptableObject[] _imagesToScan;
+    private ScannableImageScriptableObject _imageToScan;
     private Image[] _cameraReticles;
     private Image[] _progressBars;
-    private int _imagesToScanProgress = 0;
     private Coroutine _scannig = null;
     private bool _shouldFinishScanning = false;
     #endregion
@@ -42,13 +39,12 @@ public class ARManager : Singleton<ARManager>
         _progressBarContainer.gameObject.SetActive(false);
     }
 
-    public void PrepareImagesToScan(ScannableImageScriptableObject[] pImagesToScan, int pImagesToScanProgress = 0)
+    public void PrepareImageToScan(ScannableImageScriptableObject pImageToScan)
     {
         enableAR();
-        _imagesToScan = pImagesToScan;
-        _imagesToScanProgress = pImagesToScanProgress;
-        _infoLocalizedStringEvent.StringReference = _imagesToScan[_imagesToScanProgress].Info;
-        _hintLocalizedStringEvent.StringReference = _imagesToScan[_imagesToScanProgress].Hint;
+        _imageToScan = pImageToScan;
+        _infoLocalizedStringEvent.StringReference = _imageToScan.Info;
+        _hintLocalizedStringEvent.StringReference = _imageToScan.Hint;
     }
 
     public void StartScanning(ScannableImageType pScannableImageType)
@@ -103,19 +99,15 @@ public class ARManager : Singleton<ARManager>
             yield return new WaitForEndOfFrame();
         }
 
-        if (scanComplete && _imagesToScan[_imagesToScanProgress].ImageType == pScannableImageType)
+        if (scanComplete && _imageToScan.ImageType == pScannableImageType)
         {
             setImageArrayColor(_progressBars, _correctFeedbackColor);
             setImageArrayColor(_cameraReticles, _correctFeedbackColor);
 
             yield return new WaitForSeconds(1);
 
-            if (_imagesToScanProgress + 1 < _imagesToScan.Length)
-            {
-                _imagesToScanProgress++;
-                PrepareImagesToScan(_imagesToScan, _imagesToScanProgress);
-            }
-            else
+            _imageToScan.OnImageScanAction.HandleAction();
+            if (_imageToScan.OnImageScanAction.ActionType == SpecialAction.Action.None)
             {
                 disableAR();
                 DialogueManager.Instance.Resume();

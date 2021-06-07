@@ -18,8 +18,7 @@ public class QuizManager : Singleton<QuizManager>
     [SerializeField] private Color _correctFeedbackColor;
     [SerializeField] private Color _wrongFeedbackColor;
 
-    private QuestionScriptableObject[] _currentQuestions;
-    private int _currentQuestionIndex = 0;
+    private QuestionScriptableObject _currentQuestion;
     private int _currentQuestionHintIndex = -1;
     private GameObject[] _answerGameObjects;
     #endregion
@@ -43,22 +42,22 @@ public class QuizManager : Singleton<QuizManager>
         }
     }
 
-    public void PrepareQuestions(QuestionScriptableObject[] pQuestions, int pQuestionsProgress = 0)
+    public void PrepareQuestion(QuestionScriptableObject pQuestion)
     {
         _quizPanel.SetActive(true);
-        _currentQuestions = pQuestions;
-        _currentQuestionIndex = pQuestionsProgress;
+        _currentQuestion = pQuestion;
         _currentQuestionHintIndex = -1;
         DialogueManager.Instance.HideHint();
 
-        _questionContainer.GetComponentInChildren<LocalizeStringEvent>().StringReference = _currentQuestions[_currentQuestionIndex].Question;
+        _questionContainer.GetComponentInChildren<LocalizeStringEvent>().StringReference = _currentQuestion.Question;
 
-        QuizQuestionScriptableObject quizQuestion = _currentQuestions[_currentQuestionIndex] as QuizQuestionScriptableObject;
-        StoryQuestionScriptableObjcet storyQuestion = _currentQuestions[_currentQuestionIndex] as StoryQuestionScriptableObjcet;
+        QuizQuestionScriptableObject quizQuestion = _currentQuestion as QuizQuestionScriptableObject;
+        StoryQuestionScriptableObject storyQuestion = _currentQuestion as StoryQuestionScriptableObject;
+
         //Save all the answers in a local list
         List<LocalizedString> availableAnswers = new List<LocalizedString>();
-        for (int i = 0; i < _currentQuestions[_currentQuestionIndex].Answers.Length; i++)
-            availableAnswers.Add(_currentQuestions[_currentQuestionIndex].Answers[i]);
+        for (int i = 0; i < _currentQuestion.Answers.Length; i++)
+            availableAnswers.Add(_currentQuestion.Answers[i]);
         if (quizQuestion != null)
         {
             availableAnswers.Add(quizQuestion.CorrectAnswer);
@@ -68,7 +67,8 @@ public class QuizManager : Singleton<QuizManager>
         {
             _quizPanel.transform.Find("Hint").gameObject.SetActive(false);
         }
-        //Randomize the list
+
+        //Randomize the answers positions
         System.Random rnd = new System.Random();
         availableAnswers = availableAnswers.OrderBy(pA => rnd.Next()).ToList();
 
@@ -79,6 +79,7 @@ public class QuizManager : Singleton<QuizManager>
 
             _answerGameObjects[i].SetActive(false);
             _answerGameObjects[i].transform.parent.gameObject.SetActive(false);
+            _answerGameObjects[i].GetComponentInChildren<Image>().color = Color.white;
 
             if (availableAnswers.Count <= i) continue;
 
@@ -92,8 +93,8 @@ public class QuizManager : Singleton<QuizManager>
     {
         LocalizedString answerLocalizedString = pAnswerGO.GetComponentInChildren<LocalizeStringEvent>().StringReference;
 
-        QuizQuestionScriptableObject quizQuestion = _currentQuestions[_currentQuestionIndex] as QuizQuestionScriptableObject;
-        StoryQuestionScriptableObjcet storyQuestion = _currentQuestions[_currentQuestionIndex] as StoryQuestionScriptableObjcet;
+        QuizQuestionScriptableObject quizQuestion = _currentQuestion as QuizQuestionScriptableObject;
+        StoryQuestionScriptableObject storyQuestion = _currentQuestion as StoryQuestionScriptableObject;
         if (quizQuestion != null)
         {
             if (answerLocalizedString == quizQuestion.CorrectAnswer)
@@ -121,23 +122,26 @@ public class QuizManager : Singleton<QuizManager>
             answers.GetComponentInChildren<Button>().interactable = true;
         pAnswerGO.GetComponentInChildren<Image>().color = Color.gray;
 
+        QuizQuestionScriptableObject quizQuestion = _currentQuestion as QuizQuestionScriptableObject;
         if (pColorToChange == _wrongFeedbackColor)
         {
+            LocalizedString answerLocalizedString = pAnswerGO.GetComponentInChildren<LocalizeStringEvent>().StringReference;
+            for (int i = 0; i < quizQuestion.Answers.Length; i++)
+            {
+                if (answerLocalizedString != quizQuestion.Answers[i]) continue;
+
+                if (quizQuestion.GetType().GetProperty("OnAnswer" + i).GetValue(quizQuestion) is SpecialAction action)
+                    action.HandleAction();
+            }
         }
         else if (pColorToChange == _correctFeedbackColor)
         {
             foreach (GameObject answers in _answerGameObjects)
                 answers.GetComponentInChildren<Image>().color = Color.white;
 
-            if (_currentQuestionIndex + 1 < _currentQuestions.Length)
+            quizQuestion.OnCorrectAnswerAction.HandleAction();
+            if (quizQuestion.OnCorrectAnswerAction.ActionType == SpecialAction.Action.None)
             {
-                //Next Question
-                _currentQuestionIndex++;
-                PrepareQuestions(_currentQuestions, _currentQuestionIndex);
-            }
-            else //If Quiz done
-            {
-                //Continue dialogue
                 _quizPanel.SetActive(false);
                 DialogueManager.Instance.Resume();
             }
@@ -146,7 +150,7 @@ public class QuizManager : Singleton<QuizManager>
 
     public void GiveNextHint()
     {
-        QuizQuestionScriptableObject quizQuestion = _currentQuestions[_currentQuestionIndex] as QuizQuestionScriptableObject;
+        QuizQuestionScriptableObject quizQuestion = _currentQuestion as QuizQuestionScriptableObject;
 
         if (quizQuestion != null)
         {

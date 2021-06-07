@@ -73,7 +73,32 @@ public class DialogueManager : Singleton<DialogueManager>
         _currentDialogue = pDialogue;
         _dialogueProgress = pDialogueProgress - 1;
         if (_speak != null) { StopCoroutine(_speak); _speak = null; }
+        reassignSpeechBoxButtonListeners();
         nextLine();
+    }
+
+    public void AddNewLine(Line pLine)
+    {
+        if (pLine.LineString == null) return;
+
+        Line[] newLineArray = new Line[_currentDialogue.Lines.Length];
+        for (int i = 0; i < newLineArray.Length; i++)
+        {
+            if (i < _dialogueProgress)
+                newLineArray[i] = _currentDialogue.Lines[i];
+            else if (i == _dialogueProgress)
+                newLineArray[i] = pLine;
+            else
+                newLineArray[i] = _currentDialogue.Lines[i - 1];
+        }
+        _currentDialogue.Lines = newLineArray;
+    }
+
+    public void OverrideNextLine(Line pLine)
+    {
+        if (pLine.LineString == null || _dialogueProgress + 1 >= _currentDialogue.Lines.Length) return;
+
+        _currentDialogue.Lines[_dialogueProgress + 1] = pLine;
     }
 
     public void Resume()
@@ -163,10 +188,6 @@ public class DialogueManager : Singleton<DialogueManager>
         speechText.text = "";
         _speechLocalizedStingEvent.enabled = false;
 
-        //var operation = pLine.LineString.GetLocalizedString();
-        //while (!operation.IsDone)
-        //    yield return null;
-        //string[] targetText = operation.Result.Split(new string[] { "<size=0>|</size>" }, StringSplitOptions.None);
         string[] targetText = pLine.LineString.GetLocalizedString().Split(new string[] { "<size=0>|</size>" }, StringSplitOptions.None);
         if (targetText.Length <= 1)
             _speechBoxButton.onClick.AddListener(_nextLineAction);
@@ -256,12 +277,11 @@ public class DialogueManager : Singleton<DialogueManager>
 
         _speechBoxButton.onClick.RemoveAllListeners();
 
-        if (_typeOfGame == GameType.Quiz && line.QuizQuestions.Length > 0)
-            StartCoroutine(waitForInputBeforeAction(() => QuizManager.Instance.PrepareQuestions(line.QuizQuestions)));
-        else if (_typeOfGame == GameType.AR && line.ImagesToScan.Length > 0)
-            StartCoroutine(waitForInputBeforeAction(() => ARManager.Instance.PrepareImagesToScan(line.ImagesToScan)));
+        if (line.Interaction != Line.PlayerInteraction.None)
+            StartCoroutine(waitForInputBeforeAction(() => line.HandlePlayerInteraction()));
         else
         {
+            line.HandlePlayerInteraction();
             _speechBoxButton.onClick.AddListener(_nextLineAction);
             _clickToContinue.SetActive(true);
         }
@@ -297,10 +317,6 @@ public class DialogueManager : Singleton<DialogueManager>
         _hintLocalizedStringEvent.enabled = false;
         hintText.text = "";
 
-        //var operation = pString.GetLocalizedString();
-        //while (!operation.IsDone)
-        //    yield return null;
-        //string targetText = operation.Result;
         string targetText = pString.GetLocalizedString();
 
         string[] speechAndTags = targetText.Split(new char[2] { '<', '>' });

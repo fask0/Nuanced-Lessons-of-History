@@ -8,46 +8,36 @@ using UnityEngine;
 [CustomPropertyDrawer(typeof(DrawIfAttribute))]
 public class DrawIfPropertyDrawer : PropertyDrawer
 {
-    // Reference to the attribute on the property.
-    DrawIfAttribute drawIf;
+    #region Fields
+    private DrawIfAttribute _drawIf;
+    private SerializedProperty _comparedField;
+    #endregion
 
-    // Field that is being compared.
-    SerializedProperty comparedField;
-
+    #region Methods
     public override float GetPropertyHeight(SerializedProperty pProperty, GUIContent pLabel)
     {
+        if (!ShowMe(pProperty) && _drawIf.DisablingType == DisablingType.DontDraw) return -EditorGUIUtility.standardVerticalSpacing;
+
+        if (pProperty.propertyType == SerializedPropertyType.Generic)
         {
-            if (!ShowMe(pProperty) && drawIf.DisablingType == DisablingType.DontDraw)
+            int numChildren = 0;
+            float totalHeight = 0;
+            IEnumerator children = pProperty.GetEnumerator();
+            while (children.MoveNext())
             {
-                return -EditorGUIUtility.standardVerticalSpacing;
+                SerializedProperty child = children.Current as SerializedProperty;
+                GUIContent childLabel = new GUIContent(child.displayName);
+                totalHeight += EditorGUI.GetPropertyHeight(child, childLabel) + EditorGUIUtility.standardVerticalSpacing;
+                numChildren++;
             }
-            else
-            {
-                if (pProperty.propertyType == SerializedPropertyType.Generic)
-                {
-                    int numChildren = 0;
-                    float totalHeight = 0.0f;
+            // Remove extra space at end, (we only want spaces between items)
+            totalHeight -= EditorGUIUtility.standardVerticalSpacing;
 
-                    IEnumerator children = pProperty.GetEnumerator();
-
-                    while (children.MoveNext())
-                    {
-                        SerializedProperty child = children.Current as SerializedProperty;
-
-                        GUIContent childLabel = new GUIContent(child.displayName);
-
-                        totalHeight += EditorGUI.GetPropertyHeight(child, childLabel) + EditorGUIUtility.standardVerticalSpacing;
-                        numChildren++;
-                    }
-
-                    // Remove extra space at end, (we only want spaces between items)
-                    totalHeight -= EditorGUIUtility.standardVerticalSpacing;
-
-                    return totalHeight;
-                }
-
-                return EditorGUI.GetPropertyHeight(pProperty, pLabel);
-            }
+            return totalHeight;
+        }
+        else
+        {
+            return EditorGUI.GetPropertyHeight(pProperty, pLabel);
         }
     }
 
@@ -56,70 +46,114 @@ public class DrawIfPropertyDrawer : PropertyDrawer
     /// </summary>
     private bool ShowMe(SerializedProperty pProperty)
     {
-        drawIf = attribute as DrawIfAttribute;
+        _drawIf = attribute as DrawIfAttribute;
         // Replace propertyname to the value from the parameter
-        string path = pProperty.propertyPath.Contains(".") ? System.IO.Path.ChangeExtension(pProperty.propertyPath, drawIf.ComparedPropertyName) : drawIf.ComparedPropertyName;
+        string path = pProperty.propertyPath.Contains(".") ? System.IO.Path.ChangeExtension(pProperty.propertyPath, _drawIf.ComparedPropertyName) : _drawIf.ComparedPropertyName;
 
-        comparedField = pProperty.serializedObject.FindProperty(path);
+        _comparedField = pProperty.serializedObject.FindProperty(path);
 
-        if (comparedField == null)
+        if (_comparedField == null)
         {
             Debug.LogError("Cannot find property with name: " + path);
             return true;
         }
 
-        // get the value & compare based on types
-        switch (comparedField.type)
-        { // Possible extend cases to support your own type
-            case "bool":
-                return comparedField.boolValue.Equals(drawIf.ComparedValue) != drawIf.Reversed;
-            case "Enum":
-                return comparedField.enumValueIndex.Equals((int)drawIf.ComparedValue) != drawIf.Reversed;
-            case "int":
-                return comparedField.intValue.Equals((int)drawIf.ComparedValue) != drawIf.Reversed;
-            default:
-                Debug.LogError("Error: " + comparedField.type + " is not supported of " + path);
-                return true;
+        if (_comparedField.isArray)
+        {
+            int relativeIntVal = _comparedField.arraySize.CompareTo((int)_drawIf.ComparedValue);
+            return _drawIf.Comparison switch
+            {
+                ComparisonType.Equals => relativeIntVal == 0,
+                ComparisonType.NotEqual => relativeIntVal != 0,
+                ComparisonType.GreaterThan => relativeIntVal == 1,
+                ComparisonType.SmallerThan => relativeIntVal == -1,
+                ComparisonType.SmallerOrEqual => relativeIntVal == -1 || relativeIntVal == 0,
+                ComparisonType.GreaterOrEqual => relativeIntVal == 1 || relativeIntVal == 0,
+                _ => true,
+            };
+        }
+        else
+        {
+            switch (_comparedField.type)
+            {
+                case "bool":
+                    return _drawIf.Comparison switch
+                    {
+                        ComparisonType.Equals => _comparedField.boolValue.Equals(_drawIf.ComparedValue),
+                        ComparisonType.NotEqual => !_comparedField.boolValue.Equals(_drawIf.ComparedValue),
+                        _ => true,
+                    };
+                case "Enum":
+                    return _drawIf.Comparison switch
+                    {
+                        ComparisonType.Equals => _comparedField.enumValueIndex.Equals((int)_drawIf.ComparedValue),
+                        ComparisonType.NotEqual => !_comparedField.enumValueIndex.Equals((int)_drawIf.ComparedValue),
+                        _ => true,
+                    };
+                case "int":
+                    int relativeIntVal = _comparedField.intValue.CompareTo((int)_drawIf.ComparedValue);
+                    return _drawIf.Comparison switch
+                    {
+                        ComparisonType.Equals => relativeIntVal == 0,
+                        ComparisonType.NotEqual => relativeIntVal != 0,
+                        ComparisonType.GreaterThan => relativeIntVal == 1,
+                        ComparisonType.SmallerThan => relativeIntVal == -1,
+                        ComparisonType.SmallerOrEqual => relativeIntVal == -1 || relativeIntVal == 0,
+                        ComparisonType.GreaterOrEqual => relativeIntVal == 1 || relativeIntVal == 0,
+                        _ => true,
+                    };
+                case "float":
+                    float relativeFloatVal = _comparedField.floatValue.CompareTo((float)_drawIf.ComparedValue);
+                    return _drawIf.Comparison switch
+                    {
+                        ComparisonType.Equals => relativeFloatVal == 0,
+                        ComparisonType.NotEqual => relativeFloatVal != 0,
+                        ComparisonType.GreaterThan => relativeFloatVal == 1,
+                        ComparisonType.SmallerThan => relativeFloatVal == -1,
+                        ComparisonType.SmallerOrEqual => relativeFloatVal == -1 || relativeFloatVal == 0,
+                        ComparisonType.GreaterOrEqual => relativeFloatVal == 1 || relativeFloatVal == 0,
+                        _ => true,
+                    };
+                default:
+                    Debug.LogError("Error: " + _comparedField.type + " is not supported of " + path);
+                    return true;
+            }
         }
     }
 
-    public override void OnGUI(Rect pPosition, SerializedProperty pRoperty, GUIContent pLabel)
+    public override void OnGUI(Rect pPosition, SerializedProperty pProperty, GUIContent pLabel)
     {
         // If the condition is met, simply draw the field.
-        if (ShowMe(pRoperty))
+        if (ShowMe(pProperty))
         {
             // A Generic type means a custom class...
-            if (pRoperty.propertyType == SerializedPropertyType.Generic)
+            if (pProperty.propertyType == SerializedPropertyType.Generic)
             {
-                IEnumerator children = pRoperty.GetEnumerator();
-
+                IEnumerator children = pProperty.GetEnumerator();
                 Rect offsetPosition = pPosition;
-
                 while (children.MoveNext())
                 {
                     SerializedProperty child = children.Current as SerializedProperty;
-
                     GUIContent childLabel = new GUIContent(child.displayName);
 
                     float childHeight = EditorGUI.GetPropertyHeight(child, childLabel);
                     offsetPosition.height = childHeight;
-
                     EditorGUI.PropertyField(offsetPosition, child, childLabel);
-
                     offsetPosition.y += childHeight + EditorGUIUtility.standardVerticalSpacing;
                 }
             }
             else
             {
-                EditorGUI.PropertyField(pPosition, pRoperty, pLabel);
+                EditorGUI.PropertyField(pPosition, pProperty, pLabel);
             }
 
         } //...check if the disabling type is read only. If it is, draw it disabled
-        else if (drawIf.DisablingType == DisablingType.ReadOnly)
+        else if (_drawIf.DisablingType == DisablingType.ReadOnly)
         {
             GUI.enabled = false;
-            EditorGUI.PropertyField(pPosition, pRoperty, pLabel);
+            EditorGUI.PropertyField(pPosition, pProperty, pLabel);
             GUI.enabled = true;
         }
     }
+    #endregion
 }
