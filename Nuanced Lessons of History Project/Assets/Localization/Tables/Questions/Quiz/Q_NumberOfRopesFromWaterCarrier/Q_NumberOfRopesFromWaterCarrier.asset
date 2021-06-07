@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5be51871efa6c3e4eae1703925c8f5ac, type: 3}
+  m_Name: Q_NumberOfRopesFromWaterCarrier
+  m_EditorClassIdentifier: 
+  m_SharedTableData: {fileID: 11400000, guid: a487617bac243a742a6a994c4b60234c, type: 2}
+  m_Tables:
+  - {fileID: 11400000, guid: 77841c13cc5dbd4409f2e435b40a3ccc, type: 2}
+  - {fileID: 11400000, guid: e9ac2e6911a01b945a2dff447f8f0f96, type: 2}
+  - {fileID: 11400000, guid: 2ca4ea8587c7c464382a261bb07a672b, type: 2}
+  m_Extensions: []
+  m_Group: String Table
+  references:
+    version: 1
