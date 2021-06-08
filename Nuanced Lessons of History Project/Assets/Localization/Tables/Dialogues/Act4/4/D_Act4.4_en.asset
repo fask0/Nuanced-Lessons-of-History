@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: D_Act4.4_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: 8f8d342c557cdd64098daa6790178d94, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 4412796928
+    m_Localized: "Brother is leaving\u2026? *sniff sniff* <size=0>|</size>Everyone
+      is leaving\u2026\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6769995776
+    m_Localized: "What\u2019s going on? What happened?\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8984588288
+    m_Localized: "Willem is leaving!\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11488587776
+    m_Localized: "What?! <size=0>|</size>We\u2019re going to have a talk.\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13929672704
+    m_Localized: "I was gone for a few hours and now my grandson is trying to run
+      away? <size=0>|</size>What a crazy day. Haha <size=0>|</size>Here, help me
+      start preparing dinner. Get me the <color=red>pot on top of the cupboard</color>.\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 211447836672
+    m_Localized: "That\u2019s the one! <size=0>|</size>Now let\u2019s start prepping.
+      Here, I will show you how.\r"
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 1

@@ -2,7 +2,7 @@
 using UnityEngine;
 using UnityEngine.Localization;
 
-[CreateAssetMenu(fileName = "QuizQuestion", menuName = "Scriptable Objects/QuizQuestion")]
+[CreateAssetMenu(fileName = "QQ_QuizQuestion", menuName = "Scriptable Objects/QuizQuestion")]
 public class QuizQuestionScriptableObject : QuestionScriptableObject
 {
     #region Fields

@@ -7,14 +7,36 @@ public class LineCharacter
 {
     #region Fields
     [SerializeField] private CharacterScriptableObject _characterScriptableObject;
-    [SerializeField] private ExpressionType _expression;
+    [SerializeField] private CharacterScriptableObject.CharacterNameToUse _nameToUse;
+    [HorizontalLine(1)]
+    [SerializeField] private Expression.ExpressionType _expression;
+    [SerializeField] private bool _hideCharacterImage = false;
+    [HorizontalLine(1)]
     [SerializeField] private bool _isSpeaker;
     #endregion
 
     #region Properties
-    public CharacterScriptableObject CharacterScriptableObject => _characterScriptableObject;
-    public ExpressionType Expression => _expression;
+    public bool HasCharacter => _characterScriptableObject != null;
+    public bool HideCharacterImage => _hideCharacterImage;
     public bool IsSpeaker => _isSpeaker;
+    public bool CharacterNameIsLocalized => _characterScriptableObject.IsNameLocalized;
+    #endregion
+
+    #region Methods
+    public Sprite GetExpression()
+    {
+        return _characterScriptableObject.GetExpression(_expression);
+    }
+
+    public LocalizedString GetLocalizedName()
+    {
+        return _characterScriptableObject.GetLocalizedName(_nameToUse);
+    }
+
+    public string GetName()
+    {
+        return _characterScriptableObject.GetName(_nameToUse);
+    }
     #endregion
 }
 
@@ -26,7 +48,8 @@ public class Line
         None,
         QuizQuestion,
         StoryQuestion,
-        ImageToScan
+        ImageToScan,
+        StartNewDialogue
     }
 
     #region Fields
@@ -41,6 +64,7 @@ public class Line
     [AllowNesting] [ShowIf("_playerInteraction", PlayerInteraction.QuizQuestion)] [SerializeField] private QuizQuestionScriptableObject _quizQuestion;
     [AllowNesting] [ShowIf("_playerInteraction", PlayerInteraction.StoryQuestion)] [SerializeField] private StoryQuestionScriptableObject _storyQuestion;
     [AllowNesting] [ShowIf("_playerInteraction", PlayerInteraction.ImageToScan)] [SerializeField] private ScannableImageScriptableObject _imageToScan;
+    [AllowNesting] [ShowIf("_playerInteraction", PlayerInteraction.StartNewDialogue)] [SerializeField] private DialogueScriptableObject _newDialogue;
     #endregion
 
     #region Properties
@@ -65,7 +89,10 @@ public class Line
                 QuizManager.Instance.PrepareQuestion(_storyQuestion);
                 break;
             case PlayerInteraction.ImageToScan:
-                //ARManager.Instance.PrepareImagesToScan(_imageToScan);
+                ARManager.Instance.PrepareImageToScan(_imageToScan);
+                break;
+            case PlayerInteraction.StartNewDialogue:
+                DialogueManager.Instance.StartNewDialogue(_newDialogue);
                 break;
         }
     }
@@ -75,27 +102,14 @@ public class Line
         Sprite[] expressions = new Sprite[_lineCharacters.Length];
 
         for (int i = 0; i < _lineCharacters.Length; i++)
-            expressions[i] = _lineCharacters[i].CharacterScriptableObject.GetExpression(_lineCharacters[i].Expression);
+            expressions[i] = _lineCharacters[i].GetExpression();
 
         return expressions;
     }
 
-    public Sprite GetCharacterExpression(int pLineCharacterIndex)
-    {
-        return _lineCharacters[pLineCharacterIndex].CharacterScriptableObject.GetExpression(_lineCharacters[pLineCharacterIndex].Expression);
-    }
-
     public Sprite GetCharacterExpression(LineCharacter pLineCharacter)
     {
-        return pLineCharacter.CharacterScriptableObject.GetExpression(pLineCharacter.Expression);
-    }
-
-    public int GetSpeakerIndex()
-    {
-        for (int i = 0; i < _lineCharacters.Length; i++)
-            if (_lineCharacters[i].IsSpeaker) return i;
-
-        return -1;
+        return pLineCharacter.GetExpression();
     }
 
     public LineCharacter GetSpeaker()
@@ -103,12 +117,13 @@ public class Line
         for (int i = 0; i < _lineCharacters.Length; i++)
             if (_lineCharacters[i].IsSpeaker) return _lineCharacters[i];
 
+        Debug.LogError(string.Format("Line: {0}, with {1} characters does not have a speaker!", _lineString.GetLocalizedString(), _lineCharacters.Length));
         return null;
     }
     #endregion
 }
 
-[CreateAssetMenu(fileName = "Dialogue", menuName = "Scriptable Objects/Dialogue")]
+[CreateAssetMenu(fileName = "D_Dialogue", menuName = "Scriptable Objects/Dialogue")]
 public class DialogueScriptableObject : ScriptableObject
 {
     #region Fields

@@ -14,7 +14,6 @@ public class ExpandableSidebarElement : MonoBehaviour, IExpandableUIElement
 
     #region Fields
     [SerializeField] private RectTransform _dummyRect;
-    [SerializeField] private GameObject _symbol;
     private RectTransform _rect;
     private Vector2 _collapsedSize;
     private Coroutine _transforming;

@@ -5,10 +5,10 @@ namespace NaughtyAttributes
     [AttributeUsage(AttributeTargets.Field | AttributeTargets.Method, AllowMultiple = false, Inherited = true)]
     public class ShowIfAttribute : ShowIfAttributeBase
     {
-        public ShowIfAttribute(string condition)
+        public ShowIfAttribute(string condition, bool pInverted = false)
             : base(condition)
         {
-            Inverted = false;
+            Inverted = pInverted;
         }
 
         public ShowIfAttribute(EConditionOperator conditionOperator, params string[] conditions)

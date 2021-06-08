@@ -44,10 +44,13 @@ public class QuizManager : Singleton<QuizManager>
 
     public void PrepareQuestion(QuestionScriptableObject pQuestion)
     {
+        //Make a clone so that the original SO never gets changed
+        _currentQuestion = Instantiate(pQuestion);
+
         _quizPanel.SetActive(true);
-        _currentQuestion = pQuestion;
-        _currentQuestionHintIndex = -1;
+
         DialogueManager.Instance.HideHint();
+        _currentQuestionHintIndex = -1;
 
         _questionContainer.GetComponentInChildren<LocalizeStringEvent>().StringReference = _currentQuestion.Question;
 
@@ -72,20 +75,60 @@ public class QuizManager : Singleton<QuizManager>
         System.Random rnd = new System.Random();
         availableAnswers = availableAnswers.OrderBy(pA => rnd.Next()).ToList();
 
-        //Loop in reverse to avoid disabaling a row which should show an answer
-        for (int i = _answerGameObjects.Length - 1; i >= 0; i--)
+        int colSize = _answerGameObjects[0].transform.parent.childCount;
+        if (availableAnswers.Count <= colSize)
         {
-            if (i == 0) Canvas.ForceUpdateCanvases();
+            //Loop in reverse to avoid disabaling a row which should show an answer
+            for (int i = _answerGameObjects.Length - 1; i >= 0; i--)
+            {
+                if (i == 0) Canvas.ForceUpdateCanvases();
 
-            _answerGameObjects[i].SetActive(false);
-            _answerGameObjects[i].transform.parent.gameObject.SetActive(false);
-            _answerGameObjects[i].GetComponentInChildren<Image>().color = Color.white;
+                _answerGameObjects[i].SetActive(false);
+                _answerGameObjects[i].transform.parent.gameObject.SetActive(false);
+                _answerGameObjects[i].GetComponentInChildren<Image>().color = Color.white;
 
-            if (availableAnswers.Count <= i) continue;
+                if (availableAnswers.Count <= i) continue;
 
-            _answerGameObjects[i].SetActive(true);
-            _answerGameObjects[i].transform.parent.gameObject.SetActive(true);
-            _answerGameObjects[i].GetComponentInChildren<LocalizeStringEvent>().StringReference = availableAnswers[i];
+                _answerGameObjects[i].SetActive(true);
+                _answerGameObjects[i].transform.parent.gameObject.SetActive(true);
+                _answerGameObjects[i].GetComponentInChildren<LocalizeStringEvent>().StringReference = availableAnswers[i];
+            }
+        }
+        else
+        {
+            for (int i = 0; i < _answerGameObjects.Length; i++)
+            {
+                _answerGameObjects[i].SetActive(true);
+                _answerGameObjects[i].transform.parent.gameObject.SetActive(true);
+            }
+
+            int amountOfObjectsToDisable = _answerGameObjects.Length - availableAnswers.Count;
+            int colCount = _answerGameObjects.Length / colSize;
+            Transform colsParent = _answerGameObjects[0].transform.parent.parent;
+            for (int i = 0; i < amountOfObjectsToDisable; i++)
+            {
+                for (int j = 0; j < colCount; j++)
+                {
+                    colsParent.GetChild(j).GetChild(colSize - 1 - i).gameObject.SetActive(false);
+                    if (j != 0)
+                        i++;
+                }
+            }
+
+            int availableAnswerIndex = -1;
+            for (int i = 0; i < _answerGameObjects.Length; i++)
+            {
+                _answerGameObjects[i].GetComponentInChildren<Image>().color = Color.white;
+
+                if (!_answerGameObjects[i].activeSelf) continue;
+                Canvas.ForceUpdateCanvases();
+
+                _answerGameObjects[i].SetActive(false);
+                _answerGameObjects[i].SetActive(true);
+
+                availableAnswerIndex++;
+                _answerGameObjects[i].GetComponentInChildren<LocalizeStringEvent>().StringReference = availableAnswers[availableAnswerIndex];
+            }
         }
     }
 
@@ -104,7 +147,19 @@ public class QuizManager : Singleton<QuizManager>
         }
         else if (storyQuestion != null)
         {
-
+            for (int i = 0; i < storyQuestion.Answers.Length; i++)
+            {
+                if (storyQuestion.Answers[i] != answerLocalizedString) continue;
+                storyQuestion.OnAnswerActions[i].HandleAction();
+                if (storyQuestion.OnAnswerActions[i].ActionType != SpecialAction.Action.QuizQuestion &&
+                    storyQuestion.OnAnswerActions[i].ActionType != SpecialAction.Action.StoryQuestion)
+                {
+                    _quizPanel.SetActive(false);
+                    if (storyQuestion.OnAnswerActions[i].ActionType == SpecialAction.Action.None)
+                        DialogueManager.Instance.Resume();
+                }
+                break;
+            }
         }
     }
 
@@ -129,9 +184,8 @@ public class QuizManager : Singleton<QuizManager>
             for (int i = 0; i < quizQuestion.Answers.Length; i++)
             {
                 if (answerLocalizedString != quizQuestion.Answers[i]) continue;
-
-                if (quizQuestion.GetType().GetProperty("OnAnswer" + i).GetValue(quizQuestion) is SpecialAction action)
-                    action.HandleAction();
+                quizQuestion.OnAnswerActions[i].HandleAction();
+                break;
             }
         }
         else if (pColorToChange == _correctFeedbackColor)

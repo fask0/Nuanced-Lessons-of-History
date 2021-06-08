@@ -42,9 +42,11 @@ public class SpecialAction
                 break;
             case Action.AddNewLine:
                 DialogueManager.Instance.AddNewLine(_nextLine);
+                DialogueManager.Instance.Resume();
                 break;
             case Action.OverrideNextLine:
                 DialogueManager.Instance.OverrideNextLine(_nextLine);
+                DialogueManager.Instance.Resume();
                 break;
             case Action.QuizQuestion:
                 QuizManager.Instance.PrepareQuestion(_quizQuestion);

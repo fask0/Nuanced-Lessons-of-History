@@ -1,0 +1,81 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: D_Act4.5_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: 813444a174d7ed843811fe63a9b989ef, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 4681232384
+    m_Localized: "Hush hush now darling, it\u2019s ok\u2026\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7483027456
+    m_Localized: "He\u2019s really ill. With the money we have saved up, we can take
+      him to get proper treatment.\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9756340224
+    m_Localized: "If we use that money for his illness, we won\u2019t have anything
+      left for winter. <size=0>|</size>It\u2019s already been over a month and still
+      nothing from Pieter. <size=0>|</size>Winter is just around the corner. The
+      crops are dying out because of the weather.\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12797210624
+    m_Localized: "Right now we have to worry about Adel. We will figure out the money
+      later.\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 78429679616
+    m_Localized: "What if we sold the goat? <size=0>|</size>She\u2019s already quite
+      old. We can use the money this winter and buy a new goat when we hear from
+      Pieter.\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 81004982272
+    m_Localized: "NO! <size=0>|</size>Pancakes is my friend! We can\u2019t sell her!
+      <size=0>|</size>Mama please\u2026 Don\u2019t take her away from me!\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 85681631232
+    m_Localized: "I know treasure, we don\u2019t want to do this either but there
+      is nothing else we can do...Your brother is very ill and we really need the
+      money for food. Otherwise, none of us will make it.\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 87367741440
+    m_Localized: "Papa! He\u2019s going to come back and then Pancakes won\u2019t
+      have to go!\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 88265322496
+    m_Localized: "Pap\u2019s not coming back Marijke! It\u2019s been months and we
+      still haven\u2019t heard anything from him!\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 89058045952
+    m_Localized: "Children enough! <size=0>|</size>We are not going to have this
+      discussion right now. Off to bed with both of you.\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 571285565440
+    m_Localized: "He\u2019s getting worse\u2026 <size=0>|</size>We have to do something.
+      We have the money to treat him, but we need another solution for food. Our
+      crops won\u2019t last us all winter.\r"
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 1

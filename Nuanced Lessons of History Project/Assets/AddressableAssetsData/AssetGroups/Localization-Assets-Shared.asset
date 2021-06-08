@@ -17,24 +17,6 @@ MonoBehaviour:
     m_SerializedData: []
   m_GUID: 1079a07f71d638b439cd5f1e8c873970
   m_SerializeEntries:
-  - m_GUID: 37b80f267407ac245b019ca1d24d8a28
-    m_Address: Assets/Localization/Tables/Dialogues/Grandma/Grandma Intro Shared
-      Data.asset
-    m_ReadOnly: 1
-    m_SerializedLabels: []
-  - m_GUID: 267432656eafadc4b913952444fabf5f
-    m_Address: Assets/Localization/Tables/Dialogues/Grandpa/GrandpaIntro/Grandpa_IntroTable
-      Shared Data.asset
-    m_ReadOnly: 1
-    m_SerializedLabels: []
-  - m_GUID: ca4569699c9ffae4e9e0b8de09611cec
-    m_Address: Assets/Localization/Tables/Questions/0/Question0 Shared Data.asset
-    m_ReadOnly: 1
-    m_SerializedLabels: []
-  - m_GUID: 060282cc85ff51d47957c67fd1ba7176
-    m_Address: Assets/Localization/Tables/Questions/1/Question1 Shared Data.asset
-    m_ReadOnly: 1
-    m_SerializedLabels: []
   - m_GUID: f6654ccbe4060094cbed314e9fb10b13
     m_Address: Assets/Localization/Tables/ScannableImages/Chair/ScannableImageChair
       Shared Data.asset
@@ -42,11 +24,6 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: 73ab919fdaa5f3440996342e96e17c1f
     m_Address: Assets/Localization/Tables/ScannableImages/Heater/ScannableImageHeater
-      Shared Data.asset
-    m_ReadOnly: 1
-    m_SerializedLabels: []
-  - m_GUID: 0201ef1437a6c1245b7e393f69a4eaf0
-    m_Address: Assets/Localization/Tables/Questions/Quiz/DemoQuestion/Q_QuizDemoQuestion
       Shared Data.asset
     m_ReadOnly: 1
     m_SerializedLabels: []
@@ -73,6 +50,97 @@ MonoBehaviour:
   - m_GUID: 656df10e334f5b44faadaacd585a1e53
     m_Address: Assets/Localization/Tables/ScannableImages/WaterCan/WaterCan Shared
       Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+  - m_GUID: 0578ef94dfedf0740aef58810832fdc0
+    m_Address: Assets/Localization/Tables/Questions/Quiz/Q_CushionPattern/Q_CushionPattern
+      Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+  - m_GUID: 0447a5019d4c88041819ed4b3905a7ca
+    m_Address: Assets/Localization/Tables/ScannableImages/S_Bucket/S_Bucket Shared
+      Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+  - m_GUID: 396c196ca6674384196fcce1c892b4da
+    m_Address: Assets/Localization/Tables/ScannableImages/WaterCarrier/S_WaterCarrier
+      Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+  - m_GUID: f2a4d32356938f74fa1069bdd1721ed8
+    m_Address: Assets/Localization/Tables/ScannableImages/S_RoundCushion/S_RoundCushion
+      Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+  - m_GUID: a487617bac243a742a6a994c4b60234c
+    m_Address: Assets/Localization/Tables/Questions/Quiz/Q_NumberOfRopesFromWaterCarrier/Q_NumberOfRopesFromWaterCarrier
+      Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+  - m_GUID: 591677fc68a6bcc4d9df34a5c7f9f233
+    m_Address: Assets/Localization/Tables/Questions/Story/Act2/QS_Act2 Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+  - m_GUID: a892e655bef972645b810f036acecb6d
+    m_Address: Assets/Localization/Tables/Questions/Story/Act3/QS_Act3 Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+  - m_GUID: 58039f7a9c09f894aac6363878bbfd49
+    m_Address: Assets/Localization/Tables/Questions/Story/Act3/1/QS_Act3_1 Shared
+      Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+  - m_GUID: 97829a0e8216479408c653259763a926
+    m_Address: Assets/Localization/Tables/Questions/Story/Ending/0/QS_Ending0 Shared
+      Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+  - m_GUID: 6d6dafefffd45534fb74b445bc7745c3
+    m_Address: Assets/Localization/Tables/Characters/Pancakes/C_Pancakes Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+  - m_GUID: 402929567b8ce6840acf8bd4282d85a0
+    m_Address: Assets/Localization/Tables/Dialogues/Act1/0/D_Act1.0 Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+  - m_GUID: bc40cae5112a9be4ebb460158854fad8
+    m_Address: Assets/Localization/Tables/Dialogues/Act2/0/D_Act2.0 Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+  - m_GUID: eb3890a7e27aa1d49b5c172256942c33
+    m_Address: Assets/Localization/Tables/Dialogues/Act2/1/D_Act2.1 Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+  - m_GUID: 2f239361558a1754592ed18385704f91
+    m_Address: Assets/Localization/Tables/Dialogues/Act3/0/D_Act3.0 Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+  - m_GUID: 8e96aa836a45b7a4ebc36ecc2780cfb4
+    m_Address: Assets/Localization/Tables/Dialogues/Act3/1/D_Act3.1 Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+  - m_GUID: 9202a4cdefb43e445ba0da1c3f49fa3b
+    m_Address: Assets/Localization/Tables/Dialogues/Act4/0/D_Act4.0 Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+  - m_GUID: eb78135108b27724e991851cb4e07cea
+    m_Address: Assets/Localization/Tables/Dialogues/Act4/1/D_Act4.1 Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+  - m_GUID: aad08b3803082cd4cbb8f2f5f975f5c5
+    m_Address: Assets/Localization/Tables/Dialogues/Act4/2/D_Act4.2 Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+  - m_GUID: 3d7b0b51465043b44a5fd2a5c58816e0
+    m_Address: Assets/Localization/Tables/Dialogues/Act4/3/D_Act4.3 Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+  - m_GUID: 8f8d342c557cdd64098daa6790178d94
+    m_Address: Assets/Localization/Tables/Dialogues/Act4/4/D_Act4.4 Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+  - m_GUID: 813444a174d7ed843811fe63a9b989ef
+    m_Address: Assets/Localization/Tables/Dialogues/Act4/5/D_Act4.5 Shared Data.asset
     m_ReadOnly: 1
     m_SerializedLabels: []
   m_ReadOnly: 1

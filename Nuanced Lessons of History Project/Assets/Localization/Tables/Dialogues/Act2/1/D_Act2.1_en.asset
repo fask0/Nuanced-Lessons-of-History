@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: D_Act2.1_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: eb3890a7e27aa1d49b5c172256942c33, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 11350175744
+    m_Localized: "Come. We have a lot to do.\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14307160064
+    m_Localized: "We must plant these seeds as soon as possible. If we\u2019re lucky
+      they will grow and provide crops before winter. <size=0>|</size>Now, help me
+      and go grab the bucket of manure from the outhouse.\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17729712128
+    m_Localized: "That\u2019ll do it.\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20602810368
+    m_Localized: Now go get me the watering can. It should be in the storage room.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23899533312
+    m_Localized: "Ah, I see you\u2019re helping Grandpa with the crops.\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 296751591424
+    m_Localized: "It\u2019s going to be a long winter without Pieter here\u2026\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 301570846720
+    m_Localized: "You\u2019ll need to refill the watering can. Perhaps you can help
+      Willem fill some buckets at the Water pump. He should be in the living room.\r"
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 1

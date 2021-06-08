@@ -3,7 +3,9 @@
 public enum ScannableImageType
 {
     Chair,
-    Heater
+    Heater,
+    BucketOfManure,
+    WateringCan,
 }
 
 public class ImageTypeIdentifier : MonoBehaviour

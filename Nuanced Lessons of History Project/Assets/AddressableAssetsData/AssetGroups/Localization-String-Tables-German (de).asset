@@ -17,27 +17,6 @@ MonoBehaviour:
     m_SerializedData: []
   m_GUID: ab591c3341d3c27458cf207c28720f97
   m_SerializeEntries:
-  - m_GUID: 85a89c6c2ac674c4fbc4ef970f0e4f5b
-    m_Address: D_GrandmaIntro_de
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-de
-    - Preload
-  - m_GUID: e582442e62f837e4587a70d7bf2f7ded
-    m_Address: D_QrandpaIntro_de
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-de
-  - m_GUID: 44e7e04c34b0b0c4e99348c381bfc99f
-    m_Address: Q_Quiz0_de
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-de
-  - m_GUID: 2d53a0900472e29458deb97410a691ce
-    m_Address: Q_Quiz1_de
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-de
   - m_GUID: b295f3cf4dae2844c95ee03363c0eb09
     m_Address: S_Chair_de
     m_ReadOnly: 1
@@ -48,33 +27,133 @@ MonoBehaviour:
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-de
-  - m_GUID: 1ec4915abd7c67842bab93c6e029bc36
-    m_Address: Q_QuizDemoQuestion_de
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-de
   - m_GUID: e2473c155292c634e974c26ec6d0750e
     m_Address: S_BucketOfManure_de
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-de
   - m_GUID: 75719a7de3f32344890077bf66ade816
-    m_Address: FavouriteToyQuestion_de
+    m_Address: QQ_FavouriteToy0_de
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-de
   - m_GUID: 3754de2722c5b74458157f6435749429
-    m_Address: MaterialOfFavouriteToy_de
+    m_Address: QQ_FavouriteToy1Material_de
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-de
   - m_GUID: d68350af8c3b9284687910ca3c4cde5f
-    m_Address: ColorOfFavouriteToy_de
+    m_Address: QQ_FavouriteToy2Color_de
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-de
   - m_GUID: b06202303e8596c42828f5a2c476790c
     m_Address: WaterCan_de
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-de
+  - m_GUID: f713779d8d015474aa4dea3c001eb054
+    m_Address: QQ_CushionPattern_de
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-de
+  - m_GUID: 0edcfdf805e619440964b6df259b1ed7
+    m_Address: S_Bucket_de
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-de
+  - m_GUID: 78a13b72f4b1cad408923907df1da1f4
+    m_Address: S_WaterCarrier_de
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-de
+  - m_GUID: 6c096239f1f32204aae35df7b3e3536b
+    m_Address: S_RoundCushion_de
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-de
+  - m_GUID: 2ca4ea8587c7c464382a261bb07a672b
+    m_Address: QQ_NumberOfRopesFromWaterCarrier_de
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-de
+  - m_GUID: 662de46c59965c048841b4bf54c977e2
+    m_Address: QS_Act2.0_de
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-de
+  - m_GUID: 403766429fa517f47aa3718b3c6dfb28
+    m_Address: QS_Act3.0_de
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-de
+  - m_GUID: ded5cddf7e6e6184387830c1397f5b7e
+    m_Address: QS_Act3.1_de
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-de
+  - m_GUID: fcf75910bd4defb41adf998ee56108c2
+    m_Address: QS_Ending0_de
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-de
+  - m_GUID: e54fffd5aa5a69947b0d6144e59e8269
+    m_Address: C_Pancakes_de
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-de
+  - m_GUID: 324801c71f2ebc148a943afba89a3e64
+    m_Address: D_Act1.0_de
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-de
+  - m_GUID: 3325ac60dfe129d4a878910fdb79a5cc
+    m_Address: D_Act2.0_de
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-de
+  - m_GUID: 669050e009a5d624885c8fbbb0f2a221
+    m_Address: D_Act2.1_de
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-de
+  - m_GUID: e55e53770433aeb40bba36c9f1fe7226
+    m_Address: D_Act3.0_de
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-de
+  - m_GUID: be917fc5e8a5fb64c8fda5685126642a
+    m_Address: D_Act3.1_de
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-de
+  - m_GUID: 74944d1574c5347499a1e017e920bb05
+    m_Address: D_Act4.0_de
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-de
+  - m_GUID: 705a2f8b08c31cc42a2c0546aedaef5f
+    m_Address: D_Act4.1_de
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-de
+  - m_GUID: cbeb499bdc1fa3d4a8d4df1dc20aa2ad
+    m_Address: D_Act4.2_de
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-de
+  - m_GUID: ca62e5d7985dd1147a05b7b66b8d8870
+    m_Address: D_Act4.3_de
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-de
+  - m_GUID: a3371b306c306e44bab2641e8495a075
+    m_Address: D_Act4.4_de
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-de
+  - m_GUID: df5d79e01fa980f4e8e4ad9a9165f98b
+    m_Address: D_Act4.5_de
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-de

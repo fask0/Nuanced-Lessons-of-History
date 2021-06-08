@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: S_Bucket Shared Data
   m_EditorClassIdentifier: 
   m_TableCollectionName: S_Bucket
-  m_TableCollectionNameGuidString: 00000000000000000000000000000000
+  m_TableCollectionNameGuidString: 0447a5019d4c88041819ed4b3905a7ca
   m_Entries: []
   m_Metadata:
     m_Items: []

@@ -41,8 +41,11 @@ public class ARManager : Singleton<ARManager>
 
     public void PrepareImageToScan(ScannableImageScriptableObject pImageToScan)
     {
+        //Make a clone so that the original SO never gets changed
+        _imageToScan = Instantiate(pImageToScan);
+
         enableAR();
-        _imageToScan = pImageToScan;
+
         _infoLocalizedStringEvent.StringReference = _imageToScan.Info;
         _hintLocalizedStringEvent.StringReference = _imageToScan.Hint;
     }

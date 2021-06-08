@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: QS_Act2.0_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: 591677fc68a6bcc4d9df34a5c7f9f233, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 248911360000
+    m_Localized: What should I say?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 253319573504
+    m_Localized: "How can you put our waste in the crops? That\u2019s gross."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 256599519232
+    m_Localized: Is this going to be enough?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6639969497088
+    m_Localized: Why are you adding our waste to the crops?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 406926987227136
+    m_Localized: "We can\u2019t afford to buy fertilizers all the time, you know
+      - We need to make sure these plants grow well. Do you want to starve in winter?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 406987657834496
+    m_Localized: "It should be. I mixed in some hay with the manure I got from the
+      farmer\u2019s cows  yesterday as well. I traded him for some of our eggs."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 406995463434240
+    m_Localized: "The manure we got from the farmer yesterday isn\u2019t enough for
+      all the crops. Besides, this way we won\u2019t waste any resources."
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 1

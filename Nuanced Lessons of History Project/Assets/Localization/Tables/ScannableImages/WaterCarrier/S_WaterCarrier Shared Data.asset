@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: S_WaterCarrier Shared Data
   m_EditorClassIdentifier: 
   m_TableCollectionName: S_WaterCarrier
-  m_TableCollectionNameGuidString: 00000000000000000000000000000000
+  m_TableCollectionNameGuidString: 396c196ca6674384196fcce1c892b4da
   m_Entries: []
   m_Metadata:
     m_Items: []

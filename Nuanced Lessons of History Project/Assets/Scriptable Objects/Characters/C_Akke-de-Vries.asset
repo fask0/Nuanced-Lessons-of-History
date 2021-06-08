@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a3d7cd1b8417e74582caf7e3c1a49de, type: 3}
+  m_Name: C_Akke-de-Vries
+  m_EditorClassIdentifier: 
+  _isNameLocalized: 0
+  _fullName: Akke de Vries
+  _localizedFullName:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 1
+  _displayName: Akke
+  _localizedDisplayName:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 1
+  _unknownName: unknownName
+  _localizedUnknownName:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 1
+  _expressions:
+  - _typeOfExpression: 0
+    _sprite: {fileID: 21300000, guid: b3162c44224dab3478f660a3ccb2c238, type: 3}
+  - _typeOfExpression: 1
+    _sprite: {fileID: 21300000, guid: 6643e9c1da7ff514b8b62cd3692242fd, type: 3}
+  - _typeOfExpression: 2
+    _sprite: {fileID: 21300000, guid: 7b4211f52d248e24c962dde9d7759266, type: 3}

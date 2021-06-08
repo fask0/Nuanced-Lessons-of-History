@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: S_RoundCushion Shared Data
   m_EditorClassIdentifier: 
   m_TableCollectionName: S_RoundCushion
-  m_TableCollectionNameGuidString: 00000000000000000000000000000000
+  m_TableCollectionNameGuidString: f2a4d32356938f74fa1069bdd1721ed8
   m_Entries: []
   m_Metadata:
     m_Items: []

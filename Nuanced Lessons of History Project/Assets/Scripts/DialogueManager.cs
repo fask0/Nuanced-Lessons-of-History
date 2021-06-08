@@ -15,7 +15,7 @@ public class DialogueManager : Singleton<DialogueManager>
     [SerializeField] private Image _backgroundImage;
     [SerializeField] private GameObject _speechPanel;
     [SerializeField] private GameObject _charactersContainer;
-    [SerializeField] private TextMeshProUGUI _speechNameText;
+    [SerializeField] private LocalizeStringEvent _speechNameLocalizedStingEvent;
     [SerializeField] private LocalizeStringEvent _speechLocalizedStingEvent;
     [SerializeField] private LocalizeStringEvent _hintLocalizedStringEvent;
     [SerializeField] private Button _speechBoxButton;
@@ -25,15 +25,9 @@ public class DialogueManager : Singleton<DialogueManager>
     #endregion
 
     #region Quiz
-    public enum GameType
-    {
-        Quiz,
-        AR
-    }
     [Header("Gameplay")]
-    [SerializeField] private GameType _typeOfGame;
-    [DrawIf("_typeOfGame", GameType.Quiz)] [SerializeField] private GameObject _quizPanel;
-    [DrawIf("_typeOfGame", GameType.AR)] [SerializeField] private GameObject _arPanel;
+    [SerializeField] private GameObject _quizPanel;
+    [SerializeField] private GameObject _arPanel;
     #endregion
 
     #region Dialogue
@@ -59,7 +53,8 @@ public class DialogueManager : Singleton<DialogueManager>
 
     private void Start()
     {
-        _speechNameText.text = "";
+        _speechNameLocalizedStingEvent.GetComponent<TextMeshProUGUI>().text = "";
+        _speechNameLocalizedStingEvent.enabled = false;
         _speechLocalizedStingEvent.GetComponent<TextMeshProUGUI>().text = "";
 
         _characterImages = new Image[_charactersContainer.transform.childCount];
@@ -69,10 +64,14 @@ public class DialogueManager : Singleton<DialogueManager>
 
     public void StartNewDialogue(DialogueScriptableObject pDialogue, int pDialogueProgress = 0)
     {
-        _speechPanel.SetActive(true);
-        _currentDialogue = pDialogue;
+        //Make a clone so that the original SO never gets changed
+        _currentDialogue = Instantiate(pDialogue);
         _dialogueProgress = pDialogueProgress - 1;
+
+        _speechPanel.SetActive(true);
+
         if (_speak != null) { StopCoroutine(_speak); _speak = null; }
+
         reassignSpeechBoxButtonListeners();
         nextLine();
     }
@@ -81,12 +80,12 @@ public class DialogueManager : Singleton<DialogueManager>
     {
         if (pLine.LineString == null) return;
 
-        Line[] newLineArray = new Line[_currentDialogue.Lines.Length];
+        Line[] newLineArray = new Line[_currentDialogue.Lines.Length + 1];
         for (int i = 0; i < newLineArray.Length; i++)
         {
-            if (i < _dialogueProgress)
+            if (i < _dialogueProgress + 1)
                 newLineArray[i] = _currentDialogue.Lines[i];
-            else if (i == _dialogueProgress)
+            else if (i == _dialogueProgress + 1)
                 newLineArray[i] = pLine;
             else
                 newLineArray[i] = _currentDialogue.Lines[i - 1];
@@ -97,7 +96,6 @@ public class DialogueManager : Singleton<DialogueManager>
     public void OverrideNextLine(Line pLine)
     {
         if (pLine.LineString == null || _dialogueProgress + 1 >= _currentDialogue.Lines.Length) return;
-
         _currentDialogue.Lines[_dialogueProgress + 1] = pLine;
     }
 
@@ -155,25 +153,44 @@ public class DialogueManager : Singleton<DialogueManager>
         {
             if (i >= line.LineCharacters.Length) { _characterImages[i].gameObject.SetActive(false); continue; }
 
-            if (line.LineCharacters[i].CharacterScriptableObject == null)
+            LineCharacter lineCharacter = line.LineCharacters[i];
+
+            if (!lineCharacter.HasCharacter)
             {
                 Debug.LogWarning("LineCharacter of index " + i + " in the dialogue " + _currentDialogue.name + " is not assigned.");
                 _characterImages[i].gameObject.SetActive(false);
                 continue;
             }
 
-            if (line.LineCharacters[i].CharacterScriptableObject.name == "Player")
+            Sprite characterExpression = line.GetCharacterExpression(lineCharacter);
+            if (lineCharacter.HideCharacterImage || characterExpression == null)
             {
                 _characterImages[i].gameObject.SetActive(false);
                 continue;
             }
-
             _characterImages[i].gameObject.SetActive(true);
-            _characterImages[i].sprite = line.GetCharacterExpression(i);
+            _characterImages[i].sprite = characterExpression;
         }
-        if (line.BackgroundSprite != null) _backgroundImage.sprite = line.BackgroundSprite;
-        _speechNameText.text = line.GetSpeaker().CharacterScriptableObject.Name;
+
+        LineCharacter speaker = line.GetSpeaker();
+        if (speaker.CharacterNameIsLocalized)
+        {
+            _speechNameLocalizedStingEvent.StringReference = speaker.GetLocalizedName();
+            _speechNameLocalizedStingEvent.enabled = true;
+        }
+        else
+        {
+            _speechNameLocalizedStingEvent.GetComponent<TextMeshProUGUI>().text = speaker.GetName();
+            _speechNameLocalizedStingEvent.enabled = false;
+        }
         _clickToContinue.SetActive(false);
+
+        Canvas.ForceUpdateCanvases();
+        _speechNameLocalizedStingEvent.gameObject.SetActive(false);
+        _speechNameLocalizedStingEvent.gameObject.SetActive(true);
+
+        if (_backgroundImage.enabled = line.BackgroundSprite != null) _backgroundImage.sprite = line.BackgroundSprite;
+
         return line;
     }
 

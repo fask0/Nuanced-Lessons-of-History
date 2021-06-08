@@ -1,0 +1,182 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a96c5442fadcc94aaefb0193117d3f9, type: 3}
+  m_Name: D_Act2.0
+  m_EditorClassIdentifier: 
+  _lines:
+  - _lineCharacters:
+    - _characterScriptableObject: {fileID: 11400000, guid: b4441ef9acaa3334faac393c1195dc33, type: 2}
+      _nameToUse: 0
+      _expression: 2
+      _hideCharacterImage: 0
+      _isSpeaker: 1
+    _lineString:
+      m_TableReference:
+        m_TableCollectionName: GUID:bc40cae5112a9be4ebb460158854fad8
+      m_TableEntryReference:
+        m_KeyId: 5088079872
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+    _textCharactersPerSecond: 0
+    _backgroundSprite: {fileID: 21300000, guid: 6bc8696cbadc4ba499632075eedf17d6, type: 3}
+    _playerInteraction: 0
+    _quizQuestion: {fileID: 0}
+    _storyQuestion: {fileID: 0}
+    _imageToScan: {fileID: 0}
+    _newDialogue: {fileID: 0}
+  - _lineCharacters:
+    - _characterScriptableObject: {fileID: 11400000, guid: b4441ef9acaa3334faac393c1195dc33, type: 2}
+      _nameToUse: 0
+      _expression: 0
+      _hideCharacterImage: 0
+      _isSpeaker: 0
+    - _characterScriptableObject: {fileID: 11400000, guid: 2d96134aedbda164c8d2a6bde96797c5, type: 2}
+      _nameToUse: 0
+      _expression: 0
+      _hideCharacterImage: 0
+      _isSpeaker: 1
+    _lineString:
+      m_TableReference:
+        m_TableCollectionName: GUID:bc40cae5112a9be4ebb460158854fad8
+      m_TableEntryReference:
+        m_KeyId: 7445278720
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+    _textCharactersPerSecond: 0
+    _backgroundSprite: {fileID: 21300000, guid: 6bc8696cbadc4ba499632075eedf17d6, type: 3}
+    _playerInteraction: 0
+    _quizQuestion: {fileID: 0}
+    _storyQuestion: {fileID: 0}
+    _imageToScan: {fileID: 0}
+    _newDialogue: {fileID: 0}
+  - _lineCharacters:
+    - _characterScriptableObject: {fileID: 11400000, guid: b4441ef9acaa3334faac393c1195dc33, type: 2}
+      _nameToUse: 0
+      _expression: 0
+      _hideCharacterImage: 0
+      _isSpeaker: 1
+    - _characterScriptableObject: {fileID: 11400000, guid: 2d96134aedbda164c8d2a6bde96797c5, type: 2}
+      _nameToUse: 0
+      _expression: 0
+      _hideCharacterImage: 0
+      _isSpeaker: 0
+    _lineString:
+      m_TableReference:
+        m_TableCollectionName: GUID:bc40cae5112a9be4ebb460158854fad8
+      m_TableEntryReference:
+        m_KeyId: 9907335168
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+    _textCharactersPerSecond: 0
+    _backgroundSprite: {fileID: 21300000, guid: 6bc8696cbadc4ba499632075eedf17d6, type: 3}
+    _playerInteraction: 0
+    _quizQuestion: {fileID: 0}
+    _storyQuestion: {fileID: 0}
+    _imageToScan: {fileID: 0}
+    _newDialogue: {fileID: 0}
+  - _lineCharacters:
+    - _characterScriptableObject: {fileID: 11400000, guid: 2d96134aedbda164c8d2a6bde96797c5, type: 2}
+      _nameToUse: 0
+      _expression: 0
+      _hideCharacterImage: 0
+      _isSpeaker: 1
+    _lineString:
+      m_TableReference:
+        m_TableCollectionName: GUID:bc40cae5112a9be4ebb460158854fad8
+      m_TableEntryReference:
+        m_KeyId: 12595884032
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+    _textCharactersPerSecond: 0
+    _backgroundSprite: {fileID: 21300000, guid: 6bc8696cbadc4ba499632075eedf17d6, type: 3}
+    _playerInteraction: 1
+    _quizQuestion: {fileID: 11400000, guid: 6db55d87afaa97049be7daad19d715e3, type: 2}
+    _storyQuestion: {fileID: 0}
+    _imageToScan: {fileID: 0}
+    _newDialogue: {fileID: 0}
+  - _lineCharacters:
+    - _characterScriptableObject: {fileID: 11400000, guid: 2d96134aedbda164c8d2a6bde96797c5, type: 2}
+      _nameToUse: 0
+      _expression: 1
+      _hideCharacterImage: 0
+      _isSpeaker: 1
+    _lineString:
+      m_TableReference:
+        m_TableCollectionName: GUID:bc40cae5112a9be4ebb460158854fad8
+      m_TableEntryReference:
+        m_KeyId: 609726361600
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+    _textCharactersPerSecond: 0
+    _backgroundSprite: {fileID: 21300000, guid: 6bc8696cbadc4ba499632075eedf17d6, type: 3}
+    _playerInteraction: 0
+    _quizQuestion: {fileID: 11400000, guid: 6db55d87afaa97049be7daad19d715e3, type: 2}
+    _storyQuestion: {fileID: 0}
+    _imageToScan: {fileID: 0}
+    _newDialogue: {fileID: 0}
+  - _lineCharacters:
+    - _characterScriptableObject: {fileID: 11400000, guid: 2d96134aedbda164c8d2a6bde96797c5, type: 2}
+      _nameToUse: 0
+      _expression: 0
+      _hideCharacterImage: 0
+      _isSpeaker: 1
+    - _characterScriptableObject: {fileID: 11400000, guid: b4441ef9acaa3334faac393c1195dc33, type: 2}
+      _nameToUse: 0
+      _expression: 0
+      _hideCharacterImage: 0
+      _isSpeaker: 0
+    _lineString:
+      m_TableReference:
+        m_TableCollectionName: GUID:bc40cae5112a9be4ebb460158854fad8
+      m_TableEntryReference:
+        m_KeyId: 612561711104
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+    _textCharactersPerSecond: 0
+    _backgroundSprite: {fileID: 21300000, guid: 6bc8696cbadc4ba499632075eedf17d6, type: 3}
+    _playerInteraction: 0
+    _quizQuestion: {fileID: 11400000, guid: 6db55d87afaa97049be7daad19d715e3, type: 2}
+    _storyQuestion: {fileID: 0}
+    _imageToScan: {fileID: 0}
+    _newDialogue: {fileID: 0}
+  - _lineCharacters:
+    - _characterScriptableObject: {fileID: 11400000, guid: 2d96134aedbda164c8d2a6bde96797c5, type: 2}
+      _nameToUse: 0
+      _expression: 0
+      _hideCharacterImage: 0
+      _isSpeaker: 0
+    - _characterScriptableObject: {fileID: 11400000, guid: b4441ef9acaa3334faac393c1195dc33, type: 2}
+      _nameToUse: 0
+      _expression: 1
+      _hideCharacterImage: 0
+      _isSpeaker: 1
+    _lineString:
+      m_TableReference:
+        m_TableCollectionName: GUID:bc40cae5112a9be4ebb460158854fad8
+      m_TableEntryReference:
+        m_KeyId: 617997529088
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+    _textCharactersPerSecond: 0
+    _backgroundSprite: {fileID: 21300000, guid: 6bc8696cbadc4ba499632075eedf17d6, type: 3}
+    _playerInteraction: 4
+    _quizQuestion: {fileID: 11400000, guid: 6db55d87afaa97049be7daad19d715e3, type: 2}
+    _storyQuestion: {fileID: 0}
+    _imageToScan: {fileID: 0}
+    _newDialogue: {fileID: 11400000, guid: 8f8ae2fe903dda245bd3e27278e6a3b7, type: 2}

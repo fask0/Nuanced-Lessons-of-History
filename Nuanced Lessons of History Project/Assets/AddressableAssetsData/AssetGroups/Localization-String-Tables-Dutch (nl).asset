@@ -17,27 +17,6 @@ MonoBehaviour:
     m_SerializedData: []
   m_GUID: 2d8c3fe86c649c340a23437960bf7e48
   m_SerializeEntries:
-  - m_GUID: 02342d41329324e4090730d0e6a626aa
-    m_Address: D_GrandmaIntro_nl
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-nl
-    - Preload
-  - m_GUID: e62b3564cc355c0488692e2fdc95da34
-    m_Address: D_QrandpaIntro_nl
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-nl
-  - m_GUID: be9e016398b735943a6f08051e8b7ccd
-    m_Address: Q_Quiz0_nl
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-nl
-  - m_GUID: 92d826e30306b4c44ac7565d3a4c5efe
-    m_Address: Q_Quiz1_nl
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-nl
   - m_GUID: 88bfa50ee29808a478866b8a092bf730
     m_Address: S_Chair_nl
     m_ReadOnly: 1
@@ -48,33 +27,133 @@ MonoBehaviour:
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-nl
-  - m_GUID: 9b9bb0ea1001d4540ac205bd748e6885
-    m_Address: Q_QuizDemoQuestion_nl
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-nl
   - m_GUID: 7c15c0868328b33469204f03772e2264
     m_Address: S_BucketOfManure_nl
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-nl
   - m_GUID: c68130432979a8348b5c922267076321
-    m_Address: FavouriteToyQuestion_nl
+    m_Address: QQ_FavouriteToy0_nl
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-nl
   - m_GUID: 3112d321af36d5843918291b5439d8ff
-    m_Address: MaterialOfFavouriteToy_nl
+    m_Address: QQ_FavouriteToy1Material_nl
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-nl
   - m_GUID: 5a34b4712419b284bbd22f3b6042fc09
-    m_Address: ColorOfFavouriteToy_nl
+    m_Address: QQ_FavouriteToy2Color_nl
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-nl
   - m_GUID: 1c7997aba32696043b189d3495ed810f
     m_Address: WaterCan_nl
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-nl
+  - m_GUID: aa47786ce5516924a8315737365a01b1
+    m_Address: QQ_CushionPattern_nl
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-nl
+  - m_GUID: 98e2157d1f00e8d4c9d0b4a179d56123
+    m_Address: S_Bucket_nl
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-nl
+  - m_GUID: 8edd32ed38b65094186f05bc31ef28f5
+    m_Address: S_WaterCarrier_nl
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-nl
+  - m_GUID: 04c600cf8fbaee0489128334577042c0
+    m_Address: S_RoundCushion_nl
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-nl
+  - m_GUID: e9ac2e6911a01b945a2dff447f8f0f96
+    m_Address: QQ_NumberOfRopesFromWaterCarrier_nl
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-nl
+  - m_GUID: 05baf6e5a0b5acb4ca4f35c0b4b50497
+    m_Address: QS_Act2.0_nl
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-nl
+  - m_GUID: 26cc91ab1a31a914aa1cd4b67871bfba
+    m_Address: QS_Act3.0_nl
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-nl
+  - m_GUID: 9dd9116d9ac38e648a55927c068f64b4
+    m_Address: QS_Act3.1_nl
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-nl
+  - m_GUID: 391a4ebde2f2a36449d9c0d719e802d7
+    m_Address: QS_Ending0_nl
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-nl
+  - m_GUID: 40c7f1ed0a2e5c040a328666b69788a6
+    m_Address: C_Pancakes_nl
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-nl
+  - m_GUID: d1527f96f8238fa4bb0ff17ff4a6c3ec
+    m_Address: D_Act1.0_nl
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-nl
+  - m_GUID: 21666b025b76f9945a22bc9a6ad59943
+    m_Address: D_Act2.0_nl
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-nl
+  - m_GUID: bd26420f44411db4aacc2c94d91ea5e4
+    m_Address: D_Act2.1_nl
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-nl
+  - m_GUID: bedae025cbfc9c94c93da476e622efe0
+    m_Address: D_Act3.0_nl
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-nl
+  - m_GUID: 3e42eb71a1f7c374bb7c8b0353082b51
+    m_Address: D_Act3.1_nl
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-nl
+  - m_GUID: 6642996a0b7257241b2dcb011db3df7c
+    m_Address: D_Act4.0_nl
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-nl
+  - m_GUID: 607e5177f2cb62f4d90a1c3529b76e4d
+    m_Address: D_Act4.1_nl
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-nl
+  - m_GUID: 712683c4a8f0c5f4da3e1ea32a21fc1d
+    m_Address: D_Act4.2_nl
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-nl
+  - m_GUID: f472d96eda548144a897b6bf0c264221
+    m_Address: D_Act4.3_nl
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-nl
+  - m_GUID: 43f45ca05b2bbf84e880f3b1926a9ab4
+    m_Address: D_Act4.4_nl
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-nl
+  - m_GUID: 2706517c7c0f9c14e973ff9ac40cb273
+    m_Address: D_Act4.5_nl
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-nl
