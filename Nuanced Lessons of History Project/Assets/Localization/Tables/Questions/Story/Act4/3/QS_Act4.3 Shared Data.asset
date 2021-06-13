@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: QS_Act4.3 Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: QS_Act4.3
+  m_TableCollectionNameGuidString: f0e794419a9e9eb45a06104fcabd69a3
+  m_Entries:
+  - m_Id: 4966445056
+    m_Key: Q
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7407529984
+    m_Key: A0
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11819937792
+    m_Key: A1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 33902948352
+    m_Key: A2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 38017560576
+    m_Key: R0
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40269901824
+    m_Key: R1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 70976401408
+    m_Key: R2
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    id: 0
+  references:
+    version: 1
+    00000000:
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1623584751118

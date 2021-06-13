@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.Localization;
 using NaughtyAttributes;
+using UnityEngine.Video;
 
 [System.Serializable]
 public class LineCharacter
@@ -49,14 +50,21 @@ public class Line
         QuizQuestion,
         StoryQuestion,
         ImageToScan,
-        StartNewDialogue
+        StartNewDialogue,
+        PlayVideoClip
     }
 
     #region Fields
     [SerializeField] private LineCharacter[] _lineCharacters;
     [HorizontalLine(1)]
+    [SerializeField] private AudioClip _soundBeforeLine;
+    [SerializeField] private bool _waitUntilSoundBeforeLineEnds;
+    [HorizontalLine(1)]
     [SerializeField] private LocalizedString _lineString;
     [Range(10, 60)] [SerializeField] private int _textCharactersPerSecond = 30;
+    [HorizontalLine(1)]
+    [SerializeField] private AudioClip _soundAfterLine;
+    [SerializeField] private bool _waitUntilSoundAfterLineEnds;
     [HorizontalLine(1)]
     [SerializeField] private Sprite _backgroundSprite = null;
     [HorizontalLine(1)]
@@ -65,11 +73,17 @@ public class Line
     [AllowNesting] [ShowIf("_playerInteraction", PlayerInteraction.StoryQuestion)] [SerializeField] private StoryQuestionScriptableObject _storyQuestion;
     [AllowNesting] [ShowIf("_playerInteraction", PlayerInteraction.ImageToScan)] [SerializeField] private ScannableImageScriptableObject _imageToScan;
     [AllowNesting] [ShowIf("_playerInteraction", PlayerInteraction.StartNewDialogue)] [SerializeField] private DialogueScriptableObject _newDialogue;
+    [AllowNesting] [ShowIf("_playerInteraction", PlayerInteraction.PlayVideoClip)] [SerializeField] private VideoClip _videoClip;
+    [AllowNesting] [ShowIf("_playerInteraction", PlayerInteraction.PlayVideoClip)] [SerializeField] private float _videoClipStartDelay;
     #endregion
 
     #region Properties
+    public AudioClip SoundBeforeLine => _soundBeforeLine;
+    public bool WaitUntilSoundBeforeLineEnds => _waitUntilSoundBeforeLineEnds;
     public LineCharacter[] LineCharacters => _lineCharacters;
     public LocalizedString LineString => _lineString;
+    public AudioClip SoundAfterLine => _soundAfterLine;
+    public bool WaitUntilSoundAfterLineEnds => _waitUntilSoundAfterLineEnds;
     public int TextCharactersPerSecond => (_textCharactersPerSecond == 0) ? 30 : _textCharactersPerSecond;
     public Sprite BackgroundSprite => _backgroundSprite;
     public PlayerInteraction Interaction => _playerInteraction;
@@ -93,6 +107,11 @@ public class Line
                 break;
             case PlayerInteraction.StartNewDialogue:
                 DialogueManager.Instance.StartNewDialogue(_newDialogue);
+                break;
+            case PlayerInteraction.PlayVideoClip:
+                VideoManager.Instance.PlayNewClip(_videoClip, _videoClipStartDelay);
+                break;
+            default:
                 break;
         }
     }

@@ -12,4 +12,88 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a96c5442fadcc94aaefb0193117d3f9, type: 3}
   m_Name: D_Act3.0
   m_EditorClassIdentifier: 
-  _lines: []
+  _lines:
+  - _lineCharacters:
+    - _characterScriptableObject: {fileID: 11400000, guid: 6bae2253e9e586c47a040d2cbf8270fd, type: 2}
+      _nameToUse: 0
+      _expression: 0
+      _hideCharacterImage: 0
+      _isSpeaker: 1
+    _lineString:
+      m_TableReference:
+        m_TableCollectionName: GUID:2f239361558a1754592ed18385704f91
+      m_TableEntryReference:
+        m_KeyId: 5188743168
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+    _textCharactersPerSecond: 0
+    _backgroundSprite: {fileID: 21300000, guid: 6bc8696cbadc4ba499632075eedf17d6, type: 3}
+    _playerInteraction: 0
+    _quizQuestion: {fileID: 0}
+    _storyQuestion: {fileID: 0}
+    _imageToScan: {fileID: 0}
+    _newDialogue: {fileID: 0}
+  - _lineCharacters:
+    - _characterScriptableObject: {fileID: 11400000, guid: 6bae2253e9e586c47a040d2cbf8270fd, type: 2}
+      _nameToUse: 0
+      _expression: 2
+      _hideCharacterImage: 0
+      _isSpeaker: 1
+    _lineString:
+      m_TableReference:
+        m_TableCollectionName: GUID:2f239361558a1754592ed18385704f91
+      m_TableEntryReference:
+        m_KeyId: 5188743168
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+    _textCharactersPerSecond: 0
+    _backgroundSprite: {fileID: 21300000, guid: 6bc8696cbadc4ba499632075eedf17d6, type: 3}
+    _playerInteraction: 2
+    _quizQuestion: {fileID: 0}
+    _storyQuestion: {fileID: 11400000, guid: 33a0249d3d1228742b9477394313f7c4, type: 2}
+    _imageToScan: {fileID: 0}
+    _newDialogue: {fileID: 0}
+  - _lineCharacters:
+    - _characterScriptableObject: {fileID: 11400000, guid: 6bae2253e9e586c47a040d2cbf8270fd, type: 2}
+      _nameToUse: 0
+      _expression: 0
+      _hideCharacterImage: 0
+      _isSpeaker: 1
+    _lineString:
+      m_TableReference:
+        m_TableCollectionName: GUID:2f239361558a1754592ed18385704f91
+      m_TableEntryReference:
+        m_KeyId: 10196742144
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+    _textCharactersPerSecond: 0
+    _backgroundSprite: {fileID: 21300000, guid: 6bc8696cbadc4ba499632075eedf17d6, type: 3}
+    _playerInteraction: 1
+    _quizQuestion: {fileID: 11400000, guid: b4c942669efd94b49a4b93cf50dd13b7, type: 2}
+    _storyQuestion: {fileID: 0}
+    _imageToScan: {fileID: 0}
+    _newDialogue: {fileID: 0}
+  - _lineCharacters:
+    - _characterScriptableObject: {fileID: 11400000, guid: 6bae2253e9e586c47a040d2cbf8270fd, type: 2}
+      _nameToUse: 0
+      _expression: 0
+      _hideCharacterImage: 0
+      _isSpeaker: 1
+    _lineString:
+      m_TableReference:
+        m_TableCollectionName: GUID:2f239361558a1754592ed18385704f91
+      m_TableEntryReference:
+        m_KeyId: 13174697984
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+    _textCharactersPerSecond: 0
+    _backgroundSprite: {fileID: 21300000, guid: 6bc8696cbadc4ba499632075eedf17d6, type: 3}
+    _playerInteraction: 4
+    _quizQuestion: {fileID: 0}
+    _storyQuestion: {fileID: 0}
+    _imageToScan: {fileID: 0}
+    _newDialogue: {fileID: 11400000, guid: 89369d049496790479aced55090ad9e9, type: 2}

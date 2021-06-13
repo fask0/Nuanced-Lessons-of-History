@@ -1,25 +1,27 @@
-﻿using System.Collections;
-using UnityEngine.Localization.Components;
+﻿using NaughtyAttributes;
+using System.Collections;
 using UnityEngine;
+using UnityEngine.Localization.Components;
 using UnityEngine.UI;
 
 public class ARManager : Singleton<ARManager>
 {
     #region Fields
+    [HorizontalLine(1)]
     [Header("Main")]
     [SerializeField] private Camera _mainCamera;
     [SerializeField] private GameObject _vnPanel;
-
+    [HorizontalLine(1)]
     [Header("AR")]
     [SerializeField] private Camera _arCamera;
     [SerializeField] private GameObject _arPanel;
     [SerializeField] private GameObject _vuforiaBank;
     [SerializeField] private GameObject _cameraReticleContainer;
     [SerializeField] private GameObject _progressBarContainer;
-    [SerializeField] private float _scanTime;
+    [SerializeField] private float _timeToScan;
     [SerializeField] private Color _correctFeedbackColor;
     [SerializeField] private Color _wrongFeedbackColor;
-
+    [HorizontalLine(1)]
     [Header("Sidebar")]
     [SerializeField] private LocalizeStringEvent _infoLocalizedStringEvent;
     [SerializeField] private LocalizeStringEvent _hintLocalizedStringEvent;
@@ -93,7 +95,7 @@ public class ARManager : Singleton<ARManager>
         bool scanComplete = false;
         while (!_shouldFinishScanning)
         {
-            float fillAmountIncrement = (Time.deltaTime / _scanTime) / _progressBars.Length;
+            float fillAmountIncrement = (Time.deltaTime / _timeToScan) / _progressBars.Length;
             for (int i = 0; i < _progressBars.Length; i++)
                 _progressBars[i].fillAmount += fillAmountIncrement * normalizedRactangleRadialFillModifier(_progressBars[i].fillOrigin, _progressBars[i].fillAmount, sideModifiers[i]);
 

@@ -12,4 +12,112 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a96c5442fadcc94aaefb0193117d3f9, type: 3}
   m_Name: D_Act4.3
   m_EditorClassIdentifier: 
-  _lines: []
+  _lines:
+  - _lineCharacters:
+    - _characterScriptableObject: {fileID: 11400000, guid: 6bae2253e9e586c47a040d2cbf8270fd, type: 2}
+      _nameToUse: 0
+      _expression: 0
+      _hideCharacterImage: 0
+      _isSpeaker: 1
+    _soundBeforeLine: {fileID: 0}
+    _waitUntilSoundBeforeLineEnds: 0
+    _lineString:
+      m_TableReference:
+        m_TableCollectionName: GUID:3d7b0b51465043b44a5fd2a5c58816e0
+      m_TableEntryReference:
+        m_KeyId: 4085641216
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+    _textCharactersPerSecond: 0
+    _soundAfterLine: {fileID: 0}
+    _waitUntilSoundAfterLineEnds: 0
+    _backgroundSprite: {fileID: 21300000, guid: e444540bd49b533408be364cff14d3f6, type: 3}
+    _playerInteraction: 3
+    _quizQuestion: {fileID: 0}
+    _storyQuestion: {fileID: 0}
+    _imageToScan: {fileID: 11400000, guid: a20e07229313866468e59a25116e281d, type: 2}
+    _newDialogue: {fileID: 0}
+    _videoClip: {fileID: 0}
+    _videoClipStartDelay: 0
+  - _lineCharacters:
+    - _characterScriptableObject: {fileID: 11400000, guid: 6bae2253e9e586c47a040d2cbf8270fd, type: 2}
+      _nameToUse: 0
+      _expression: 1
+      _hideCharacterImage: 0
+      _isSpeaker: 1
+    _soundBeforeLine: {fileID: 0}
+    _waitUntilSoundBeforeLineEnds: 0
+    _lineString:
+      m_TableReference:
+        m_TableCollectionName: GUID:3d7b0b51465043b44a5fd2a5c58816e0
+      m_TableEntryReference:
+        m_KeyId: 6577057792
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+    _textCharactersPerSecond: 0
+    _soundAfterLine: {fileID: 0}
+    _waitUntilSoundAfterLineEnds: 0
+    _backgroundSprite: {fileID: 0}
+    _playerInteraction: 0
+    _quizQuestion: {fileID: 0}
+    _storyQuestion: {fileID: 0}
+    _imageToScan: {fileID: 11400000, guid: a20e07229313866468e59a25116e281d, type: 2}
+    _newDialogue: {fileID: 0}
+    _videoClip: {fileID: 0}
+    _videoClipStartDelay: 0
+  - _lineCharacters:
+    - _characterScriptableObject: {fileID: 11400000, guid: 6bae2253e9e586c47a040d2cbf8270fd, type: 2}
+      _nameToUse: 0
+      _expression: 0
+      _hideCharacterImage: 0
+      _isSpeaker: 1
+    _soundBeforeLine: {fileID: 0}
+    _waitUntilSoundBeforeLineEnds: 0
+    _lineString:
+      m_TableReference:
+        m_TableCollectionName: GUID:3d7b0b51465043b44a5fd2a5c58816e0
+      m_TableEntryReference:
+        m_KeyId: 9076862976
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+    _textCharactersPerSecond: 0
+    _soundAfterLine: {fileID: 0}
+    _waitUntilSoundAfterLineEnds: 0
+    _backgroundSprite: {fileID: 0}
+    _playerInteraction: 2
+    _quizQuestion: {fileID: 0}
+    _storyQuestion: {fileID: 11400000, guid: b7503dcbdb6da8344aee3cf9d2a936b4, type: 2}
+    _imageToScan: {fileID: 11400000, guid: a20e07229313866468e59a25116e281d, type: 2}
+    _newDialogue: {fileID: 0}
+    _videoClip: {fileID: 0}
+    _videoClipStartDelay: 0
+  - _lineCharacters:
+    - _characterScriptableObject: {fileID: 11400000, guid: 6bae2253e9e586c47a040d2cbf8270fd, type: 2}
+      _nameToUse: 0
+      _expression: 0
+      _hideCharacterImage: 0
+      _isSpeaker: 1
+    _soundBeforeLine: {fileID: 0}
+    _waitUntilSoundBeforeLineEnds: 0
+    _lineString:
+      m_TableReference:
+        m_TableCollectionName: GUID:3d7b0b51465043b44a5fd2a5c58816e0
+      m_TableEntryReference:
+        m_KeyId: 11794771968
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+    _textCharactersPerSecond: 0
+    _soundAfterLine: {fileID: 0}
+    _waitUntilSoundAfterLineEnds: 0
+    _backgroundSprite: {fileID: 0}
+    _playerInteraction: 4
+    _quizQuestion: {fileID: 0}
+    _storyQuestion: {fileID: 0}
+    _imageToScan: {fileID: 11400000, guid: a20e07229313866468e59a25116e281d, type: 2}
+    _newDialogue: {fileID: 11400000, guid: 21916e3c8f3d01f40b290c3191239070, type: 2}
+    _videoClip: {fileID: 0}
+    _videoClipStartDelay: 0

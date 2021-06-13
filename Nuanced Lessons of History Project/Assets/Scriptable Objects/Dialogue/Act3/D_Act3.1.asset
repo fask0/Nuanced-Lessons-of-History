@@ -12,4 +12,243 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a96c5442fadcc94aaefb0193117d3f9, type: 3}
   m_Name: D_Act3.1
   m_EditorClassIdentifier: 
-  _lines: []
+  _lines:
+  - _lineCharacters:
+    - _characterScriptableObject: {fileID: 11400000, guid: b4441ef9acaa3334faac393c1195dc33, type: 2}
+      _nameToUse: 0
+      _expression: 0
+      _hideCharacterImage: 0
+      _isSpeaker: 1
+    _lineString:
+      m_TableReference:
+        m_TableCollectionName: GUID:8e96aa836a45b7a4ebc36ecc2780cfb4
+      m_TableEntryReference:
+        m_KeyId: 3817205760
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+    _textCharactersPerSecond: 0
+    _backgroundSprite: {fileID: 21300000, guid: 6bc8696cbadc4ba499632075eedf17d6, type: 3}
+    _playerInteraction: 0
+    _quizQuestion: {fileID: 0}
+    _storyQuestion: {fileID: 0}
+    _imageToScan: {fileID: 0}
+    _newDialogue: {fileID: 0}
+  - _lineCharacters:
+    - _characterScriptableObject: {fileID: 11400000, guid: b4441ef9acaa3334faac393c1195dc33, type: 2}
+      _nameToUse: 0
+      _expression: 0
+      _hideCharacterImage: 0
+      _isSpeaker: 1
+    _lineString:
+      m_TableReference:
+        m_TableCollectionName: GUID:8e96aa836a45b7a4ebc36ecc2780cfb4
+      m_TableEntryReference:
+        m_KeyId: 6375731200
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+    _textCharactersPerSecond: 0
+    _backgroundSprite: {fileID: 21300000, guid: 6bc8696cbadc4ba499632075eedf17d6, type: 3}
+    _playerInteraction: 0
+    _quizQuestion: {fileID: 0}
+    _storyQuestion: {fileID: 0}
+    _imageToScan: {fileID: 0}
+    _newDialogue: {fileID: 0}
+  - _lineCharacters:
+    - _characterScriptableObject: {fileID: 11400000, guid: b4441ef9acaa3334faac393c1195dc33, type: 2}
+      _nameToUse: 0
+      _expression: 0
+      _hideCharacterImage: 0
+      _isSpeaker: 1
+    - _characterScriptableObject: {fileID: 11400000, guid: 6025f6a7ca3cb674c9007ad149bbe2a1, type: 2}
+      _nameToUse: 0
+      _expression: 0
+      _hideCharacterImage: 0
+      _isSpeaker: 0
+    _lineString:
+      m_TableReference:
+        m_TableCollectionName: GUID:8e96aa836a45b7a4ebc36ecc2780cfb4
+      m_TableEntryReference:
+        m_KeyId: 8644849664
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+    _textCharactersPerSecond: 0
+    _backgroundSprite: {fileID: 21300000, guid: 25ca7d594ed7bfe4e9c7a0ded5ba983f, type: 3}
+    _playerInteraction: 1
+    _quizQuestion: {fileID: 11400000, guid: 0f67153483babad47b76ffb5d6587e50, type: 2}
+    _storyQuestion: {fileID: 0}
+    _imageToScan: {fileID: 0}
+    _newDialogue: {fileID: 0}
+  - _lineCharacters:
+    - _characterScriptableObject: {fileID: 11400000, guid: b4441ef9acaa3334faac393c1195dc33, type: 2}
+      _nameToUse: 0
+      _expression: 0
+      _hideCharacterImage: 0
+      _isSpeaker: 1
+    - _characterScriptableObject: {fileID: 11400000, guid: 6025f6a7ca3cb674c9007ad149bbe2a1, type: 2}
+      _nameToUse: 0
+      _expression: 0
+      _hideCharacterImage: 0
+      _isSpeaker: 0
+    _lineString:
+      m_TableReference:
+        m_TableCollectionName: GUID:8e96aa836a45b7a4ebc36ecc2780cfb4
+      m_TableEntryReference:
+        m_KeyId: 1813386752000
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+    _textCharactersPerSecond: 0
+    _backgroundSprite: {fileID: 21300000, guid: 25ca7d594ed7bfe4e9c7a0ded5ba983f, type: 3}
+    _playerInteraction: 2
+    _quizQuestion: {fileID: 0}
+    _storyQuestion: {fileID: 11400000, guid: 36cb1a723c0a4d448b78298198b6c652, type: 2}
+    _imageToScan: {fileID: 0}
+    _newDialogue: {fileID: 0}
+  - _lineCharacters:
+    - _characterScriptableObject: {fileID: 11400000, guid: b4441ef9acaa3334faac393c1195dc33, type: 2}
+      _nameToUse: 0
+      _expression: 0
+      _hideCharacterImage: 0
+      _isSpeaker: 0
+    - _characterScriptableObject: {fileID: 11400000, guid: 6025f6a7ca3cb674c9007ad149bbe2a1, type: 2}
+      _nameToUse: 0
+      _expression: 0
+      _hideCharacterImage: 0
+      _isSpeaker: 0
+    - _characterScriptableObject: {fileID: 11400000, guid: 2d96134aedbda164c8d2a6bde96797c5, type: 2}
+      _nameToUse: 0
+      _expression: 0
+      _hideCharacterImage: 0
+      _isSpeaker: 1
+    _lineString:
+      m_TableReference:
+        m_TableCollectionName: GUID:8e96aa836a45b7a4ebc36ecc2780cfb4
+      m_TableEntryReference:
+        m_KeyId: 1815878168576
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+    _textCharactersPerSecond: 0
+    _backgroundSprite: {fileID: 21300000, guid: 25ca7d594ed7bfe4e9c7a0ded5ba983f, type: 3}
+    _playerInteraction: 0
+    _quizQuestion: {fileID: 0}
+    _storyQuestion: {fileID: 0}
+    _imageToScan: {fileID: 0}
+    _newDialogue: {fileID: 0}
+  - _lineCharacters:
+    - _characterScriptableObject: {fileID: 11400000, guid: b4441ef9acaa3334faac393c1195dc33, type: 2}
+      _nameToUse: 0
+      _expression: 2
+      _hideCharacterImage: 0
+      _isSpeaker: 1
+    - _characterScriptableObject: {fileID: 11400000, guid: 6025f6a7ca3cb674c9007ad149bbe2a1, type: 2}
+      _nameToUse: 0
+      _expression: 2
+      _hideCharacterImage: 0
+      _isSpeaker: 0
+    - _characterScriptableObject: {fileID: 11400000, guid: 2d96134aedbda164c8d2a6bde96797c5, type: 2}
+      _nameToUse: 0
+      _expression: 0
+      _hideCharacterImage: 0
+      _isSpeaker: 0
+    _lineString:
+      m_TableReference:
+        m_TableCollectionName: GUID:8e96aa836a45b7a4ebc36ecc2780cfb4
+      m_TableEntryReference:
+        m_KeyId: 1818621243392
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+    _textCharactersPerSecond: 0
+    _backgroundSprite: {fileID: 21300000, guid: 25ca7d594ed7bfe4e9c7a0ded5ba983f, type: 3}
+    _playerInteraction: 0
+    _quizQuestion: {fileID: 0}
+    _storyQuestion: {fileID: 0}
+    _imageToScan: {fileID: 0}
+    _newDialogue: {fileID: 0}
+  - _lineCharacters:
+    - _characterScriptableObject: {fileID: 11400000, guid: 2d96134aedbda164c8d2a6bde96797c5, type: 2}
+      _nameToUse: 0
+      _expression: 0
+      _hideCharacterImage: 0
+      _isSpeaker: 1
+    - _characterScriptableObject: {fileID: 11400000, guid: 6025f6a7ca3cb674c9007ad149bbe2a1, type: 2}
+      _nameToUse: 0
+      _expression: 0
+      _hideCharacterImage: 0
+      _isSpeaker: 0
+    _lineString:
+      m_TableReference:
+        m_TableCollectionName: GUID:8e96aa836a45b7a4ebc36ecc2780cfb4
+      m_TableEntryReference:
+        m_KeyId: 1897927143424
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+    _textCharactersPerSecond: 0
+    _backgroundSprite: {fileID: 21300000, guid: 25ca7d594ed7bfe4e9c7a0ded5ba983f, type: 3}
+    _playerInteraction: 3
+    _quizQuestion: {fileID: 0}
+    _storyQuestion: {fileID: 0}
+    _imageToScan: {fileID: 11400000, guid: 6becd73df09d02e4ba1d4e1c98badeae, type: 2}
+    _newDialogue: {fileID: 0}
+  - _lineCharacters:
+    - _characterScriptableObject: {fileID: 11400000, guid: 2d96134aedbda164c8d2a6bde96797c5, type: 2}
+      _nameToUse: 0
+      _expression: 1
+      _hideCharacterImage: 0
+      _isSpeaker: 1
+    - _characterScriptableObject: {fileID: 11400000, guid: 6025f6a7ca3cb674c9007ad149bbe2a1, type: 2}
+      _nameToUse: 0
+      _expression: 1
+      _hideCharacterImage: 0
+      _isSpeaker: 0
+    _lineString:
+      m_TableReference:
+        m_TableCollectionName: GUID:8e96aa836a45b7a4ebc36ecc2780cfb4
+      m_TableEntryReference:
+        m_KeyId: 1901840429056
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+    _textCharactersPerSecond: 0
+    _backgroundSprite: {fileID: 21300000, guid: 25ca7d594ed7bfe4e9c7a0ded5ba983f, type: 3}
+    _playerInteraction: 0
+    _quizQuestion: {fileID: 0}
+    _storyQuestion: {fileID: 0}
+    _imageToScan: {fileID: 11400000, guid: 6becd73df09d02e4ba1d4e1c98badeae, type: 2}
+    _newDialogue: {fileID: 0}
+  - _lineCharacters:
+    - _characterScriptableObject: {fileID: 11400000, guid: 2d96134aedbda164c8d2a6bde96797c5, type: 2}
+      _nameToUse: 0
+      _expression: 0
+      _hideCharacterImage: 0
+      _isSpeaker: 0
+    - _characterScriptableObject: {fileID: 11400000, guid: 6025f6a7ca3cb674c9007ad149bbe2a1, type: 2}
+      _nameToUse: 0
+      _expression: 0
+      _hideCharacterImage: 0
+      _isSpeaker: 0
+    - _characterScriptableObject: {fileID: 11400000, guid: 6bae2253e9e586c47a040d2cbf8270fd, type: 2}
+      _nameToUse: 0
+      _expression: 0
+      _hideCharacterImage: 0
+      _isSpeaker: 1
+    _lineString:
+      m_TableReference:
+        m_TableCollectionName: GUID:8e96aa836a45b7a4ebc36ecc2780cfb4
+      m_TableEntryReference:
+        m_KeyId: 1956538347520
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+    _textCharactersPerSecond: 0
+    _backgroundSprite: {fileID: 21300000, guid: 25ca7d594ed7bfe4e9c7a0ded5ba983f, type: 3}
+    _playerInteraction: 4
+    _quizQuestion: {fileID: 0}
+    _storyQuestion: {fileID: 0}
+    _imageToScan: {fileID: 11400000, guid: 6becd73df09d02e4ba1d4e1c98badeae, type: 2}
+    _newDialogue: {fileID: 11400000, guid: 27f6aa644c8d5d8448dd51aac9a2f8db, type: 2}

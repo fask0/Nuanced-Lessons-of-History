@@ -6,6 +6,10 @@ public enum ScannableImageType
     Heater,
     BucketOfManure,
     WateringCan,
+    BucketOfMilk,
+    WashingBoard,
+    FootStove,
+    LaundryRack
 }
 
 public class ImageTypeIdentifier : MonoBehaviour

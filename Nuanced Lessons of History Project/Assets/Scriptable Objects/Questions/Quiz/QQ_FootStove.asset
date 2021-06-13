@@ -10,43 +10,43 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 59752de0b75d1a146b65c158fff577e6, type: 3}
-  m_Name: QQ_FavouriteToy0
+  m_Name: QQ_FootStove
   m_EditorClassIdentifier: 
   _question:
     m_TableReference:
-      m_TableCollectionName: GUID:58b9ae2c3e65e4040b67ef8441b01604
+      m_TableCollectionName: GUID:9ca6098aae3502c4a9345bf8cbe51bfc
     m_TableEntryReference:
-      m_KeyId: 1370550124544
+      m_KeyId: 5692059648
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
   _answers:
   - m_TableReference:
-      m_TableCollectionName: GUID:58b9ae2c3e65e4040b67ef8441b01604
+      m_TableCollectionName: GUID:9ca6098aae3502c4a9345bf8cbe51bfc
     m_TableEntryReference:
-      m_KeyId: 1505594130432
+      m_KeyId: 8141533184
       m_Key: 
     m_FallbackState: 0
-    m_WaitForCompletion: 0
+    m_WaitForCompletion: 1
   - m_TableReference:
-      m_TableCollectionName: GUID:58b9ae2c3e65e4040b67ef8441b01604
+      m_TableCollectionName: GUID:9ca6098aae3502c4a9345bf8cbe51bfc
     m_TableEntryReference:
-      m_KeyId: 2214687358976
+      m_KeyId: 10347737088
       m_Key: 
     m_FallbackState: 0
-    m_WaitForCompletion: 0
+    m_WaitForCompletion: 1
   - m_TableReference:
-      m_TableCollectionName: GUID:58b9ae2c3e65e4040b67ef8441b01604
+      m_TableCollectionName: GUID:9ca6098aae3502c4a9345bf8cbe51bfc
     m_TableEntryReference:
-      m_KeyId: 2585849708544
+      m_KeyId: 15385096192
       m_Key: 
     m_FallbackState: 0
-    m_WaitForCompletion: 0
+    m_WaitForCompletion: 1
   _correctAnswer:
     m_TableReference:
-      m_TableCollectionName: GUID:58b9ae2c3e65e4040b67ef8441b01604
+      m_TableCollectionName: GUID:9ca6098aae3502c4a9345bf8cbe51bfc
     m_TableEntryReference:
-      m_KeyId: 2659115810816
+      m_KeyId: 18136559616
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
@@ -55,6 +55,8 @@ MonoBehaviour:
     _newDialogue: {fileID: 0}
     _nextLine:
       _lineCharacters: []
+      _soundBeforeLine: {fileID: 0}
+      _waitUntilSoundBeforeLineEnds: 0
       _lineString:
         m_TableReference:
           m_TableCollectionName: 
@@ -64,18 +66,27 @@ MonoBehaviour:
         m_FallbackState: 0
         m_WaitForCompletion: 1
       _textCharactersPerSecond: 30
+      _soundAfterLine: {fileID: 0}
+      _waitUntilSoundAfterLineEnds: 0
       _backgroundSprite: {fileID: 0}
       _playerInteraction: 0
       _quizQuestion: {fileID: 0}
       _storyQuestion: {fileID: 0}
       _imageToScan: {fileID: 0}
+      _newDialogue: {fileID: 0}
+      _videoClip: {fileID: 0}
+      _videoClipStartDelay: 0
     _quizQuestion: {fileID: 0}
     _storyQuestion: {fileID: 0}
     _imageToScan: {fileID: 0}
+    _videoClip: {fileID: 0}
+    _videoClipStartDelay: 0
   - _action: 0
     _newDialogue: {fileID: 0}
     _nextLine:
       _lineCharacters: []
+      _soundBeforeLine: {fileID: 0}
+      _waitUntilSoundBeforeLineEnds: 0
       _lineString:
         m_TableReference:
           m_TableCollectionName: 
@@ -85,18 +96,27 @@ MonoBehaviour:
         m_FallbackState: 0
         m_WaitForCompletion: 1
       _textCharactersPerSecond: 30
+      _soundAfterLine: {fileID: 0}
+      _waitUntilSoundAfterLineEnds: 0
       _backgroundSprite: {fileID: 0}
       _playerInteraction: 0
       _quizQuestion: {fileID: 0}
       _storyQuestion: {fileID: 0}
       _imageToScan: {fileID: 0}
+      _newDialogue: {fileID: 0}
+      _videoClip: {fileID: 0}
+      _videoClipStartDelay: 0
     _quizQuestion: {fileID: 0}
     _storyQuestion: {fileID: 0}
     _imageToScan: {fileID: 0}
+    _videoClip: {fileID: 0}
+    _videoClipStartDelay: 0
   - _action: 0
     _newDialogue: {fileID: 0}
     _nextLine:
       _lineCharacters: []
+      _soundBeforeLine: {fileID: 0}
+      _waitUntilSoundBeforeLineEnds: 0
       _lineString:
         m_TableReference:
           m_TableCollectionName: 
@@ -106,19 +126,28 @@ MonoBehaviour:
         m_FallbackState: 0
         m_WaitForCompletion: 1
       _textCharactersPerSecond: 30
+      _soundAfterLine: {fileID: 0}
+      _waitUntilSoundAfterLineEnds: 0
       _backgroundSprite: {fileID: 0}
       _playerInteraction: 0
       _quizQuestion: {fileID: 0}
       _storyQuestion: {fileID: 0}
       _imageToScan: {fileID: 0}
+      _newDialogue: {fileID: 0}
+      _videoClip: {fileID: 0}
+      _videoClipStartDelay: 0
     _quizQuestion: {fileID: 0}
     _storyQuestion: {fileID: 0}
     _imageToScan: {fileID: 0}
+    _videoClip: {fileID: 0}
+    _videoClipStartDelay: 0
   _onCorrectAnswerAction:
-    _action: 4
+    _action: 6
     _newDialogue: {fileID: 0}
     _nextLine:
       _lineCharacters: []
+      _soundBeforeLine: {fileID: 0}
+      _waitUntilSoundBeforeLineEnds: 0
       _lineString:
         m_TableReference:
           m_TableCollectionName: 
@@ -128,19 +157,19 @@ MonoBehaviour:
         m_FallbackState: 0
         m_WaitForCompletion: 1
       _textCharactersPerSecond: 30
+      _soundAfterLine: {fileID: 0}
+      _waitUntilSoundAfterLineEnds: 0
       _backgroundSprite: {fileID: 0}
       _playerInteraction: 0
       _quizQuestion: {fileID: 0}
       _storyQuestion: {fileID: 0}
       _imageToScan: {fileID: 0}
-    _quizQuestion: {fileID: 11400000, guid: b4c942669efd94b49a4b93cf50dd13b7, type: 2}
+      _newDialogue: {fileID: 0}
+      _videoClip: {fileID: 0}
+      _videoClipStartDelay: 0
+    _quizQuestion: {fileID: 0}
     _storyQuestion: {fileID: 0}
-    _imageToScan: {fileID: 0}
-  _hints:
-  - m_TableReference:
-      m_TableCollectionName: GUID:58b9ae2c3e65e4040b67ef8441b01604
-    m_TableEntryReference:
-      m_KeyId: 2768733945856
-      m_Key: 
-    m_FallbackState: 0
-    m_WaitForCompletion: 0
+    _imageToScan: {fileID: 11400000, guid: f388ebb0375633740a61c9fcab21c940, type: 2}
+    _videoClip: {fileID: 0}
+    _videoClipStartDelay: 0
+  _hints: []

@@ -27,11 +27,25 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 11090128896
-    m_Localized: Why did you name her pancakes?
+    m_Localized: Why did you name her Pancakes?
     m_Metadata:
       m_Items: []
   - m_Id: 4886993694720
-    m_Localized: Haha, how cute.
+    m_Localized: "That\u2019s cute."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1096493310537728
+    m_Localized: Pancakes is my friend!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1096495885840384
+    m_Localized: "Because pancakes are my favourite food! We don\u2019t always get
+      to eat them, but when dad would come back from work, he\u2019d sometimes bring
+      some!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1096500168224768
+    m_Localized: Do you want to play too? I can make room!
     m_Metadata:
       m_Items: []
   references:

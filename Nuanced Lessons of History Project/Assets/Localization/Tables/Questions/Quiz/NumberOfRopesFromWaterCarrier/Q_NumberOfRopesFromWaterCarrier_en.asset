@@ -17,6 +17,26 @@ MonoBehaviour:
   m_SharedData: {fileID: 11400000, guid: a487617bac243a742a6a994c4b60234c, type: 2}
   m_Metadata:
     m_Items: []
-  m_TableData: []
+  m_TableData:
+  - m_Id: 2158568954785792
+    m_Localized: How many ropes are attached to the Water carrier?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2158572989706240
+    m_Localized: 1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2158672604426240
+    m_Localized: 2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2158578622656512
+    m_Localized: None
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2158575523065856
+    m_Localized: 4
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

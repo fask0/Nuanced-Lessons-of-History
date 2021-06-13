@@ -1,6 +1,7 @@
 ﻿using NaughtyAttributes;
 using UnityEngine;
 using UnityEngine.Localization;
+using UnityEngine.Video;
 
 [System.Serializable]
 public class SpecialAction
@@ -13,7 +14,8 @@ public class SpecialAction
         OverrideNextLine,
         QuizQuestion,
         StoryQuestion,
-        ImageToScan
+        ImageToScan,
+        PlayVideoClip
     }
 
     #region Fields
@@ -23,6 +25,8 @@ public class SpecialAction
     [AllowNesting] [ShowIf("_action", Action.QuizQuestion)] [SerializeField] private QuizQuestionScriptableObject _quizQuestion;
     [AllowNesting] [ShowIf("_action", Action.StoryQuestion)] [SerializeField] private StoryQuestionScriptableObject _storyQuestion;
     [AllowNesting] [ShowIf("_action", Action.ImageToScan)] [SerializeField] private ScannableImageScriptableObject _imageToScan;
+    [AllowNesting] [ShowIf("_action", Action.PlayVideoClip)] [SerializeField] private VideoClip _videoClip;
+    [AllowNesting] [ShowIf("_action", Action.PlayVideoClip)] [SerializeField] private float _videoClipStartDelay;
 
     private bool EnableNewLine => _action == Action.AddNewLine || _action == Action.OverrideNextLine;
     #endregion
@@ -56,6 +60,9 @@ public class SpecialAction
                 break;
             case Action.ImageToScan:
                 ARManager.Instance.PrepareImageToScan(_imageToScan);
+                break;
+            case Action.PlayVideoClip:
+                VideoManager.Instance.PlayNewClip(_videoClip, _videoClipStartDelay);
                 break;
             default:
                 break;

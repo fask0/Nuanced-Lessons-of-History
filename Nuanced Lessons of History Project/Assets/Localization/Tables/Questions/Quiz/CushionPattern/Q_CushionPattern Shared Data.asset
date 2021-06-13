@@ -14,7 +14,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_TableCollectionName: QQ_CushionPattern
   m_TableCollectionNameGuidString: 0578ef94dfedf0740aef58810832fdc0
-  m_Entries: []
+  m_Entries:
+  - m_Id: 2153624482738176
+    m_Key: Q
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2153626756050944
+    m_Key: A0
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2153629180358656
+    m_Key: A1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2153631860518912
+    m_Key: A2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2153657928118272
+    m_Key: C
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

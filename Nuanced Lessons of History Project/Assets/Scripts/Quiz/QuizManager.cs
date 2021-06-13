@@ -1,17 +1,17 @@
-﻿using System.Collections;
+﻿using NaughtyAttributes;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using TMPro;
 using UnityEngine;
 using UnityEngine.Localization;
 using UnityEngine.Localization.Components;
-using UnityEngine.Localization.Settings;
 using UnityEngine.UI;
 
 public class QuizManager : Singleton<QuizManager>
 {
     #region Fields
-    [Header("Quiz Manager")]
+    [HorizontalLine(1)]
+    [Header("Quiz")]
     [SerializeField] private GameObject _quizPanel;
     [SerializeField] private GameObject _questionContainer;
     [SerializeField] private GameObject _answersContainer;

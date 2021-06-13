@@ -12,9 +12,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
   m_Name: Q_NumberOfRopesFromWaterCarrier Shared Data
   m_EditorClassIdentifier: 
-  m_TableCollectionName: QQ_NumberOfRopesFromWaterCarrier
+  m_TableCollectionName: QQ_WaterCarrier
   m_TableCollectionNameGuidString: a487617bac243a742a6a994c4b60234c
-  m_Entries: []
+  m_Entries:
+  - m_Id: 2158568954785792
+    m_Key: Q
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2158572989706240
+    m_Key: A0
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2158575523065856
+    m_Key: A1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2158578622656512
+    m_Key: A2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2158672604426240
+    m_Key: C
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

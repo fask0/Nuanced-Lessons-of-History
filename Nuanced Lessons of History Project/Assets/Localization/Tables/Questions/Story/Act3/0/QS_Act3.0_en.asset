@@ -34,5 +34,20 @@ MonoBehaviour:
     m_Localized: Why do you want to grow up so fast?
     m_Metadata:
       m_Items: []
+  - m_Id: 1092516883853312
+    m_Localized: "I bet I can carry three at the same time without spilling! Pa and
+      I used to compete all the time\u2026 I won\u2019t disappoint him."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1092519807283200
+    m_Localized: "You\u2019re just like everyone else! I\u2019ll show all of you\u2026"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1092524286799872
+    m_Localized: "I have to do something to pull my weight\u2026 Everyone is working
+      so hard to get money and I am just here doing nothing. <size=0>|</size>If Pa
+      was still here, he\u2019d understand\u2026 I won\u2019t let him down."
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

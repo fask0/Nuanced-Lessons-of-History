@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NaughtyAttributes;
+using System;
 using System.Collections;
 using TMPro;
 using UnityEngine;
@@ -10,7 +11,7 @@ using UnityEngine.UI;
 public class DialogueManager : Singleton<DialogueManager>
 {
     #region Fields
-    #region Speech
+    [HorizontalLine(1)]
     [Header("Speech Panel")]
     [SerializeField] private Image _backgroundImage;
     [SerializeField] private GameObject _speechPanel;
@@ -20,27 +21,17 @@ public class DialogueManager : Singleton<DialogueManager>
     [SerializeField] private LocalizeStringEvent _hintLocalizedStringEvent;
     [SerializeField] private Button _speechBoxButton;
     [SerializeField] private GameObject _clickToContinue;
-
-    private Image[] _characterImages;
-    #endregion
-
-    #region Quiz
-    [Header("Gameplay")]
+    [HorizontalLine(1)]
+    [Header("Other Panels")]
     [SerializeField] private GameObject _quizPanel;
     [SerializeField] private GameObject _arPanel;
-    #endregion
 
-    #region Dialogue
+    private Image[] _characterImages;
     private DialogueScriptableObject _currentDialogue;
     private int _dialogueProgress;
     private Coroutine _speak = null;
     private Coroutine _speakHint = null;
-    #endregion
-
     private UnityAction _nextLineAction;
-    #endregion
-
-    #region Properties
     #endregion
 
     #region Methods
@@ -101,6 +92,8 @@ public class DialogueManager : Singleton<DialogueManager>
 
     public void Resume()
     {
+        _quizPanel.SetActive(false);
+        _arPanel.SetActive(false);
         reassignSpeechBoxButtonListeners();
         nextLine();
     }
@@ -189,7 +182,7 @@ public class DialogueManager : Singleton<DialogueManager>
         _speechNameLocalizedStingEvent.gameObject.SetActive(false);
         _speechNameLocalizedStingEvent.gameObject.SetActive(true);
 
-        if (_backgroundImage.enabled = line.BackgroundSprite != null) _backgroundImage.sprite = line.BackgroundSprite;
+        if (line.BackgroundSprite != null) _backgroundImage.sprite = line.BackgroundSprite;
 
         return line;
     }
@@ -198,6 +191,29 @@ public class DialogueManager : Singleton<DialogueManager>
     {
         _speechBoxButton.onClick.RemoveAllListeners();
 
+        if (pLine.SoundBeforeLine != null)
+        {
+            SoundManager.Instance.PlayNewSoundClip(pLine.SoundBeforeLine);
+            UnityAction onClickAction = () => skipWaitOnClick();
+            _speechBoxButton.onClick.AddListener(onClickAction);
+            float timeRemaining = pLine.SoundBeforeLine.length;
+            while (pLine.WaitUntilSoundBeforeLineEnds)
+            {
+                yield return new WaitForEndOfFrame();
+                timeRemaining -= Time.deltaTime;
+                if (timeRemaining <= 0) break;
+            }
+            _speechBoxButton.onClick.RemoveListener(onClickAction);
+
+            #region Local Methods
+            void skipWaitOnClick()
+            {
+                timeRemaining = 0;
+                //SoundManager.Instance.StopSound();
+            }
+            #endregion
+        }
+
         float delay = 1.0f / pLine.TextCharactersPerSecond;
 
         TextMeshProUGUI speechText = _speechLocalizedStingEvent.GetComponent<TextMeshProUGUI>();
@@ -205,7 +221,7 @@ public class DialogueManager : Singleton<DialogueManager>
         speechText.text = "";
         _speechLocalizedStingEvent.enabled = false;
 
-        string[] targetText = pLine.LineString.GetLocalizedString().Split(new string[] { "<size=0>|</size>" }, StringSplitOptions.None);
+        string[] targetText = (pLine.LineString != null) ? pLine.LineString.GetLocalizedString().Split(new string[] { "<size=0>|</size>" }, StringSplitOptions.None) : new string[1] { "" };
         if (targetText.Length <= 1)
             _speechBoxButton.onClick.AddListener(_nextLineAction);
 
@@ -272,6 +288,29 @@ public class DialogueManager : Singleton<DialogueManager>
             }
         }
 
+        if (pLine.SoundAfterLine != null)
+        {
+            SoundManager.Instance.PlayNewSoundClip(pLine.SoundAfterLine);
+            UnityAction onClickAction = () => stopSoundOnClick();
+            _speechBoxButton.onClick.AddListener(onClickAction);
+            float timeRemaining = pLine.SoundBeforeLine.length;
+            while (pLine.WaitUntilSoundAfterLineEnds)
+            {
+                yield return new WaitForEndOfFrame();
+                timeRemaining -= Time.deltaTime;
+                if (timeRemaining <= 0) break;
+            }
+            _speechBoxButton.onClick.RemoveListener(onClickAction);
+
+            #region Local Methods
+            void stopSoundOnClick()
+            {
+                timeRemaining = 0;
+                SoundManager.Instance.StopSound();
+            }
+            #endregion
+        }
+
         finishSpeak();
 
         #region Local Methods
@@ -289,8 +328,11 @@ public class DialogueManager : Singleton<DialogueManager>
         StopCoroutine(_speak);
         _speak = null;
 
-        _speechLocalizedStingEvent.enabled = true;
-        _speechLocalizedStingEvent.StringReference = line.LineString;
+        if (line.LineString != null)
+        {
+            _speechLocalizedStingEvent.enabled = true;
+            _speechLocalizedStingEvent.StringReference = line.LineString;
+        }
 
         _speechBoxButton.onClick.RemoveAllListeners();
 

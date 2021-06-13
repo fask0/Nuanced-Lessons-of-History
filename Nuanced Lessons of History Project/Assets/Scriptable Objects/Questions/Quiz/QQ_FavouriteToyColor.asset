@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 59752de0b75d1a146b65c158fff577e6, type: 3}
-  m_Name: QQ_NumberOfRopesFromWaterCarrier
+  m_Name: QQ_FavouriteToyColor
   m_EditorClassIdentifier: 
   _question:
     m_TableReference:
@@ -27,7 +27,21 @@ MonoBehaviour:
       m_KeyId: 23062855680
       m_Key: 
     m_FallbackState: 0
-    m_WaitForCompletion: 1
+    m_WaitForCompletion: 0
+  - m_TableReference:
+      m_TableCollectionName: GUID:492d87ae7e8dcf74c86763f75dc2dcd8
+    m_TableEntryReference:
+      m_KeyId: 36430102528
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+  - m_TableReference:
+      m_TableCollectionName: GUID:492d87ae7e8dcf74c86763f75dc2dcd8
+    m_TableEntryReference:
+      m_KeyId: 54973120512
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
   _correctAnswer:
     m_TableReference:
       m_TableCollectionName: GUID:492d87ae7e8dcf74c86763f75dc2dcd8
@@ -55,6 +69,51 @@ MonoBehaviour:
       _quizQuestion: {fileID: 0}
       _storyQuestion: {fileID: 0}
       _imageToScan: {fileID: 0}
+      _newDialogue: {fileID: 0}
+    _quizQuestion: {fileID: 0}
+    _storyQuestion: {fileID: 0}
+    _imageToScan: {fileID: 0}
+  - _action: 0
+    _newDialogue: {fileID: 0}
+    _nextLine:
+      _lineCharacters: []
+      _lineString:
+        m_TableReference:
+          m_TableCollectionName: 
+        m_TableEntryReference:
+          m_KeyId: 0
+          m_Key: 
+        m_FallbackState: 0
+        m_WaitForCompletion: 1
+      _textCharactersPerSecond: 30
+      _backgroundSprite: {fileID: 0}
+      _playerInteraction: 0
+      _quizQuestion: {fileID: 0}
+      _storyQuestion: {fileID: 0}
+      _imageToScan: {fileID: 0}
+      _newDialogue: {fileID: 0}
+    _quizQuestion: {fileID: 0}
+    _storyQuestion: {fileID: 0}
+    _imageToScan: {fileID: 0}
+  - _action: 0
+    _newDialogue: {fileID: 0}
+    _nextLine:
+      _lineCharacters: []
+      _lineString:
+        m_TableReference:
+          m_TableCollectionName: 
+        m_TableEntryReference:
+          m_KeyId: 0
+          m_Key: 
+        m_FallbackState: 0
+        m_WaitForCompletion: 1
+      _textCharactersPerSecond: 30
+      _backgroundSprite: {fileID: 0}
+      _playerInteraction: 0
+      _quizQuestion: {fileID: 0}
+      _storyQuestion: {fileID: 0}
+      _imageToScan: {fileID: 0}
+      _newDialogue: {fileID: 0}
     _quizQuestion: {fileID: 0}
     _storyQuestion: {fileID: 0}
     _imageToScan: {fileID: 0}
@@ -77,6 +136,7 @@ MonoBehaviour:
       _quizQuestion: {fileID: 0}
       _storyQuestion: {fileID: 0}
       _imageToScan: {fileID: 0}
+      _newDialogue: {fileID: 0}
     _quizQuestion: {fileID: 0}
     _storyQuestion: {fileID: 0}
     _imageToScan: {fileID: 0}

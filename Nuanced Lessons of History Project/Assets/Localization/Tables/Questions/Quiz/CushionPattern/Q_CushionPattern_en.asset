@@ -17,6 +17,26 @@ MonoBehaviour:
   m_SharedData: {fileID: 11400000, guid: 0578ef94dfedf0740aef58810832fdc0, type: 2}
   m_Metadata:
     m_Items: []
-  m_TableData: []
+  m_TableData:
+  - m_Id: 2153624482738176
+    m_Localized: What pattern is on the cushion?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2153626756050944
+    m_Localized: Checkered
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2153629180358656
+    m_Localized: Polkadot
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2153631860518912
+    m_Localized: Stripes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2153657928118272
+    m_Localized: Floral
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

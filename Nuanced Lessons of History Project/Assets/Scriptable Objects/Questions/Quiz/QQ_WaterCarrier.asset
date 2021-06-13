@@ -10,43 +10,43 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 59752de0b75d1a146b65c158fff577e6, type: 3}
-  m_Name: QQ_FavouriteToy1Material
+  m_Name: QQ_WaterCarrier
   m_EditorClassIdentifier: 
   _question:
     m_TableReference:
-      m_TableCollectionName: GUID:310b47bd856e34e46851aac6d4f8d191
+      m_TableCollectionName: GUID:a487617bac243a742a6a994c4b60234c
     m_TableEntryReference:
-      m_KeyId: 34794323968
+      m_KeyId: 2158568954785792
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
   _answers:
   - m_TableReference:
-      m_TableCollectionName: GUID:310b47bd856e34e46851aac6d4f8d191
+      m_TableCollectionName: GUID:a487617bac243a742a6a994c4b60234c
     m_TableEntryReference:
-      m_KeyId: 45145866240
+      m_KeyId: 2158572989706240
       m_Key: 
     m_FallbackState: 0
-    m_WaitForCompletion: 0
+    m_WaitForCompletion: 1
   - m_TableReference:
-      m_TableCollectionName: GUID:310b47bd856e34e46851aac6d4f8d191
+      m_TableCollectionName: GUID:a487617bac243a742a6a994c4b60234c
     m_TableEntryReference:
-      m_KeyId: 70391382016
+      m_KeyId: 2158575523065856
       m_Key: 
     m_FallbackState: 0
-    m_WaitForCompletion: 0
+    m_WaitForCompletion: 1
   - m_TableReference:
-      m_TableCollectionName: GUID:310b47bd856e34e46851aac6d4f8d191
+      m_TableCollectionName: GUID:a487617bac243a742a6a994c4b60234c
     m_TableEntryReference:
-      m_KeyId: 94676402176
+      m_KeyId: 2158578622656512
       m_Key: 
     m_FallbackState: 0
-    m_WaitForCompletion: 0
+    m_WaitForCompletion: 1
   _correctAnswer:
     m_TableReference:
-      m_TableCollectionName: GUID:310b47bd856e34e46851aac6d4f8d191
+      m_TableCollectionName: GUID:a487617bac243a742a6a994c4b60234c
     m_TableEntryReference:
-      m_KeyId: 117522776064
+      m_KeyId: 2158672604426240
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
@@ -118,7 +118,7 @@ MonoBehaviour:
     _storyQuestion: {fileID: 0}
     _imageToScan: {fileID: 0}
   _onCorrectAnswerAction:
-    _action: 4
+    _action: 0
     _newDialogue: {fileID: 0}
     _nextLine:
       _lineCharacters: []
@@ -137,14 +137,7 @@ MonoBehaviour:
       _storyQuestion: {fileID: 0}
       _imageToScan: {fileID: 0}
       _newDialogue: {fileID: 0}
-    _quizQuestion: {fileID: 11400000, guid: 6c909cae7c93d3244aff3562dae5b275, type: 2}
+    _quizQuestion: {fileID: 0}
     _storyQuestion: {fileID: 0}
     _imageToScan: {fileID: 0}
-  _hints:
-  - m_TableReference:
-      m_TableCollectionName: GUID:310b47bd856e34e46851aac6d4f8d191
-    m_TableEntryReference:
-      m_KeyId: 126980931584
-      m_Key: 
-    m_FallbackState: 0
-    m_WaitForCompletion: 0
+  _hints: []

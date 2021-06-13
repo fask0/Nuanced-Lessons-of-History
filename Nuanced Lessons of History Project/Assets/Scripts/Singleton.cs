@@ -1,4 +1,5 @@
 ﻿using JetBrains.Annotations;
+using NaughtyAttributes;
 using UnityEngine;
 
 public abstract class Singleton<T> : Singleton where T : MonoBehaviour
@@ -11,6 +12,7 @@ public abstract class Singleton<T> : Singleton where T : MonoBehaviour
     // ReSharper disable once StaticMemberInGenericType
     private static readonly object Lock = new object();
 
+    [HorizontalLine(1)]
     [Header("Singleton")]
     [SerializeField] private bool _persistent = true;
     #endregion

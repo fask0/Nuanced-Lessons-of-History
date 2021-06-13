@@ -73,7 +73,7 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-de
   - m_GUID: 2ca4ea8587c7c464382a261bb07a672b
-    m_Address: QQ_NumberOfRopesFromWaterCarrier_de
+    m_Address: QQ_WaterCarrier_de
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-de
@@ -154,6 +154,46 @@ MonoBehaviour:
     - Locale-de
   - m_GUID: df5d79e01fa980f4e8e4ad9a9165f98b
     m_Address: D_Act4.5_de
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-de
+  - m_GUID: 8849d3d5c8e3d5543baadc7635945bfd
+    m_Address: QQ_CushionShape_de
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-de
+  - m_GUID: 5140bf2b85ede6742b90c7b87ea6924b
+    m_Address: QQ_ColorOfCircleHoe_de
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-de
+  - m_GUID: accaebb9900b2be4c9e29bbcf4ce45f1
+    m_Address: QS_Act4.1_de
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-de
+  - m_GUID: 9ab9fb2baaa65984d9fef1c595d2ba0e
+    m_Address: QS_Act4.2_de
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-de
+  - m_GUID: 0687cb1efa21dad4690b43195a9ab87d
+    m_Address: QQ_FootStove_de
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-de
+  - m_GUID: 6d5c285a0652bc34ab4eaef0a866b119
+    m_Address: QS_Act4.3_de
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-de
+  - m_GUID: d19c101a4ce9a0e4686ec6f4b3ff8212
+    m_Address: QQ_Pot_de
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-de
+  - m_GUID: c7c07ec73969e0342a6484c429f8cc09
+    m_Address: QS_Act4.5_de
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-de
