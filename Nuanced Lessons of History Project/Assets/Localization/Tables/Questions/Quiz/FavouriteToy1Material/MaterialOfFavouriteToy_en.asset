@@ -16,10 +16,11 @@ MonoBehaviour:
     m_Code: en
   m_SharedData: {fileID: 11400000, guid: 310b47bd856e34e46851aac6d4f8d191, type: 2}
   m_Metadata:
-    m_Items: []
+    m_Items:
+    - id: 0
   m_TableData:
   - m_Id: 34794323968
-    m_Localized: What is the horse toy made of?
+    m_Localized: What material is the toy made out of?
     m_Metadata:
       m_Items: []
   - m_Id: 45145866240
@@ -27,11 +28,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 70391382016
-    m_Localized: Wool
+    m_Localized: Plastic
     m_Metadata:
       m_Items: []
   - m_Id: 94676402176
-    m_Localized: Gun
+    m_Localized: Glass
     m_Metadata:
       m_Items: []
   - m_Id: 117522776064
@@ -39,8 +40,14 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 126980931584
-    m_Localized: Look closer at a toy
+    m_Localized: Look for a colorful <color={c}>horse toy</color> in the <color={c}>living
+      room</color>.
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - id: 0
   references:
     version: 1
+    00000000:
+      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries: 0040a7901d000000

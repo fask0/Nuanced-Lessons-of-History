@@ -27,6 +27,10 @@ MonoBehaviour:
     m_Key: B2
     m_Metadata:
       m_Items: []
+  - m_Id: 3606756370804736
+    m_Key: B1.1
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

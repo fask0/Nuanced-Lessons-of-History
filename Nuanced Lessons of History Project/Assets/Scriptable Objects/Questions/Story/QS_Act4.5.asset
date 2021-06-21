@@ -52,8 +52,7 @@ MonoBehaviour:
         _expression: 0
         _hideCharacterImage: 0
         _isSpeaker: 1
-      _soundBeforeLine: {fileID: 0}
-      _waitUntilSoundBeforeLineEnds: 0
+      _sfxBeforeLine: []
       _lineString:
         m_TableReference:
           m_TableCollectionName: GUID:c7f2cfb2b36ccf146943b0fc7625471c
@@ -63,16 +62,18 @@ MonoBehaviour:
         m_FallbackState: 0
         m_WaitForCompletion: 1
       _textCharactersPerSecond: 30
-      _soundAfterLine: {fileID: 0}
-      _waitUntilSoundAfterLineEnds: 0
+      _sfxAfterLine: []
+      _ambientSoundToStartPlaying: {fileID: 0}
       _backgroundSprite: {fileID: 0}
       _playerInteraction: 5
       _quizQuestion: {fileID: 0}
       _storyQuestion: {fileID: 0}
       _imageToScan: {fileID: 0}
       _newDialogue: {fileID: 0}
-      _videoClip: {fileID: 0}
+      _videoClip: {fileID: 32900000, guid: d754e4f86c95e5749be0da45039b6144, type: 3}
       _videoClipStartDelay: 0
+      _timePassSFX: []
+      _newDialogueAfterTimePass: {fileID: 0}
     _quizQuestion: {fileID: 0}
     _storyQuestion: {fileID: 0}
     _imageToScan: {fileID: 0}
@@ -87,8 +88,7 @@ MonoBehaviour:
         _expression: 0
         _hideCharacterImage: 0
         _isSpeaker: 1
-      _soundBeforeLine: {fileID: 0}
-      _waitUntilSoundBeforeLineEnds: 0
+      _sfxBeforeLine: []
       _lineString:
         m_TableReference:
           m_TableCollectionName: GUID:c7f2cfb2b36ccf146943b0fc7625471c
@@ -98,16 +98,18 @@ MonoBehaviour:
         m_FallbackState: 0
         m_WaitForCompletion: 1
       _textCharactersPerSecond: 30
-      _soundAfterLine: {fileID: 0}
-      _waitUntilSoundAfterLineEnds: 0
+      _sfxAfterLine: []
+      _ambientSoundToStartPlaying: {fileID: 0}
       _backgroundSprite: {fileID: 0}
       _playerInteraction: 5
       _quizQuestion: {fileID: 0}
       _storyQuestion: {fileID: 0}
       _imageToScan: {fileID: 0}
       _newDialogue: {fileID: 0}
-      _videoClip: {fileID: 0}
+      _videoClip: {fileID: 32900000, guid: 9b523aac8e19e794f8e339bb17b4d62f, type: 3}
       _videoClipStartDelay: 0
+      _timePassSFX: []
+      _newDialogueAfterTimePass: {fileID: 0}
     _quizQuestion: {fileID: 0}
     _storyQuestion: {fileID: 0}
     _imageToScan: {fileID: 0}
@@ -122,8 +124,7 @@ MonoBehaviour:
         _expression: 1
         _hideCharacterImage: 0
         _isSpeaker: 1
-      _soundBeforeLine: {fileID: 0}
-      _waitUntilSoundBeforeLineEnds: 0
+      _sfxBeforeLine: []
       _lineString:
         m_TableReference:
           m_TableCollectionName: GUID:c7f2cfb2b36ccf146943b0fc7625471c
@@ -133,16 +134,18 @@ MonoBehaviour:
         m_FallbackState: 0
         m_WaitForCompletion: 1
       _textCharactersPerSecond: 30
-      _soundAfterLine: {fileID: 0}
-      _waitUntilSoundAfterLineEnds: 0
+      _sfxAfterLine: []
+      _ambientSoundToStartPlaying: {fileID: 0}
       _backgroundSprite: {fileID: 0}
       _playerInteraction: 5
       _quizQuestion: {fileID: 0}
       _storyQuestion: {fileID: 0}
       _imageToScan: {fileID: 0}
       _newDialogue: {fileID: 0}
-      _videoClip: {fileID: 0}
+      _videoClip: {fileID: 32900000, guid: fc51c403189a292438d34dac563736f4, type: 3}
       _videoClipStartDelay: 0
+      _timePassSFX: []
+      _newDialogueAfterTimePass: {fileID: 0}
     _quizQuestion: {fileID: 0}
     _storyQuestion: {fileID: 0}
     _imageToScan: {fileID: 0}

@@ -11,6 +11,7 @@ public class ARManager : Singleton<ARManager>
     [Header("Main")]
     [SerializeField] private Camera _mainCamera;
     [SerializeField] private GameObject _vnPanel;
+    [SerializeField] private GameObject _quizPanel;
     [HorizontalLine(1)]
     [Header("AR")]
     [SerializeField] private Camera _arCamera;
@@ -21,10 +22,11 @@ public class ARManager : Singleton<ARManager>
     [SerializeField] private float _timeToScan;
     [SerializeField] private Color _correctFeedbackColor;
     [SerializeField] private Color _wrongFeedbackColor;
+    [SerializeField] private Button _fakeScanButton;
     [HorizontalLine(1)]
     [Header("Sidebar")]
     [SerializeField] private LocalizeStringEvent _infoLocalizedStringEvent;
-    [SerializeField] private LocalizeStringEvent _hintLocalizedStringEvent;
+    [SerializeField] private Image _hintImage;
 
     private ScannableImageScriptableObject _imageToScan;
     private Image[] _cameraReticles;
@@ -48,8 +50,21 @@ public class ARManager : Singleton<ARManager>
 
         enableAR();
 
+        _fakeScanButton.enabled = pImageToScan.AllowSkip;
+
         _infoLocalizedStringEvent.StringReference = _imageToScan.Info;
-        _hintLocalizedStringEvent.StringReference = _imageToScan.Hint;
+        _hintImage.sprite = _imageToScan.HintSprite;
+    }
+
+    public void StartFakeScan()
+    {
+        if (_scannig != null)
+        {
+            StopCoroutine(_scannig);
+            _scannig = null;
+        }
+
+        _scannig = StartCoroutine(scan(_imageToScan.ImageType));
     }
 
     public void StartScanning(ScannableImageType pScannableImageType)
@@ -172,6 +187,7 @@ public class ARManager : Singleton<ARManager>
     {
         _mainCamera.gameObject.SetActive(false);
         _vnPanel.SetActive(false);
+        _quizPanel.SetActive(false);
 
         _arCamera.gameObject.SetActive(true);
         _arPanel.SetActive(true);

@@ -182,6 +182,21 @@ MonoBehaviour:
       Data.asset
     m_ReadOnly: 1
     m_SerializedLabels: []
+  - m_GUID: ff32dc601a007104cb67382562db7a47
+    m_Address: Assets/Localization/Tables/Dialogues/Test/ZZZ_EncapsulationTest Shared
+      Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+  - m_GUID: af3e614f3a37b0b40947216a9d307f47
+    m_Address: Assets/Localization/Tables/ScannableImages/LaundryRack/S_LaundryRack
+      Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+  - m_GUID: 6e8f456aa4594984797277ac8a3cc476
+    m_Address: Assets/Localization/Tables/ScannableImages/FootStove/S_FootStove Shared
+      Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 7a182c8356cb7ce4a92349c520368361, type: 2}
   m_SchemaSet:

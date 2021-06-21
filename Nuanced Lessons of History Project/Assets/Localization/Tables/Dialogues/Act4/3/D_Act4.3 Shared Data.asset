@@ -31,6 +31,14 @@ MonoBehaviour:
     m_Key: W3
     m_Metadata:
       m_Items: []
+  - m_Id: 3600547207049216
+    m_Key: W2.1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3600854615977984
+    m_Key: W2.2
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

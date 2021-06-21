@@ -16,7 +16,8 @@ MonoBehaviour:
     m_Code: en
   m_SharedData: {fileID: 11400000, guid: eb3890a7e27aa1d49b5c172256942c33, type: 2}
   m_Metadata:
-    m_Items: []
+    m_Items:
+    - id: 0
   m_TableData:
   - m_Id: 11350175744
     m_Localized: "Come. We have a lot to do.\r"
@@ -24,8 +25,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 14307160064
     m_Localized: "We must plant these seeds as soon as possible. If we\u2019re lucky
-      they will grow and provide crops before winter. <size=0>|</size>Now, help me
-      and go grab the bucket of manure from the outhouse.\r"
+      they will grow and provide crops before winter."
     m_Metadata:
       m_Items: []
   - m_Id: 17729712128
@@ -33,9 +33,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 20602810368
-    m_Localized: Now go get me the watering can. It should be in the storage room.
+    m_Localized: Now go get me the <color={c}>watering can</color>. It should be
+      in the <color={c}>storage room</color>.
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - id: 0
   - m_Id: 23899533312
     m_Localized: "Ah, I see you\u2019re helping Grandpa with the crops.\r"
     m_Metadata:
@@ -49,5 +51,15 @@ MonoBehaviour:
       Willem fill some buckets at the Water pump. He should be in the living room.\r"
     m_Metadata:
       m_Items: []
+  - m_Id: 2927088437161984
+    m_Localized: Now, help me and go grab the <color={c}>bucket of manure</color>
+      from the <color={c}>outhouse</color>.
+    m_Metadata:
+      m_Items:
+      - id: 0
   references:
     version: 1
+    00000000:
+      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries: 00f005cc0400000000f085e22b660a00

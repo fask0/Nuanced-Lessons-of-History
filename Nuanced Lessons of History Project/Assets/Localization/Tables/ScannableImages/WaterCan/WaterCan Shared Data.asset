@@ -12,15 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
   m_Name: WaterCan Shared Data
   m_EditorClassIdentifier: 
-  m_TableCollectionName: WaterCan
+  m_TableCollectionName: S_WashingBoard
   m_TableCollectionNameGuidString: 656df10e334f5b44faadaacd585a1e53
   m_Entries:
   - m_Id: 122652409856
     m_Key: I
-    m_Metadata:
-      m_Items: []
-  - m_Id: 131854712832
-    m_Key: H
     m_Metadata:
       m_Items: []
   m_Metadata:

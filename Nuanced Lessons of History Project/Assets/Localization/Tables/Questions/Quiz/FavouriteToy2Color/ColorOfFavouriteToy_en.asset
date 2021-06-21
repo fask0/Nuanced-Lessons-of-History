@@ -16,22 +16,23 @@ MonoBehaviour:
     m_Code: en
   m_SharedData: {fileID: 11400000, guid: 492d87ae7e8dcf74c86763f75dc2dcd8, type: 2}
   m_Metadata:
-    m_Items: []
+    m_Items:
+    - id: 0
   m_TableData:
   - m_Id: 12799393792
-    m_Localized: What is the color of Marije's favourite toy?
+    m_Localized: What is the color of its base?
     m_Metadata:
       m_Items: []
   - m_Id: 23062855680
-    m_Localized: Purple
+    m_Localized: Yellow
     m_Metadata:
       m_Items: []
   - m_Id: 36430102528
-    m_Localized: Transparent
+    m_Localized: Red
     m_Metadata:
       m_Items: []
   - m_Id: 54973120512
-    m_Localized: Rainbow
+    m_Localized: White
     m_Metadata:
       m_Items: []
   - m_Id: 66620702720
@@ -39,8 +40,14 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 77332955136
-    m_Localized: Ask somebody nearby this question
+    m_Localized: Look for a colorful <color={c}>horse toy</color> in the <color={c}>living
+      room</color>.
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - id: 0
   references:
     version: 1
+    00000000:
+      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries: 0040670112000000

@@ -16,11 +16,11 @@ MonoBehaviour:
     m_Code: en
   m_SharedData: {fileID: 11400000, guid: 8f8d342c557cdd64098daa6790178d94, type: 2}
   m_Metadata:
-    m_Items: []
+    m_Items:
+    - id: 0
   m_TableData:
   - m_Id: 4412796928
-    m_Localized: "Brother is leaving\u2026? *sniff sniff* <size=0>|</size>Everyone
-      is leaving\u2026\r"
+    m_Localized: "Brother is leaving\u2026? *sniff sniff*"
     m_Metadata:
       m_Items: []
   - m_Id: 6769995776
@@ -37,14 +37,23 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 13929672704
     m_Localized: "I was gone for a few hours and now my grandson is trying to run
-      away? <size=0>|</size>What a crazy day. Haha <size=0>|</size>Here, help me
-      start preparing dinner. Get me the <color=red>pot on top of the cupboard</color>.\r"
+      away? <size=0>|</size>What a crazy day. Haha. <size=0>|</size>Here, help me
+      start preparing dinner. Get me the <color={c}>pot on top of the cupboard</color>.\r"
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - id: 0
   - m_Id: 211447836672
     m_Localized: "That\u2019s the one! <size=0>|</size>Now let\u2019s start prepping.
       Here, I will show you how.\r"
     m_Metadata:
       m_Items: []
+  - m_Id: 2206192604934144
+    m_Localized: "Everyone is leaving\u2026\r"
+    m_Metadata:
+      m_Items: []
   references:
     version: 1
+    00000000:
+      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries: 00f0453e03000000

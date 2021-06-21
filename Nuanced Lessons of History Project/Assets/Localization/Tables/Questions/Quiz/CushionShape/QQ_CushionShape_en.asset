@@ -16,7 +16,8 @@ MonoBehaviour:
     m_Code: en
   m_SharedData: {fileID: 11400000, guid: 82de1a07999f1af4ca4a7835a0b22930, type: 2}
   m_Metadata:
-    m_Items: []
+    m_Items:
+    - id: 0
   m_TableData:
   - m_Id: 6270873600
     m_Localized: What shape is the cushion next to the bedbox?
@@ -38,5 +39,15 @@ MonoBehaviour:
     m_Localized: Rectangle
     m_Metadata:
       m_Items: []
+  - m_Id: 2578835032109056
+    m_Localized: Look on the <color={c}>ground</color> in front of the <color={c}>bed
+      box</color>.
+    m_Metadata:
+      m_Items:
+      - id: 0
   references:
     version: 1
+    00000000:
+      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries: 00f005d26f290900

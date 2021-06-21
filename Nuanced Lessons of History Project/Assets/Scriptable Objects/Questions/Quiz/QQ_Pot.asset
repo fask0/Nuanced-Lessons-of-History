@@ -55,8 +55,7 @@ MonoBehaviour:
     _newDialogue: {fileID: 0}
     _nextLine:
       _lineCharacters: []
-      _soundBeforeLine: {fileID: 0}
-      _waitUntilSoundBeforeLineEnds: 0
+      _sfxBeforeLine: []
       _lineString:
         m_TableReference:
           m_TableCollectionName: 
@@ -66,8 +65,8 @@ MonoBehaviour:
         m_FallbackState: 0
         m_WaitForCompletion: 1
       _textCharactersPerSecond: 30
-      _soundAfterLine: {fileID: 0}
-      _waitUntilSoundAfterLineEnds: 0
+      _sfxAfterLine: []
+      _ambientSoundToStartPlaying: {fileID: 0}
       _backgroundSprite: {fileID: 0}
       _playerInteraction: 0
       _quizQuestion: {fileID: 0}
@@ -76,6 +75,8 @@ MonoBehaviour:
       _newDialogue: {fileID: 0}
       _videoClip: {fileID: 0}
       _videoClipStartDelay: 0
+      _timePassSFX: []
+      _newDialogueAfterTimePass: {fileID: 0}
     _quizQuestion: {fileID: 0}
     _storyQuestion: {fileID: 0}
     _imageToScan: {fileID: 0}
@@ -85,8 +86,7 @@ MonoBehaviour:
     _newDialogue: {fileID: 0}
     _nextLine:
       _lineCharacters: []
-      _soundBeforeLine: {fileID: 0}
-      _waitUntilSoundBeforeLineEnds: 0
+      _sfxBeforeLine: []
       _lineString:
         m_TableReference:
           m_TableCollectionName: 
@@ -96,8 +96,8 @@ MonoBehaviour:
         m_FallbackState: 0
         m_WaitForCompletion: 1
       _textCharactersPerSecond: 30
-      _soundAfterLine: {fileID: 0}
-      _waitUntilSoundAfterLineEnds: 0
+      _sfxAfterLine: []
+      _ambientSoundToStartPlaying: {fileID: 0}
       _backgroundSprite: {fileID: 0}
       _playerInteraction: 0
       _quizQuestion: {fileID: 0}
@@ -106,6 +106,8 @@ MonoBehaviour:
       _newDialogue: {fileID: 0}
       _videoClip: {fileID: 0}
       _videoClipStartDelay: 0
+      _timePassSFX: []
+      _newDialogueAfterTimePass: {fileID: 0}
     _quizQuestion: {fileID: 0}
     _storyQuestion: {fileID: 0}
     _imageToScan: {fileID: 0}
@@ -115,8 +117,7 @@ MonoBehaviour:
     _newDialogue: {fileID: 0}
     _nextLine:
       _lineCharacters: []
-      _soundBeforeLine: {fileID: 0}
-      _waitUntilSoundBeforeLineEnds: 0
+      _sfxBeforeLine: []
       _lineString:
         m_TableReference:
           m_TableCollectionName: 
@@ -126,8 +127,8 @@ MonoBehaviour:
         m_FallbackState: 0
         m_WaitForCompletion: 1
       _textCharactersPerSecond: 30
-      _soundAfterLine: {fileID: 0}
-      _waitUntilSoundAfterLineEnds: 0
+      _sfxAfterLine: []
+      _ambientSoundToStartPlaying: {fileID: 0}
       _backgroundSprite: {fileID: 0}
       _playerInteraction: 0
       _quizQuestion: {fileID: 0}
@@ -136,6 +137,8 @@ MonoBehaviour:
       _newDialogue: {fileID: 0}
       _videoClip: {fileID: 0}
       _videoClipStartDelay: 0
+      _timePassSFX: []
+      _newDialogueAfterTimePass: {fileID: 0}
     _quizQuestion: {fileID: 0}
     _storyQuestion: {fileID: 0}
     _imageToScan: {fileID: 0}
@@ -146,8 +149,7 @@ MonoBehaviour:
     _newDialogue: {fileID: 0}
     _nextLine:
       _lineCharacters: []
-      _soundBeforeLine: {fileID: 0}
-      _waitUntilSoundBeforeLineEnds: 0
+      _sfxBeforeLine: []
       _lineString:
         m_TableReference:
           m_TableCollectionName: 
@@ -157,8 +159,8 @@ MonoBehaviour:
         m_FallbackState: 0
         m_WaitForCompletion: 1
       _textCharactersPerSecond: 30
-      _soundAfterLine: {fileID: 0}
-      _waitUntilSoundAfterLineEnds: 0
+      _sfxAfterLine: []
+      _ambientSoundToStartPlaying: {fileID: 0}
       _backgroundSprite: {fileID: 0}
       _playerInteraction: 0
       _quizQuestion: {fileID: 0}
@@ -167,9 +169,18 @@ MonoBehaviour:
       _newDialogue: {fileID: 0}
       _videoClip: {fileID: 0}
       _videoClipStartDelay: 0
+      _timePassSFX: []
+      _newDialogueAfterTimePass: {fileID: 0}
     _quizQuestion: {fileID: 0}
     _storyQuestion: {fileID: 0}
     _imageToScan: {fileID: 0}
     _videoClip: {fileID: 0}
     _videoClipStartDelay: 0
-  _hints: []
+  _hints:
+  - m_TableReference:
+      m_TableCollectionName: GUID:b2be93d1cd8bac5419819a0daacac0c4
+    m_TableEntryReference:
+      m_KeyId: 37619101696
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0

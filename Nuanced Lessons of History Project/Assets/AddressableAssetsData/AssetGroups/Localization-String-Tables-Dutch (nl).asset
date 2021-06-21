@@ -48,7 +48,7 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-nl
   - m_GUID: 1c7997aba32696043b189d3495ed810f
-    m_Address: WaterCan_nl
+    m_Address: S_WashingBoard_nl
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-nl
@@ -58,12 +58,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-nl
   - m_GUID: 98e2157d1f00e8d4c9d0b4a179d56123
-    m_Address: S_Bucket_nl
+    m_Address: S_BucketOfMilk_nl
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-nl
   - m_GUID: 8edd32ed38b65094186f05bc31ef28f5
-    m_Address: S_WaterCarrier_nl
+    m_Address: S_WateringCan_nl
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-nl
@@ -194,6 +194,21 @@ MonoBehaviour:
     - Locale-nl
   - m_GUID: c842a3ae2eecfca42ae865eff6ede742
     m_Address: QS_Act4.5_nl
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-nl
+  - m_GUID: 210ceae9f975aa14b809def7c2bae1df
+    m_Address: ZZZ_EncapsulationTest_nl
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-nl
+  - m_GUID: d78379549d647fe419914590e26917eb
+    m_Address: S_LaundryRack_nl
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-nl
+  - m_GUID: 99f83cf407c3fca4391bfbd5e7bda4e2
+    m_Address: S_FootStove_nl
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-nl

@@ -12,9 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
   m_Name: S_WaterCarrier Shared Data
   m_EditorClassIdentifier: 
-  m_TableCollectionName: S_WaterCarrier
+  m_TableCollectionName: S_WateringCan
   m_TableCollectionNameGuidString: 396c196ca6674384196fcce1c892b4da
-  m_Entries: []
+  m_Entries:
+  - m_Id: 4743009677996032
+    m_Key: I
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

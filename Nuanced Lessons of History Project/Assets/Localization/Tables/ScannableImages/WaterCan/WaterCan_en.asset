@@ -16,15 +16,18 @@ MonoBehaviour:
     m_Code: en
   m_SharedData: {fileID: 11400000, guid: 656df10e334f5b44faadaacd585a1e53, type: 2}
   m_Metadata:
-    m_Items: []
+    m_Items:
+    - id: 0
   m_TableData:
   - m_Id: 122652409856
-    m_Localized: 'Now go get me the watering can. '
+    m_Localized: Look for a <color={ch}>board</color> made out of <color={ch}>wood</color>
+      and <color={ch}>metal</color>.
     m_Metadata:
-      m_Items: []
-  - m_Id: 131854712832
-    m_Localized: It should be in the storage room
-    m_Metadata:
-      m_Items: []
+      m_Items:
+      - id: 0
   references:
     version: 1
+    00000000:
+      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries: 0040a78e1c000000

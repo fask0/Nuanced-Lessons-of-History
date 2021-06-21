@@ -21,19 +21,13 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
-  _hint:
-    m_TableReference:
-      m_TableCollectionName: GUID:8aea187e5b7d3c846a07ffc41692682c
-    m_TableEntryReference:
-      m_KeyId: 60853534720
-      m_Key: 
-    m_FallbackState: 0
-    m_WaitForCompletion: 1
+  _hintSprite: {fileID: 21300000, guid: 5f09403358234f64e990543c78e49ca6, type: 3}
   _onImageScanAction:
     _action: 0
     _newDialogue: {fileID: 0}
     _nextLine:
       _lineCharacters: []
+      _sfxBeforeLine: []
       _lineString:
         m_TableReference:
           m_TableCollectionName: 
@@ -43,11 +37,21 @@ MonoBehaviour:
         m_FallbackState: 0
         m_WaitForCompletion: 1
       _textCharactersPerSecond: 30
+      _sfxAfterLine: []
+      _ambientSoundToStartPlaying: {fileID: 0}
       _backgroundSprite: {fileID: 0}
       _playerInteraction: 0
       _quizQuestion: {fileID: 0}
       _storyQuestion: {fileID: 0}
       _imageToScan: {fileID: 0}
+      _newDialogue: {fileID: 0}
+      _videoClip: {fileID: 0}
+      _videoClipStartDelay: 0
+      _timePassSFX: []
+      _newDialogueAfterTimePass: {fileID: 0}
     _quizQuestion: {fileID: 0}
     _storyQuestion: {fileID: 0}
     _imageToScan: {fileID: 0}
+    _videoClip: {fileID: 0}
+    _videoClipStartDelay: 0
+  _allowSkip: 1

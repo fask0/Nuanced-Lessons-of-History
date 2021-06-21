@@ -31,6 +31,8 @@ public class VideoManager : Singleton<VideoManager>
     {
         if (_playing != null) StopCoroutine(_playing);
 
+        SoundManager.Instance.StopAllAmbient();
+        SoundManager.Instance.StopAllSounds();
         _playing = StartCoroutine(playClip(pClip, pStartDelay));
     }
 
@@ -61,8 +63,8 @@ public class VideoManager : Singleton<VideoManager>
         _currentClip = pClip;
         _player.clip = _currentClip;
         _player.Play();
-        for (int i = 0; i < 20; i++)
-            yield return new WaitForEndOfFrame();
+        while (!_player.isPrepared) yield return new WaitForEndOfFrame();
+        for (int i = 0; i < 20; i++) yield return new WaitForEndOfFrame();
         _videoPanel.SetActive(true);
 
         UnityAction onClickAction = () => onClick();
@@ -79,7 +81,7 @@ public class VideoManager : Singleton<VideoManager>
 
         _videoPanel.SetActive(false);
         _playing = null;
-        DialogueManager.Instance.Resume();
+        GameManager.Instance.RestartGame();
 
         #region Local Methods
         void onClick()

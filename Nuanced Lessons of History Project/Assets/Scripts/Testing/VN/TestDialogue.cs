@@ -148,9 +148,4 @@ public class TestDialogue : MonoBehaviour
         yes.SetActive(false);
         no.SetActive(false);
     }
-
-    public void ExitApplication()
-    {
-        Application.Quit();
-    }
 }

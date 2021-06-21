@@ -16,15 +16,17 @@ MonoBehaviour:
     m_Code: en
   m_SharedData: {fileID: 11400000, guid: 8aea187e5b7d3c846a07ffc41692682c, type: 2}
   m_Metadata:
-    m_Items: []
+    m_Items:
+    - id: 0
   m_TableData:
   - m_Id: 35784179712
-    m_Localized: This is information for this stuff
+    m_Localized: Look in the <color={ch}>toilet room</color> outside the house.
     m_Metadata:
-      m_Items: []
-  - m_Id: 60853534720
-    m_Localized: This is a very valuable hint
-    m_Metadata:
-      m_Items: []
+      m_Items:
+      - id: 0
   references:
     version: 1
+    00000000:
+      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries: 0040e75408000000

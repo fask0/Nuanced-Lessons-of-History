@@ -9,7 +9,8 @@ public class Expression
     {
         Idle,
         Happy,
-        Upset
+        Upset,
+        Silhouette
     }
 
     #region Fields

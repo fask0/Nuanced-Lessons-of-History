@@ -16,7 +16,8 @@ MonoBehaviour:
     m_Code: en
   m_SharedData: {fileID: 11400000, guid: 0578ef94dfedf0740aef58810832fdc0, type: 2}
   m_Metadata:
-    m_Items: []
+    m_Items:
+    - id: 0
   m_TableData:
   - m_Id: 2153624482738176
     m_Localized: What pattern is on the cushion?
@@ -38,5 +39,15 @@ MonoBehaviour:
     m_Localized: Floral
     m_Metadata:
       m_Items: []
+  - m_Id: 4732709532725248
+    m_Localized: Look on the <color={c}>ground</color> in front of the <color={c}>bed
+      box</color>.
+    m_Metadata:
+      m_Items:
+      - id: 0
   references:
     version: 1
+    00000000:
+      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries: 00f085ce5fd01000

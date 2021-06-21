@@ -19,6 +19,7 @@ MonoBehaviour:
       _expression: 0
       _hideCharacterImage: 0
       _isSpeaker: 1
+    _sfxBeforeLine: []
     _lineString:
       m_TableReference:
         m_TableCollectionName: GUID:eb3890a7e27aa1d49b5c172256942c33
@@ -28,18 +29,25 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
     _textCharactersPerSecond: 0
+    _sfxAfterLine: []
+    _ambientSoundToStartPlaying: {fileID: 8300000, guid: 4b022b2d12b9b174ba575e0b9eaab43b, type: 3}
     _backgroundSprite: {fileID: 21300000, guid: e444540bd49b533408be364cff14d3f6, type: 3}
     _playerInteraction: 0
     _quizQuestion: {fileID: 0}
     _storyQuestion: {fileID: 0}
     _imageToScan: {fileID: 0}
     _newDialogue: {fileID: 0}
+    _videoClip: {fileID: 0}
+    _videoClipStartDelay: 0
+    _timePassSFX: []
+    _newDialogueAfterTimePass: {fileID: 0}
   - _lineCharacters:
     - _characterScriptableObject: {fileID: 11400000, guid: bfe907f888a308f4eacdb3cdfded4fd2, type: 2}
       _nameToUse: 0
       _expression: 0
       _hideCharacterImage: 0
       _isSpeaker: 1
+    _sfxBeforeLine: []
     _lineString:
       m_TableReference:
         m_TableCollectionName: GUID:eb3890a7e27aa1d49b5c172256942c33
@@ -49,18 +57,53 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
     _textCharactersPerSecond: 0
-    _backgroundSprite: {fileID: 21300000, guid: e444540bd49b533408be364cff14d3f6, type: 3}
-    _playerInteraction: 3
+    _sfxAfterLine: []
+    _ambientSoundToStartPlaying: {fileID: 0}
+    _backgroundSprite: {fileID: 0}
+    _playerInteraction: 0
     _quizQuestion: {fileID: 0}
     _storyQuestion: {fileID: 0}
     _imageToScan: {fileID: 11400000, guid: 83921b9ad4c33824aaee5d71d3e3f2a0, type: 2}
     _newDialogue: {fileID: 0}
+    _videoClip: {fileID: 0}
+    _videoClipStartDelay: 0
+    _timePassSFX: []
+    _newDialogueAfterTimePass: {fileID: 0}
   - _lineCharacters:
     - _characterScriptableObject: {fileID: 11400000, guid: bfe907f888a308f4eacdb3cdfded4fd2, type: 2}
       _nameToUse: 0
       _expression: 0
       _hideCharacterImage: 0
       _isSpeaker: 1
+    _sfxBeforeLine: []
+    _lineString:
+      m_TableReference:
+        m_TableCollectionName: GUID:eb3890a7e27aa1d49b5c172256942c33
+      m_TableEntryReference:
+        m_KeyId: 2927088437161984
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+    _textCharactersPerSecond: 0
+    _sfxAfterLine: []
+    _ambientSoundToStartPlaying: {fileID: 0}
+    _backgroundSprite: {fileID: 0}
+    _playerInteraction: 3
+    _quizQuestion: {fileID: 0}
+    _storyQuestion: {fileID: 0}
+    _imageToScan: {fileID: 11400000, guid: 83921b9ad4c33824aaee5d71d3e3f2a0, type: 2}
+    _newDialogue: {fileID: 0}
+    _videoClip: {fileID: 0}
+    _videoClipStartDelay: 0
+    _timePassSFX: []
+    _newDialogueAfterTimePass: {fileID: 0}
+  - _lineCharacters:
+    - _characterScriptableObject: {fileID: 11400000, guid: bfe907f888a308f4eacdb3cdfded4fd2, type: 2}
+      _nameToUse: 0
+      _expression: 0
+      _hideCharacterImage: 0
+      _isSpeaker: 1
+    _sfxBeforeLine: []
     _lineString:
       m_TableReference:
         m_TableCollectionName: GUID:eb3890a7e27aa1d49b5c172256942c33
@@ -70,18 +113,25 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
     _textCharactersPerSecond: 0
-    _backgroundSprite: {fileID: 21300000, guid: e444540bd49b533408be364cff14d3f6, type: 3}
+    _sfxAfterLine: []
+    _ambientSoundToStartPlaying: {fileID: 0}
+    _backgroundSprite: {fileID: 0}
     _playerInteraction: 2
     _quizQuestion: {fileID: 0}
     _storyQuestion: {fileID: 11400000, guid: f1a10c2d66e8ddf428fb1c628ba6f87a, type: 2}
     _imageToScan: {fileID: 11400000, guid: 83921b9ad4c33824aaee5d71d3e3f2a0, type: 2}
     _newDialogue: {fileID: 0}
+    _videoClip: {fileID: 0}
+    _videoClipStartDelay: 0
+    _timePassSFX: []
+    _newDialogueAfterTimePass: {fileID: 0}
   - _lineCharacters:
     - _characterScriptableObject: {fileID: 11400000, guid: bfe907f888a308f4eacdb3cdfded4fd2, type: 2}
       _nameToUse: 0
       _expression: 0
       _hideCharacterImage: 0
       _isSpeaker: 1
+    _sfxBeforeLine: []
     _lineString:
       m_TableReference:
         m_TableCollectionName: GUID:eb3890a7e27aa1d49b5c172256942c33
@@ -91,18 +141,25 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
     _textCharactersPerSecond: 0
-    _backgroundSprite: {fileID: 21300000, guid: e444540bd49b533408be364cff14d3f6, type: 3}
+    _sfxAfterLine: []
+    _ambientSoundToStartPlaying: {fileID: 0}
+    _backgroundSprite: {fileID: 0}
     _playerInteraction: 3
     _quizQuestion: {fileID: 0}
     _storyQuestion: {fileID: 11400000, guid: f1a10c2d66e8ddf428fb1c628ba6f87a, type: 2}
     _imageToScan: {fileID: 11400000, guid: 780c5f5cbc4b17541b903bfecabbb7a0, type: 2}
     _newDialogue: {fileID: 0}
+    _videoClip: {fileID: 0}
+    _videoClipStartDelay: 0
+    _timePassSFX: []
+    _newDialogueAfterTimePass: {fileID: 0}
   - _lineCharacters:
     - _characterScriptableObject: {fileID: 11400000, guid: 9e8f2010cc514d345807680671826b95, type: 2}
       _nameToUse: 0
       _expression: 0
       _hideCharacterImage: 0
       _isSpeaker: 1
+    _sfxBeforeLine: []
     _lineString:
       m_TableReference:
         m_TableCollectionName: GUID:eb3890a7e27aa1d49b5c172256942c33
@@ -112,18 +169,25 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
     _textCharactersPerSecond: 30
+    _sfxAfterLine: []
+    _ambientSoundToStartPlaying: {fileID: 8300000, guid: 344b464b93c65534bbcd0b714660d065, type: 3}
     _backgroundSprite: {fileID: 21300000, guid: 25ca7d594ed7bfe4e9c7a0ded5ba983f, type: 3}
     _playerInteraction: 0
     _quizQuestion: {fileID: 0}
     _storyQuestion: {fileID: 11400000, guid: f1a10c2d66e8ddf428fb1c628ba6f87a, type: 2}
     _imageToScan: {fileID: 11400000, guid: 780c5f5cbc4b17541b903bfecabbb7a0, type: 2}
     _newDialogue: {fileID: 11400000, guid: 7d58471dc54a45041b4e6fbd6e710071, type: 2}
+    _videoClip: {fileID: 0}
+    _videoClipStartDelay: 0
+    _timePassSFX: []
+    _newDialogueAfterTimePass: {fileID: 0}
   - _lineCharacters:
     - _characterScriptableObject: {fileID: 11400000, guid: 9e8f2010cc514d345807680671826b95, type: 2}
       _nameToUse: 0
       _expression: 2
       _hideCharacterImage: 0
       _isSpeaker: 1
+    _sfxBeforeLine: []
     _lineString:
       m_TableReference:
         m_TableCollectionName: GUID:eb3890a7e27aa1d49b5c172256942c33
@@ -133,18 +197,25 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
     _textCharactersPerSecond: 30
-    _backgroundSprite: {fileID: 21300000, guid: 25ca7d594ed7bfe4e9c7a0ded5ba983f, type: 3}
+    _sfxAfterLine: []
+    _ambientSoundToStartPlaying: {fileID: 0}
+    _backgroundSprite: {fileID: 0}
     _playerInteraction: 0
     _quizQuestion: {fileID: 0}
     _storyQuestion: {fileID: 11400000, guid: f1a10c2d66e8ddf428fb1c628ba6f87a, type: 2}
     _imageToScan: {fileID: 11400000, guid: 780c5f5cbc4b17541b903bfecabbb7a0, type: 2}
     _newDialogue: {fileID: 11400000, guid: 7d58471dc54a45041b4e6fbd6e710071, type: 2}
+    _videoClip: {fileID: 0}
+    _videoClipStartDelay: 0
+    _timePassSFX: []
+    _newDialogueAfterTimePass: {fileID: 0}
   - _lineCharacters:
     - _characterScriptableObject: {fileID: 11400000, guid: 9e8f2010cc514d345807680671826b95, type: 2}
       _nameToUse: 0
       _expression: 0
       _hideCharacterImage: 0
       _isSpeaker: 1
+    _sfxBeforeLine: []
     _lineString:
       m_TableReference:
         m_TableCollectionName: GUID:eb3890a7e27aa1d49b5c172256942c33
@@ -154,9 +225,15 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
     _textCharactersPerSecond: 30
-    _backgroundSprite: {fileID: 21300000, guid: 25ca7d594ed7bfe4e9c7a0ded5ba983f, type: 3}
+    _sfxAfterLine: []
+    _ambientSoundToStartPlaying: {fileID: 0}
+    _backgroundSprite: {fileID: 0}
     _playerInteraction: 4
     _quizQuestion: {fileID: 0}
     _storyQuestion: {fileID: 11400000, guid: f1a10c2d66e8ddf428fb1c628ba6f87a, type: 2}
     _imageToScan: {fileID: 11400000, guid: 780c5f5cbc4b17541b903bfecabbb7a0, type: 2}
     _newDialogue: {fileID: 11400000, guid: 7d58471dc54a45041b4e6fbd6e710071, type: 2}
+    _videoClip: {fileID: 0}
+    _videoClipStartDelay: 0
+    _timePassSFX: []
+    _newDialogueAfterTimePass: {fileID: 0}

@@ -16,7 +16,8 @@ MonoBehaviour:
     m_Code: en
   m_SharedData: {fileID: 11400000, guid: 04194fdb658912446bd73b7260075410, type: 2}
   m_Metadata:
-    m_Items: []
+    m_Items:
+    - id: 0
   m_TableData:
   - m_Id: 7415918592
     m_Localized: What colour is the handle of the circle hoe?
@@ -27,7 +28,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 13107589120
-    m_Localized: Orange
+    m_Localized: Purple
     m_Metadata:
       m_Items: []
   - m_Id: 15410262016
@@ -38,5 +39,15 @@ MonoBehaviour:
     m_Localized: Red
     m_Metadata:
       m_Items: []
+  - m_Id: 53431627776
+    m_Localized: Look in the <color={c}>cupboard</color> for a gardening tool with
+      a colored handle.
+    m_Metadata:
+      m_Items:
+      - id: 0
   references:
     version: 1
+    00000000:
+      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries: 00f0c5700c000000

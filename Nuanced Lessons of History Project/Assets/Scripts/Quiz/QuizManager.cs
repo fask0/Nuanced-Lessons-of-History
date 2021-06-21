@@ -15,8 +15,14 @@ public class QuizManager : Singleton<QuizManager>
     [SerializeField] private GameObject _quizPanel;
     [SerializeField] private GameObject _questionContainer;
     [SerializeField] private GameObject _answersContainer;
+    [SerializeField] private List<Sprite> _answerBackgroundsList;
     [SerializeField] private Color _correctFeedbackColor;
+    [SerializeField] private AudioClip _correctFeedbackSound;
     [SerializeField] private Color _wrongFeedbackColor;
+    [SerializeField] private AudioClip _wrongFeedbackSound;
+    [HorizontalLine(1)]
+    [Header("Story")]
+    [SerializeField] private Color _storyFeedbackColor;
 
     private QuestionScriptableObject _currentQuestion;
     private int _currentQuestionHintIndex = -1;
@@ -74,6 +80,17 @@ public class QuizManager : Singleton<QuizManager>
         //Randomize the answers positions
         System.Random rnd = new System.Random();
         availableAnswers = availableAnswers.OrderBy(pA => rnd.Next()).ToList();
+
+        List<Sprite> answerBackgrounds = new List<Sprite>();
+        int indexToAddBackground = 0;
+        for (int i = 0; i < _answerGameObjects.Length; i++)
+        {
+            answerBackgrounds.Add(_answerBackgroundsList[indexToAddBackground]);
+            indexToAddBackground = (indexToAddBackground + 1 >= _answerBackgroundsList.Count) ? 0 : indexToAddBackground + 1;
+        }
+        answerBackgrounds = answerBackgrounds.OrderBy(pA => rnd.Next()).ToList();
+        for (int i = 0; i < _answerGameObjects.Length; i++)
+            _answerGameObjects[i].GetComponentInChildren<Image>().sprite = answerBackgrounds[i];
 
         int colSize = _answerGameObjects[0].transform.parent.childCount;
         if (availableAnswers.Count <= colSize)
@@ -147,9 +164,62 @@ public class QuizManager : Singleton<QuizManager>
         }
         else if (storyQuestion != null)
         {
+            StartCoroutine(handleAnswer(pAnswerGO, _storyFeedbackColor));
+        }
+    }
+
+    private IEnumerator handleAnswer(GameObject pAnswerGO, Color pColorToChange)
+    {
+        bool answerIsCorrect = pColorToChange == _correctFeedbackColor || pColorToChange == _storyFeedbackColor;
+
+        //Make sure buttons cannot be clicked while waiting
+        foreach (GameObject answers in _answerGameObjects)
+            answers.GetComponentInChildren<Button>().interactable = false;
+        pAnswerGO.GetComponentInChildren<Image>().color = pColorToChange;
+
+        SoundManager.Instance.PlayNewSoundClip((answerIsCorrect) ? _correctFeedbackSound : _wrongFeedbackSound);
+
+        yield return new WaitForSeconds((answerIsCorrect) ? 1 : 0.2f);
+
+        //Re-enable button interaction
+        foreach (GameObject answers in _answerGameObjects)
+            answers.GetComponentInChildren<Button>().interactable = true;
+        pAnswerGO.GetComponentInChildren<Image>().color = Color.gray;
+
+        QuizQuestionScriptableObject quizQuestion = _currentQuestion as QuizQuestionScriptableObject;
+        StoryQuestionScriptableObject storyQuestion = _currentQuestion as StoryQuestionScriptableObject;
+        if (quizQuestion != null)
+        {
+            if (answerIsCorrect)
+            {
+                foreach (GameObject answers in _answerGameObjects)
+                    answers.GetComponentInChildren<Image>().color = Color.white;
+
+                quizQuestion.OnCorrectAnswerAction.HandleAction();
+                if (quizQuestion.OnCorrectAnswerAction.ActionType == SpecialAction.Action.None)
+                {
+                    _quizPanel.SetActive(false);
+                    DialogueManager.Instance.Resume();
+                }
+            }
+            else
+            {
+                LocalizedString answerLocalizedString = pAnswerGO.GetComponentInChildren<LocalizeStringEvent>().StringReference;
+                for (int i = 0; i < quizQuestion.Answers.Length; i++)
+                {
+                    if (answerLocalizedString != quizQuestion.Answers[i]) continue;
+                    quizQuestion.OnAnswerActions[i].HandleAction();
+                    break;
+                }
+            }
+        }
+        else if (storyQuestion != null)
+        {
+            LocalizedString answerLocalizedString = pAnswerGO.GetComponentInChildren<LocalizeStringEvent>().StringReference;
             for (int i = 0; i < storyQuestion.Answers.Length; i++)
             {
                 if (storyQuestion.Answers[i] != answerLocalizedString) continue;
+
                 storyQuestion.OnAnswerActions[i].HandleAction();
                 if (storyQuestion.OnAnswerActions[i].ActionType != SpecialAction.Action.QuizQuestion &&
                     storyQuestion.OnAnswerActions[i].ActionType != SpecialAction.Action.StoryQuestion)
@@ -159,45 +229,6 @@ public class QuizManager : Singleton<QuizManager>
                         DialogueManager.Instance.Resume();
                 }
                 break;
-            }
-        }
-    }
-
-    private IEnumerator handleAnswer(GameObject pAnswerGO, Color pColorToChange)
-    {
-        //Make sure buttons cannot be clicked while waiting
-        foreach (GameObject answers in _answerGameObjects)
-            answers.GetComponentInChildren<Button>().interactable = false;
-        pAnswerGO.GetComponentInChildren<Image>().color = pColorToChange;
-
-        yield return new WaitForSeconds((pColorToChange == _correctFeedbackColor) ? 1 : 0.2f);
-
-        //Re-enable button interaction
-        foreach (GameObject answers in _answerGameObjects)
-            answers.GetComponentInChildren<Button>().interactable = true;
-        pAnswerGO.GetComponentInChildren<Image>().color = Color.gray;
-
-        QuizQuestionScriptableObject quizQuestion = _currentQuestion as QuizQuestionScriptableObject;
-        if (pColorToChange == _wrongFeedbackColor)
-        {
-            LocalizedString answerLocalizedString = pAnswerGO.GetComponentInChildren<LocalizeStringEvent>().StringReference;
-            for (int i = 0; i < quizQuestion.Answers.Length; i++)
-            {
-                if (answerLocalizedString != quizQuestion.Answers[i]) continue;
-                quizQuestion.OnAnswerActions[i].HandleAction();
-                break;
-            }
-        }
-        else if (pColorToChange == _correctFeedbackColor)
-        {
-            foreach (GameObject answers in _answerGameObjects)
-                answers.GetComponentInChildren<Image>().color = Color.white;
-
-            quizQuestion.OnCorrectAnswerAction.HandleAction();
-            if (quizQuestion.OnCorrectAnswerAction.ActionType == SpecialAction.Action.None)
-            {
-                _quizPanel.SetActive(false);
-                DialogueManager.Instance.Resume();
             }
         }
     }
@@ -220,11 +251,6 @@ public class QuizManager : Singleton<QuizManager>
             if (_currentQuestionHintIndex + 1 >= quizQuestion.Hints.Length)
                 _currentQuestionHintIndex = -1;
         }
-    }
-
-    public void ExitApplication()
-    {
-        Application.Quit();
     }
     #endregion
 }

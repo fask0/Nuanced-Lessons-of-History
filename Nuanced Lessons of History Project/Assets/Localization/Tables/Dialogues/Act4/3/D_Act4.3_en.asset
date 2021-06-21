@@ -16,25 +16,23 @@ MonoBehaviour:
     m_Code: en
   m_SharedData: {fileID: 11400000, guid: 3d7b0b51465043b44a5fd2a5c58816e0, type: 2}
   m_Metadata:
-    m_Items: []
+    m_Items:
+    - id: 0
   m_TableData:
   - m_Id: 4085641216
     m_Localized: "Hey. Can you give me a hand? <size=0>|</size>Grandma wanted me
-      to do the laundry while she\u2019s gone. Can you get the <color=red>laundry
-      rack</color> in the <color=red>storage room</color>?\r"
+      to do the laundry while she\u2019s gone. Can you get the <color={c}>laundry
+      rack</color> in the <color={c}>storage room</color>?\r"
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - id: 0
   - m_Id: 6577057792
     m_Localized: "Thanks.\r"
     m_Metadata:
       m_Items: []
   - m_Id: 9076862976
     m_Localized: "\u2026<size=0>|</size>Listen, I\u2019m telling you this because
-      I want you to take care of the family while I\u2019m gone. <size=0>|</size>I\u2019m
-      going to leave the Wouden. <size=0>|</size>Everyone is leaving to the larger
-      cities because there\u2019s work there. <size=0>|</size>If I also leave, I
-      can find work somewhere and send money back. <size=0>|</size>Even if we make
-      it through winter, this region is dying. There\u2019s nothing else to do here\u2026\r"
+      I want you to take care of the family while I\u2019m gone."
     m_Metadata:
       m_Items: []
   - m_Id: 11794771968
@@ -42,5 +40,20 @@ MonoBehaviour:
       try to stop me.\r"
     m_Metadata:
       m_Items: []
+  - m_Id: 3600547207049216
+    m_Localized: "I\u2019m going to leave the Wouden. <size=0>|</size>Everyone is
+      leaving to the larger cities because there\u2019s work there. <size=0>|</size>If
+      I also leave, I can find work somewhere and send money back."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3600854615977984
+    m_Localized: "Even if we make it through winter, this region is dying. There\u2019s
+      nothing else to do here\u2026\r"
+    m_Metadata:
+      m_Items: []
   references:
     version: 1
+    00000000:
+      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries: 00f085f300000000

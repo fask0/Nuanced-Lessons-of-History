@@ -16,7 +16,8 @@ MonoBehaviour:
     m_Code: en
   m_SharedData: {fileID: 11400000, guid: b2be93d1cd8bac5419819a0daacac0c4, type: 2}
   m_Metadata:
-    m_Items: []
+    m_Items:
+    - id: 0
   m_TableData:
   - m_Id: 7743074304
     m_Localized: What are the prints on the pot?
@@ -38,5 +39,14 @@ MonoBehaviour:
     m_Localized: Flowers
     m_Metadata:
       m_Items: []
+  - m_Id: 37619101696
+    m_Localized: Look for a <color={c}>blue-green cooking pot</color> in the <color={c}>cupboard</color>.
+    m_Metadata:
+      m_Items:
+      - id: 0
   references:
     version: 1
+    00000000:
+      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries: 00f045c208000000

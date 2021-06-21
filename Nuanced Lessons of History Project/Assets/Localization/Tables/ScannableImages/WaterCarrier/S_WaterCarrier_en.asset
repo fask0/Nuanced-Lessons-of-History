@@ -16,7 +16,17 @@ MonoBehaviour:
     m_Code: en
   m_SharedData: {fileID: 11400000, guid: 396c196ca6674384196fcce1c892b4da, type: 2}
   m_Metadata:
-    m_Items: []
-  m_TableData: []
+    m_Items:
+    - id: 0
+  m_TableData:
+  - m_Id: 4743009677996032
+    m_Localized: Look around the <color={ch}>goat pen</color>.
+    m_Metadata:
+      m_Items:
+      - id: 0
   references:
     version: 1
+    00000000:
+      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries: 00f005ffbdd91000

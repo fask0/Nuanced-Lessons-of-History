@@ -16,7 +16,8 @@ MonoBehaviour:
     m_Code: en
   m_SharedData: {fileID: 11400000, guid: 8e96aa836a45b7a4ebc36ecc2780cfb4, type: 2}
   m_Metadata:
-    m_Items: []
+    m_Items:
+    - id: 0
   m_TableData:
   - m_Id: 3817205760
     m_Localized: "Hello\u2026\r"
@@ -29,11 +30,12 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 8644849664
     m_Localized: "Pancakes! <size=0>|</size>Want to play?  I brought our favourite
-      toy! Wait \u2013 where is my <color=red>cushion</color>? I can\u2019t find
-      it. <size=0>|</size>Maybe I left it <color=red>near the bed</color> when I
+      toy! Wait \u2013 where is my <color={c}>cushion</color>? I can\u2019t find
+      it. <size=0>|</size>Maybe I left it <color={c}>near the bed</color> when I
       was eating last night. Ah, can you bring it to me?\r"
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - id: 0
   - m_Id: 1813386752000
     m_Localized: "Thank you! Now I can sit and play with Pancakes!\r"
     m_Metadata:
@@ -47,10 +49,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 1897927143424
-    m_Localized: "We should have a <color=red>bucket</color> in <color=red>here</color>
+    m_Localized: "We should have a <color={c}>bucket</color> in <color={c}>here</color>
       somewhere. I have to milk her before I take her outside.\r"
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - id: 0
   - m_Id: 1901840429056
     m_Localized: "Thank you dear. Now let\u2019s see\u2026\r"
     m_Metadata:
@@ -62,3 +65,7 @@ MonoBehaviour:
       m_Items: []
   references:
     version: 1
+    00000000:
+      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries: 00f045030200000000f045e5b9010000

@@ -16,7 +16,17 @@ MonoBehaviour:
     m_Code: en
   m_SharedData: {fileID: 11400000, guid: 0447a5019d4c88041819ed4b3905a7ca, type: 2}
   m_Metadata:
-    m_Items: []
-  m_TableData: []
+    m_Items:
+    - id: 0
+  m_TableData:
+  - m_Id: 4726551531089920
+    m_Localized: Look for a <color={ch}>metal bucket</color> on the <color={ch}>floor</color>.
+    m_Metadata:
+      m_Items:
+      - id: 0
   references:
     version: 1
+    00000000:
+      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries: 00f00509c6ca1000

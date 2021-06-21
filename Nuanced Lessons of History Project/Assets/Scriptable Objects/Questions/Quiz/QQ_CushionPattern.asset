@@ -55,6 +55,7 @@ MonoBehaviour:
     _newDialogue: {fileID: 0}
     _nextLine:
       _lineCharacters: []
+      _sfxBeforeLine: []
       _lineString:
         m_TableReference:
           m_TableCollectionName: 
@@ -64,19 +65,28 @@ MonoBehaviour:
         m_FallbackState: 0
         m_WaitForCompletion: 1
       _textCharactersPerSecond: 30
+      _sfxAfterLine: []
+      _ambientSoundToStartPlaying: {fileID: 0}
       _backgroundSprite: {fileID: 0}
       _playerInteraction: 0
       _quizQuestion: {fileID: 0}
       _storyQuestion: {fileID: 0}
       _imageToScan: {fileID: 0}
       _newDialogue: {fileID: 0}
+      _videoClip: {fileID: 0}
+      _videoClipStartDelay: 0
+      _timePassSFX: []
+      _newDialogueAfterTimePass: {fileID: 0}
     _quizQuestion: {fileID: 0}
     _storyQuestion: {fileID: 0}
     _imageToScan: {fileID: 0}
+    _videoClip: {fileID: 0}
+    _videoClipStartDelay: 0
   - _action: 0
     _newDialogue: {fileID: 0}
     _nextLine:
       _lineCharacters: []
+      _sfxBeforeLine: []
       _lineString:
         m_TableReference:
           m_TableCollectionName: 
@@ -86,19 +96,28 @@ MonoBehaviour:
         m_FallbackState: 0
         m_WaitForCompletion: 1
       _textCharactersPerSecond: 30
+      _sfxAfterLine: []
+      _ambientSoundToStartPlaying: {fileID: 0}
       _backgroundSprite: {fileID: 0}
       _playerInteraction: 0
       _quizQuestion: {fileID: 0}
       _storyQuestion: {fileID: 0}
       _imageToScan: {fileID: 0}
       _newDialogue: {fileID: 0}
+      _videoClip: {fileID: 0}
+      _videoClipStartDelay: 0
+      _timePassSFX: []
+      _newDialogueAfterTimePass: {fileID: 0}
     _quizQuestion: {fileID: 0}
     _storyQuestion: {fileID: 0}
     _imageToScan: {fileID: 0}
+    _videoClip: {fileID: 0}
+    _videoClipStartDelay: 0
   - _action: 0
     _newDialogue: {fileID: 0}
     _nextLine:
       _lineCharacters: []
+      _sfxBeforeLine: []
       _lineString:
         m_TableReference:
           m_TableCollectionName: 
@@ -108,20 +127,29 @@ MonoBehaviour:
         m_FallbackState: 0
         m_WaitForCompletion: 1
       _textCharactersPerSecond: 30
+      _sfxAfterLine: []
+      _ambientSoundToStartPlaying: {fileID: 0}
       _backgroundSprite: {fileID: 0}
       _playerInteraction: 0
       _quizQuestion: {fileID: 0}
       _storyQuestion: {fileID: 0}
       _imageToScan: {fileID: 0}
       _newDialogue: {fileID: 0}
+      _videoClip: {fileID: 0}
+      _videoClipStartDelay: 0
+      _timePassSFX: []
+      _newDialogueAfterTimePass: {fileID: 0}
     _quizQuestion: {fileID: 0}
     _storyQuestion: {fileID: 0}
     _imageToScan: {fileID: 0}
+    _videoClip: {fileID: 0}
+    _videoClipStartDelay: 0
   _onCorrectAnswerAction:
     _action: 0
     _newDialogue: {fileID: 0}
     _nextLine:
       _lineCharacters: []
+      _sfxBeforeLine: []
       _lineString:
         m_TableReference:
           m_TableCollectionName: 
@@ -131,13 +159,28 @@ MonoBehaviour:
         m_FallbackState: 0
         m_WaitForCompletion: 1
       _textCharactersPerSecond: 30
+      _sfxAfterLine: []
+      _ambientSoundToStartPlaying: {fileID: 0}
       _backgroundSprite: {fileID: 0}
       _playerInteraction: 0
       _quizQuestion: {fileID: 0}
       _storyQuestion: {fileID: 0}
       _imageToScan: {fileID: 0}
       _newDialogue: {fileID: 0}
+      _videoClip: {fileID: 0}
+      _videoClipStartDelay: 0
+      _timePassSFX: []
+      _newDialogueAfterTimePass: {fileID: 0}
     _quizQuestion: {fileID: 0}
     _storyQuestion: {fileID: 0}
     _imageToScan: {fileID: 0}
-  _hints: []
+    _videoClip: {fileID: 0}
+    _videoClipStartDelay: 0
+  _hints:
+  - m_TableReference:
+      m_TableCollectionName: GUID:0578ef94dfedf0740aef58810832fdc0
+    m_TableEntryReference:
+      m_KeyId: 4732709532725248
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0

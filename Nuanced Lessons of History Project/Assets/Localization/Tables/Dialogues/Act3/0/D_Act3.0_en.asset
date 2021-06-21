@@ -16,7 +16,8 @@ MonoBehaviour:
     m_Code: en
   m_SharedData: {fileID: 11400000, guid: 2f239361558a1754592ed18385704f91, type: 2}
   m_Metadata:
-    m_Items: []
+    m_Items:
+    - id: 0
   m_TableData:
   - m_Id: 5188743168
     m_Localized: "Ma sent you?\r"
@@ -27,13 +28,18 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 10196742144
-    m_Localized: "We\u2019re wasting time now. Quickly, find me the <color=red>water
-      carrier</color>. It\u2019s still in the <color=red>storage room</color>.\r"
+    m_Localized: "We\u2019re wasting time now. Quickly, find me the <color={c}>water
+      carrier</color>. It\u2019s still in the <color={c}>storage room</color>.\r"
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - id: 0
   - m_Id: 13174697984
     m_Localized: "I\u2019m leaving now.\r"
     m_Metadata:
       m_Items: []
   references:
     version: 1
+    00000000:
+      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries: 00f0c55f02000000

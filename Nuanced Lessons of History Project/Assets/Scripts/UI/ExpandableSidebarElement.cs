@@ -14,6 +14,7 @@ public class ExpandableSidebarElement : MonoBehaviour, IExpandableUIElement
 
     #region Fields
     [SerializeField] private RectTransform _dummyRect;
+    [SerializeField] private RectTransform[] _subElements;
     private RectTransform _rect;
     private Vector2 _collapsedSize;
     private Coroutine _transforming;
@@ -85,6 +86,16 @@ public class ExpandableSidebarElement : MonoBehaviour, IExpandableUIElement
 
     private IEnumerator collapse(Vector2 pTargetSize, float pTransitionDuration)
     {
+        if (_subElements.Length > 0)
+        {
+            for (int i = _subElements.Length - 1; i >= 0; i--)
+            {
+                //This can be graetly improved, perhaps implement an interface to support different types of collapsing
+                IEnumerator foldin = _subElements[i].GetComponent<ARHintFoldout>().Foldin();
+                yield return foldin;
+            }
+        }
+
         _dummyRect.gameObject.SetActive(true);
         gameObject.SetActive(false);
 

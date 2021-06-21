@@ -16,7 +16,8 @@ MonoBehaviour:
     m_Code: en
   m_SharedData: {fileID: 11400000, guid: bc40cae5112a9be4ebb460158854fad8, type: 2}
   m_Metadata:
-    m_Items: []
+    m_Items:
+    - id: 0
   m_TableData:
   - m_Id: 5088079872
     m_Localized: "Papaa!! <size=0>|</size>*sniff sniff* <size=0>|</size>Please come
@@ -34,10 +35,11 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 12595884032
     m_Localized: "I know what will make her feel better. <size=0>|</size>Can you
-      look for her favourite toy? It\u2019s a <color=red>little horse</color>. It
-      should be somewhere here in the <color=red>living room</color>.\r"
+      look for her favourite toy? It\u2019s a <color={c}>little horse</color>. It
+      should be somewhere here in the <color={c}>living room</color>.\r"
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - id: 0
   - m_Id: 609726361600
     m_Localized: "You found it. Thank you.\r"
     m_Metadata:
@@ -52,3 +54,7 @@ MonoBehaviour:
       m_Items: []
   references:
     version: 1
+    00000000:
+      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries: 00f0c5ee02000000

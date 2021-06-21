@@ -43,6 +43,10 @@ MonoBehaviour:
     m_Key: F2
     m_Metadata:
       m_Items: []
+  - m_Id: 2927088437161984
+    m_Key: B1.1
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

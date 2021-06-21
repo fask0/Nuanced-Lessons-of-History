@@ -25,12 +25,21 @@ public class DialogueManager : Singleton<DialogueManager>
     [Header("Other Panels")]
     [SerializeField] private GameObject _quizPanel;
     [SerializeField] private GameObject _arPanel;
+    [SerializeField] private GameObject _timePassPanel;
+    [HorizontalLine(1)]
+    [Header("Misc")]
+    [SerializeField] private DialogueScriptableObject _startOfGameDialogue;
+    [SerializeField] private string _specialWordColor;
+    [SerializeField] private string _specialWordColorHint;
+    public string c => _specialWordColor;
+    public string ch => _specialWordColorHint;
 
     private Image[] _characterImages;
     private DialogueScriptableObject _currentDialogue;
     private int _dialogueProgress;
     private Coroutine _speak = null;
     private Coroutine _speakHint = null;
+    private Coroutine _passingTime = null;
     private UnityAction _nextLineAction;
     #endregion
 
@@ -53,12 +62,36 @@ public class DialogueManager : Singleton<DialogueManager>
             _characterImages[i] = _charactersContainer.transform.GetChild(i).GetComponent<Image>();
     }
 
+    public void StartNewGame()
+    {
+        StartNewDialogue(_startOfGameDialogue);
+    }
+
+    public void StartNewDialogueAfterTimePass(SFX[] pSFX, DialogueScriptableObject pDialogue, int pDialogueProgress = 0)
+    {
+        if (_passingTime != null) StopCoroutine(_passingTime);
+        _passingTime = StartCoroutine(passTime(pSFX, pDialogue, pDialogueProgress));
+    }
+
+    private IEnumerator passTime(SFX[] pSFX, DialogueScriptableObject pDialogue, int pDialogueProgress = 0)
+    {
+        _timePassPanel.SetActive(true);
+
+        yield return handleSFX(pSFX, _timePassPanel.GetComponent<Button>());
+
+        _timePassPanel.SetActive(false);
+
+        StartNewDialogue(pDialogue, pDialogueProgress);
+    }
+
     public void StartNewDialogue(DialogueScriptableObject pDialogue, int pDialogueProgress = 0)
     {
         //Make a clone so that the original SO never gets changed
         _currentDialogue = Instantiate(pDialogue);
         _dialogueProgress = pDialogueProgress - 1;
 
+        //Make sure the VNPanel is enabled, if it was disabled for some reason
+        _speechPanel.transform.parent.gameObject.SetActive(true);
         _speechPanel.SetActive(true);
 
         if (_speak != null) { StopCoroutine(_speak); _speak = null; }
@@ -144,6 +177,7 @@ public class DialogueManager : Singleton<DialogueManager>
         Line line = _currentDialogue.Lines[_dialogueProgress];
         for (int i = 0; i < _characterImages.Length; i++)
         {
+            //Disable any extra images
             if (i >= line.LineCharacters.Length) { _characterImages[i].gameObject.SetActive(false); continue; }
 
             LineCharacter lineCharacter = line.LineCharacters[i];
@@ -165,6 +199,7 @@ public class DialogueManager : Singleton<DialogueManager>
             _characterImages[i].sprite = characterExpression;
         }
 
+        //Handle normal and localized names
         LineCharacter speaker = line.GetSpeaker();
         if (speaker.CharacterNameIsLocalized)
         {
@@ -178,143 +213,118 @@ public class DialogueManager : Singleton<DialogueManager>
         }
         _clickToContinue.SetActive(false);
 
+        //Force update the canvas, so that the speaker name box is the correct size
         Canvas.ForceUpdateCanvases();
         _speechNameLocalizedStingEvent.gameObject.SetActive(false);
         _speechNameLocalizedStingEvent.gameObject.SetActive(true);
 
+        //Disregard fuctions if they are not set
         if (line.BackgroundSprite != null) _backgroundImage.sprite = line.BackgroundSprite;
+        if (line.AmbientSoundToStartPlaying != null) SoundManager.Instance.PlayNewAmbientClip(line.AmbientSoundToStartPlaying);
 
         return line;
     }
 
     private IEnumerator speak(Line pLine)
     {
+        //Disable player interaction
         _speechBoxButton.onClick.RemoveAllListeners();
-
-        if (pLine.SoundBeforeLine != null)
-        {
-            SoundManager.Instance.PlayNewSoundClip(pLine.SoundBeforeLine);
-            UnityAction onClickAction = () => skipWaitOnClick();
-            _speechBoxButton.onClick.AddListener(onClickAction);
-            float timeRemaining = pLine.SoundBeforeLine.length;
-            while (pLine.WaitUntilSoundBeforeLineEnds)
-            {
-                yield return new WaitForEndOfFrame();
-                timeRemaining -= Time.deltaTime;
-                if (timeRemaining <= 0) break;
-            }
-            _speechBoxButton.onClick.RemoveListener(onClickAction);
-
-            #region Local Methods
-            void skipWaitOnClick()
-            {
-                timeRemaining = 0;
-                //SoundManager.Instance.StopSound();
-            }
-            #endregion
-        }
-
+        //Calculate the delay between each letter
         float delay = 1.0f / pLine.TextCharactersPerSecond;
-
+        //Store the text component
         TextMeshProUGUI speechText = _speechLocalizedStingEvent.GetComponent<TextMeshProUGUI>();
 
-        speechText.text = "";
+        _speechLocalizedStingEvent.StringReference = pLine.LineString;
+        //Disable the localization component until finished
         _speechLocalizedStingEvent.enabled = false;
 
-        string[] targetText = (pLine.LineString != null) ? pLine.LineString.GetLocalizedString().Split(new string[] { "<size=0>|</size>" }, StringSplitOptions.None) : new string[1] { "" };
-        if (targetText.Length <= 1)
-            _speechBoxButton.onClick.AddListener(_nextLineAction);
+        //Clear the text from the text component
+        speechText.text = "";
 
+        //Handle SFX before line text
+        yield return handleSFX(pLine.SFXBeforeLine, _speechBoxButton);
+
+        #region HandleText
+        //Store the final text seperated by "<size=0>|</size>" to handle concatanation
+        string[] targetText = (pLine.LineString != null) ? pLine.LineString.GetLocalizedString().Split(new string[] { "<size=0>|</size>" }, StringSplitOptions.None) : new string[1] { "" };
+
+        //Allow the player to quickly complete text generation
         bool shouldQuickComplete = false;
-        UnityAction completeOnClickAction = () => completeOnClick();
+        //Store the quickComplete method, so it can be enabled/disabled at anytime
+        UnityAction quickCompleteAction = () => quickComplete();
         for (int i = 0; i < targetText.Length; i++)
         {
-            if (i > 0)
+            //Allow the player to quickComplete
+            _speechBoxButton.onClick.AddListener(quickCompleteAction);
+            //Check for encapsulation
+            string currentText = "";
+            string[] textWithTags = targetText[i].Split(new char[2] { '<', '>' });
+            for (int k = 0; k < textWithTags.Length; k++)
+            {
+                //Every odd element in the array is a tag
+                bool isTag = (k & 1) != 0;
+                if (isTag)
+                {
+                    //Store currently displayed text
+                    currentText = speechText.text;
+                    //Handle encapsulation
+                    EncapsulatedText encapsulation = new EncapsulatedText(string.Format("<{0}>", textWithTags[k]), textWithTags, k);
+                    while (!encapsulation.IsDone)
+                    {
+                        //Step through the encapsulation
+                        bool hasStepped = encapsulation.Step();
+                        //Append the displayed text with the encapsulated text
+                        speechText.text = currentText + encapsulation.DisplayText;
+                        if (hasStepped && !shouldQuickComplete) yield return new WaitForSeconds(delay);
+                    }
+                    //Go to the element after encapsulation
+                    k = encapsulation.SpeechAndTagsProgress + 1;
+                }
+                else
+                {
+                    for (int j = 0; j < textWithTags[k].Length; j++)
+                    {
+                        speechText.text += textWithTags[k][j];
+                        if (!shouldQuickComplete) yield return new WaitForSeconds(delay);
+                    }
+                }
+            }
+            _speechBoxButton.onClick.RemoveListener(quickCompleteAction);
+            shouldQuickComplete = false;
+
+            //Only wait for player interaction if concatanation is needed
+            if (targetText.Length > 1 && i < targetText.Length - 1)
             {
                 bool hasClicked = false;
-
-                UnityAction onClickAction = () => onClick();
-                _speechBoxButton.onClick.AddListener(onClickAction);
+                //Store the playerClicked method, so it can be enabled/disabled at anytime
+                UnityAction playerClickedAction = () => playerClicked();
+                _speechBoxButton.onClick.AddListener(playerClickedAction);
                 _clickToContinue.SetActive(true);
 
+                //Wait until player clicks
                 while (!hasClicked)
                     yield return new WaitForEndOfFrame();
 
-                _speechBoxButton.onClick.RemoveListener(onClickAction);
+                _speechBoxButton.onClick.RemoveListener(playerClickedAction);
                 _clickToContinue.SetActive(false);
 
                 #region Local Methods
-                void onClick()
+                void playerClicked()
                 {
                     hasClicked = true;
                 }
                 #endregion
             }
-
-            string currentText = "";
-            string[] speechAndTags = targetText[i].Split(new char[2] { '<', '>' });
-            for (int k = 0; k < speechAndTags.Length; k++)
-            {
-                string section = speechAndTags[k];
-                bool isTag = (k & 1) != 0;
-
-                if (isTag)
-                {
-                    currentText = speechText.text;
-                    EncapsulatedText encapsulation = new EncapsulatedText(string.Format("<{0}>", section), speechAndTags, k);
-                    _speechBoxButton.onClick.AddListener(completeOnClickAction);
-                    while (!encapsulation.IsDone)
-                    {
-                        bool hasStepped = encapsulation.Step();
-                        speechText.text = currentText + encapsulation.DisplayText;
-                        if (hasStepped)
-                            if (!shouldQuickComplete) yield return new WaitForSeconds(delay);
-                    }
-                    _speechBoxButton.onClick.RemoveListener(completeOnClickAction);
-                    shouldQuickComplete = false;
-                    k = encapsulation.SpeechAndTagsProgress + 1;
-                }
-                else
-                {
-                    _speechBoxButton.onClick.AddListener(completeOnClickAction);
-                    for (int j = 0; j < section.Length; j++)
-                    {
-                        speechText.text += section[j];
-                        if (!shouldQuickComplete) yield return new WaitForSeconds(delay);
-                    }
-                    _speechBoxButton.onClick.RemoveListener(completeOnClickAction);
-                    shouldQuickComplete = false;
-                }
-            }
         }
+        #endregion
 
-        if (pLine.SoundAfterLine != null)
-        {
-            SoundManager.Instance.PlayNewSoundClip(pLine.SoundAfterLine);
-            UnityAction onClickAction = () => stopSoundOnClick();
-            _speechBoxButton.onClick.AddListener(onClickAction);
-            float timeRemaining = pLine.SoundBeforeLine.length;
-            while (pLine.WaitUntilSoundAfterLineEnds)
-            {
-                yield return new WaitForEndOfFrame();
-                timeRemaining -= Time.deltaTime;
-                if (timeRemaining <= 0) break;
-            }
-            _speechBoxButton.onClick.RemoveListener(onClickAction);
-
-            #region Local Methods
-            void stopSoundOnClick()
-            {
-                timeRemaining = 0;
-                SoundManager.Instance.StopSound();
-            }
-            #endregion
-        }
+        //Handle SFX after line text
+        yield return handleSFX(pLine.SFXAfterLine, _speechBoxButton);
 
         finishSpeak();
 
         #region Local Methods
-        void completeOnClick()
+        void quickComplete()
         {
             shouldQuickComplete = true;
         }
@@ -328,19 +338,18 @@ public class DialogueManager : Singleton<DialogueManager>
         StopCoroutine(_speak);
         _speak = null;
 
-        if (line.LineString != null)
-        {
-            _speechLocalizedStingEvent.enabled = true;
-            _speechLocalizedStingEvent.StringReference = line.LineString;
-        }
+        _speechLocalizedStingEvent.enabled = true;
+        _speechLocalizedStingEvent.StringReference = line.LineString;
 
+        //Disable player interaction
         _speechBoxButton.onClick.RemoveAllListeners();
-
         if (line.Interaction != Line.PlayerInteraction.None)
+            //If there is a special action, wait for the player's input before acting
             StartCoroutine(waitForInputBeforeAction(() => line.HandlePlayerInteraction()));
         else
         {
             line.HandlePlayerInteraction();
+            //If there is no special action, allow the player to continue
             _speechBoxButton.onClick.AddListener(_nextLineAction);
             _clickToContinue.SetActive(true);
         }
@@ -373,6 +382,9 @@ public class DialogueManager : Singleton<DialogueManager>
         float delay = 1.0f / 50;
 
         TextMeshProUGUI hintText = _hintLocalizedStringEvent.GetComponent<TextMeshProUGUI>();
+
+        _hintLocalizedStringEvent.StringReference = pString;
+        //Disable the localization component until finished
         _hintLocalizedStringEvent.enabled = false;
         hintText.text = "";
 
@@ -443,6 +455,66 @@ public class DialogueManager : Singleton<DialogueManager>
         #endregion
     }
 
+    private IEnumerator handleSFX(SFX[] pSFX, Button pSkipButton)
+    {
+        float timeRemainingBefore = 0;
+        float timeRemainingAfter = 0;
+        for (int i = 0; i < pSFX.Length; i++)
+        {
+            SFX sfx = pSFX[i];
+
+            if ((timeRemainingBefore = sfx.DelayBefore) > 0)
+            {
+                if (sfx.PlayDuringText) StartCoroutine(playClipAfterDelay(sfx.Clip, sfx.DelayBefore));
+                else
+                {
+                    UnityAction skipSFXDelayBeforeAction = () => skipSFXDelayBefore();
+                    pSkipButton.onClick.AddListener(skipSFXDelayBeforeAction);
+                    while (timeRemainingBefore > 0)
+                    {
+                        yield return new WaitForEndOfFrame();
+                        timeRemainingBefore -= Time.deltaTime;
+                    }
+                    pSkipButton.onClick.RemoveListener(skipSFXDelayBeforeAction);
+                }
+
+                SoundManager.Instance.PlayNewSoundClip(sfx.Clip);
+            }
+            else
+                SoundManager.Instance.PlayNewSoundClip(sfx.Clip);
+
+            if ((timeRemainingAfter = sfx.DelayAfter) > 0)
+            {
+                UnityAction skipSFXDelayAfterAction = () => skipSFXDelayAfter();
+                pSkipButton.onClick.AddListener(skipSFXDelayAfterAction);
+                while (timeRemainingAfter > 0)
+                {
+                    yield return new WaitForEndOfFrame();
+                    timeRemainingAfter -= Time.deltaTime;
+                }
+                pSkipButton.onClick.RemoveListener(skipSFXDelayAfterAction);
+            }
+        }
+
+        #region Local Methods
+        IEnumerator playClipAfterDelay(AudioClip pClip, float pDelay)
+        {
+            yield return new WaitForSeconds(pDelay);
+            SoundManager.Instance.PlayNewSoundClip(pClip);
+        }
+
+        void skipSFXDelayBefore()
+        {
+            timeRemainingBefore = 0;
+        }
+
+        void skipSFXDelayAfter()
+        {
+            timeRemainingAfter = 0;
+        }
+        #endregion
+    }
+
     private bool progressDialogue()
     {
         if (_dialogueProgress + 1 < _currentDialogue.Lines.Length) { _dialogueProgress++; return true; }
@@ -494,25 +566,25 @@ public class DialogueManager : Singleton<DialogueManager>
         public EncapsulatedText(string pTag, string[] pSpeechAndTags, int pSpeechAndTagsProgress)
         {
             _tag = pTag;
-            generateEndTag();
+            _endTag = generateEndTag();
             _speechAndTags = pSpeechAndTags;
             _speechAndTagsProgress = pSpeechAndTagsProgress;
 
-            if (_speechAndTags.Length - 1 <= _speechAndTagsProgress) return;
+            if (_speechAndTagsProgress + 1 >= _speechAndTags.Length) return;
 
             string nextPart = _speechAndTags[_speechAndTagsProgress + 1];
             _targetText = nextPart;
             _speechAndTagsProgress++;
         }
 
-        private void generateEndTag()
+        private string generateEndTag()
         {
-            _endTag = _tag.Replace("<", "").Replace(">", "");
+            string s = _tag.Replace("<", "").Replace(">", "");
 
-            if (_endTag.Contains("="))
-                _endTag = string.Format("</{0}>", _endTag.Split('=')[0]);
+            if (s.Contains("="))
+                return string.Format("</{0}>", s.Split('=')[0]);
             else
-                _endTag = string.Format("</{0}>", _endTag);
+                return string.Format("</{0}>", s);
         }
 
         public bool Step()
@@ -523,7 +595,7 @@ public class DialogueManager : Singleton<DialogueManager>
             {
                 if (_currentText == _targetText)
                 {
-                    if (_speechAndTags.Length > _speechAndTagsProgress + 1)
+                    if (_speechAndTagsProgress + 1 < _speechAndTags.Length)
                     {
                         string nextPart = _speechAndTags[_speechAndTagsProgress + 1];
                         bool isTag = ((_speechAndTagsProgress + 1) & 1) != 0;

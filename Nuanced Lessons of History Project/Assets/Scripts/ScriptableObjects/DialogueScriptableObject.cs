@@ -51,23 +51,29 @@ public class Line
         StoryQuestion,
         ImageToScan,
         StartNewDialogue,
-        PlayVideoClip
+        PlayVideoClip,
+        TimePass
     }
 
     #region Fields
+    [Header("Characters")]
     [SerializeField] private LineCharacter[] _lineCharacters;
     [HorizontalLine(1)]
-    [SerializeField] private AudioClip _soundBeforeLine;
-    [SerializeField] private bool _waitUntilSoundBeforeLineEnds;
+    [Header("Before Text")]
+    [SerializeField] private SFX[] _sfxBeforeLine;
     [HorizontalLine(1)]
+    [Header("Text")]
     [SerializeField] private LocalizedString _lineString;
     [Range(10, 60)] [SerializeField] private int _textCharactersPerSecond = 30;
     [HorizontalLine(1)]
-    [SerializeField] private AudioClip _soundAfterLine;
-    [SerializeField] private bool _waitUntilSoundAfterLineEnds;
+    [Header("After Text")]
+    [SerializeField] private SFX[] _sfxAfterLine;
     [HorizontalLine(1)]
+    [Header("Override")]
+    [SerializeField] private AudioClip _ambientSoundToStartPlaying;
     [SerializeField] private Sprite _backgroundSprite = null;
     [HorizontalLine(1)]
+    [Header("Interaction")]
     [SerializeField] private PlayerInteraction _playerInteraction;
     [AllowNesting] [ShowIf("_playerInteraction", PlayerInteraction.QuizQuestion)] [SerializeField] private QuizQuestionScriptableObject _quizQuestion;
     [AllowNesting] [ShowIf("_playerInteraction", PlayerInteraction.StoryQuestion)] [SerializeField] private StoryQuestionScriptableObject _storyQuestion;
@@ -75,16 +81,17 @@ public class Line
     [AllowNesting] [ShowIf("_playerInteraction", PlayerInteraction.StartNewDialogue)] [SerializeField] private DialogueScriptableObject _newDialogue;
     [AllowNesting] [ShowIf("_playerInteraction", PlayerInteraction.PlayVideoClip)] [SerializeField] private VideoClip _videoClip;
     [AllowNesting] [ShowIf("_playerInteraction", PlayerInteraction.PlayVideoClip)] [SerializeField] private float _videoClipStartDelay;
+    [AllowNesting] [ShowIf("_playerInteraction", PlayerInteraction.TimePass)] [SerializeField] private SFX[] _timePassSFX;
+    [AllowNesting] [ShowIf("_playerInteraction", PlayerInteraction.TimePass)] [SerializeField] private DialogueScriptableObject _newDialogueAfterTimePass;
     #endregion
 
     #region Properties
-    public AudioClip SoundBeforeLine => _soundBeforeLine;
-    public bool WaitUntilSoundBeforeLineEnds => _waitUntilSoundBeforeLineEnds;
+    public SFX[] SFXBeforeLine => _sfxBeforeLine;
     public LineCharacter[] LineCharacters => _lineCharacters;
     public LocalizedString LineString => _lineString;
-    public AudioClip SoundAfterLine => _soundAfterLine;
-    public bool WaitUntilSoundAfterLineEnds => _waitUntilSoundAfterLineEnds;
+    public SFX[] SFXAfterLine => _sfxAfterLine;
     public int TextCharactersPerSecond => (_textCharactersPerSecond == 0) ? 30 : _textCharactersPerSecond;
+    public AudioClip AmbientSoundToStartPlaying => _ambientSoundToStartPlaying;
     public Sprite BackgroundSprite => _backgroundSprite;
     public PlayerInteraction Interaction => _playerInteraction;
     #endregion
@@ -110,6 +117,9 @@ public class Line
                 break;
             case PlayerInteraction.PlayVideoClip:
                 VideoManager.Instance.PlayNewClip(_videoClip, _videoClipStartDelay);
+                break;
+            case PlayerInteraction.TimePass:
+                DialogueManager.Instance.StartNewDialogueAfterTimePass(_timePassSFX, _newDialogueAfterTimePass);
                 break;
             default:
                 break;

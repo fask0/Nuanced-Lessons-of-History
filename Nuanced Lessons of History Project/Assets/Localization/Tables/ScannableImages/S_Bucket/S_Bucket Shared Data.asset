@@ -12,9 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
   m_Name: S_Bucket Shared Data
   m_EditorClassIdentifier: 
-  m_TableCollectionName: S_Bucket
+  m_TableCollectionName: S_BucketOfMilk
   m_TableCollectionNameGuidString: 0447a5019d4c88041819ed4b3905a7ca
-  m_Entries: []
+  m_Entries:
+  - m_Id: 4726551531089920
+    m_Key: I
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

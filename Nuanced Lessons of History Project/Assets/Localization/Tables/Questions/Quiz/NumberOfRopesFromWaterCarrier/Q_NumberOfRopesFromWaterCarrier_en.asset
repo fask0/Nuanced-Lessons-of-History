@@ -16,7 +16,8 @@ MonoBehaviour:
     m_Code: en
   m_SharedData: {fileID: 11400000, guid: a487617bac243a742a6a994c4b60234c, type: 2}
   m_Metadata:
-    m_Items: []
+    m_Items:
+    - id: 0
   m_TableData:
   - m_Id: 2158568954785792
     m_Localized: How many ropes are attached to the Water carrier?
@@ -38,5 +39,14 @@ MonoBehaviour:
     m_Localized: 4
     m_Metadata:
       m_Items: []
+  - m_Id: 4738941052121088
+    m_Localized: Look next to the <color={c}>goat pen</color>.
+    m_Metadata:
+      m_Items:
+      - id: 0
   references:
     version: 1
+    00000000:
+      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries: 00f005b20ad61000
