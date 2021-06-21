@@ -1,0 +1,150 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59752de0b75d1a146b65c158fff577e6, type: 3}
+  m_Name: QQ_FavouriteToyMaterial
+  m_EditorClassIdentifier: 
+  _question:
+    m_TableReference:
+      m_TableCollectionName: GUID:310b47bd856e34e46851aac6d4f8d191
+    m_TableEntryReference:
+      m_KeyId: 34794323968
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 1
+  _answers:
+  - m_TableReference:
+      m_TableCollectionName: GUID:310b47bd856e34e46851aac6d4f8d191
+    m_TableEntryReference:
+      m_KeyId: 45145866240
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+  - m_TableReference:
+      m_TableCollectionName: GUID:310b47bd856e34e46851aac6d4f8d191
+    m_TableEntryReference:
+      m_KeyId: 70391382016
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+  - m_TableReference:
+      m_TableCollectionName: GUID:310b47bd856e34e46851aac6d4f8d191
+    m_TableEntryReference:
+      m_KeyId: 94676402176
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+  _correctAnswer:
+    m_TableReference:
+      m_TableCollectionName: GUID:310b47bd856e34e46851aac6d4f8d191
+    m_TableEntryReference:
+      m_KeyId: 117522776064
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 1
+  _onAnswerActions:
+  - _action: 0
+    _newDialogue: {fileID: 0}
+    _nextLine:
+      _lineCharacters: []
+      _lineString:
+        m_TableReference:
+          m_TableCollectionName: 
+        m_TableEntryReference:
+          m_KeyId: 0
+          m_Key: 
+        m_FallbackState: 0
+        m_WaitForCompletion: 1
+      _textCharactersPerSecond: 30
+      _backgroundSprite: {fileID: 0}
+      _playerInteraction: 0
+      _quizQuestion: {fileID: 0}
+      _storyQuestion: {fileID: 0}
+      _imageToScan: {fileID: 0}
+      _newDialogue: {fileID: 0}
+    _quizQuestion: {fileID: 0}
+    _storyQuestion: {fileID: 0}
+    _imageToScan: {fileID: 0}
+  - _action: 0
+    _newDialogue: {fileID: 0}
+    _nextLine:
+      _lineCharacters: []
+      _lineString:
+        m_TableReference:
+          m_TableCollectionName: 
+        m_TableEntryReference:
+          m_KeyId: 0
+          m_Key: 
+        m_FallbackState: 0
+        m_WaitForCompletion: 1
+      _textCharactersPerSecond: 30
+      _backgroundSprite: {fileID: 0}
+      _playerInteraction: 0
+      _quizQuestion: {fileID: 0}
+      _storyQuestion: {fileID: 0}
+      _imageToScan: {fileID: 0}
+      _newDialogue: {fileID: 0}
+    _quizQuestion: {fileID: 0}
+    _storyQuestion: {fileID: 0}
+    _imageToScan: {fileID: 0}
+  - _action: 0
+    _newDialogue: {fileID: 0}
+    _nextLine:
+      _lineCharacters: []
+      _lineString:
+        m_TableReference:
+          m_TableCollectionName: 
+        m_TableEntryReference:
+          m_KeyId: 0
+          m_Key: 
+        m_FallbackState: 0
+        m_WaitForCompletion: 1
+      _textCharactersPerSecond: 30
+      _backgroundSprite: {fileID: 0}
+      _playerInteraction: 0
+      _quizQuestion: {fileID: 0}
+      _storyQuestion: {fileID: 0}
+      _imageToScan: {fileID: 0}
+      _newDialogue: {fileID: 0}
+    _quizQuestion: {fileID: 0}
+    _storyQuestion: {fileID: 0}
+    _imageToScan: {fileID: 0}
+  _onCorrectAnswerAction:
+    _action: 4
+    _newDialogue: {fileID: 0}
+    _nextLine:
+      _lineCharacters: []
+      _lineString:
+        m_TableReference:
+          m_TableCollectionName: 
+        m_TableEntryReference:
+          m_KeyId: 0
+          m_Key: 
+        m_FallbackState: 0
+        m_WaitForCompletion: 1
+      _textCharactersPerSecond: 30
+      _backgroundSprite: {fileID: 0}
+      _playerInteraction: 0
+      _quizQuestion: {fileID: 0}
+      _storyQuestion: {fileID: 0}
+      _imageToScan: {fileID: 0}
+      _newDialogue: {fileID: 0}
+    _quizQuestion: {fileID: 11400000, guid: 6c909cae7c93d3244aff3562dae5b275, type: 2}
+    _storyQuestion: {fileID: 0}
+    _imageToScan: {fileID: 0}
+  _hints:
+  - m_TableReference:
+      m_TableCollectionName: GUID:310b47bd856e34e46851aac6d4f8d191
+    m_TableEntryReference:
+      m_KeyId: 126980931584
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0

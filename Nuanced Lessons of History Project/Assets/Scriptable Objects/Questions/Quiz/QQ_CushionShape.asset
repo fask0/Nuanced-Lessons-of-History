@@ -1,0 +1,186 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59752de0b75d1a146b65c158fff577e6, type: 3}
+  m_Name: QQ_CushionShape
+  m_EditorClassIdentifier: 
+  _question:
+    m_TableReference:
+      m_TableCollectionName: GUID:82de1a07999f1af4ca4a7835a0b22930
+    m_TableEntryReference:
+      m_KeyId: 6270873600
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 1
+  _answers:
+  - m_TableReference:
+      m_TableCollectionName: GUID:82de1a07999f1af4ca4a7835a0b22930
+    m_TableEntryReference:
+      m_KeyId: 8917479424
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 1
+  - m_TableReference:
+      m_TableCollectionName: GUID:82de1a07999f1af4ca4a7835a0b22930
+    m_TableEntryReference:
+      m_KeyId: 11295649792
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 1
+  - m_TableReference:
+      m_TableCollectionName: GUID:82de1a07999f1af4ca4a7835a0b22930
+    m_TableEntryReference:
+      m_KeyId: 13954838528
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 1
+  _correctAnswer:
+    m_TableReference:
+      m_TableCollectionName: GUID:82de1a07999f1af4ca4a7835a0b22930
+    m_TableEntryReference:
+      m_KeyId: 36960595968
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 1
+  _onAnswerActions:
+  - _action: 0
+    _newDialogue: {fileID: 0}
+    _nextLine:
+      _lineCharacters: []
+      _sfxBeforeLine: []
+      _lineString:
+        m_TableReference:
+          m_TableCollectionName: 
+        m_TableEntryReference:
+          m_KeyId: 0
+          m_Key: 
+        m_FallbackState: 0
+        m_WaitForCompletion: 1
+      _textCharactersPerSecond: 30
+      _sfxAfterLine: []
+      _ambientSoundToStartPlaying: {fileID: 0}
+      _backgroundSprite: {fileID: 0}
+      _playerInteraction: 0
+      _quizQuestion: {fileID: 0}
+      _storyQuestion: {fileID: 0}
+      _imageToScan: {fileID: 0}
+      _newDialogue: {fileID: 0}
+      _videoClip: {fileID: 0}
+      _videoClipStartDelay: 0
+      _timePassSFX: []
+      _newDialogueAfterTimePass: {fileID: 0}
+    _quizQuestion: {fileID: 0}
+    _storyQuestion: {fileID: 0}
+    _imageToScan: {fileID: 0}
+    _videoClip: {fileID: 0}
+    _videoClipStartDelay: 0
+  - _action: 0
+    _newDialogue: {fileID: 0}
+    _nextLine:
+      _lineCharacters: []
+      _sfxBeforeLine: []
+      _lineString:
+        m_TableReference:
+          m_TableCollectionName: 
+        m_TableEntryReference:
+          m_KeyId: 0
+          m_Key: 
+        m_FallbackState: 0
+        m_WaitForCompletion: 1
+      _textCharactersPerSecond: 30
+      _sfxAfterLine: []
+      _ambientSoundToStartPlaying: {fileID: 0}
+      _backgroundSprite: {fileID: 0}
+      _playerInteraction: 0
+      _quizQuestion: {fileID: 0}
+      _storyQuestion: {fileID: 0}
+      _imageToScan: {fileID: 0}
+      _newDialogue: {fileID: 0}
+      _videoClip: {fileID: 0}
+      _videoClipStartDelay: 0
+      _timePassSFX: []
+      _newDialogueAfterTimePass: {fileID: 0}
+    _quizQuestion: {fileID: 0}
+    _storyQuestion: {fileID: 0}
+    _imageToScan: {fileID: 0}
+    _videoClip: {fileID: 0}
+    _videoClipStartDelay: 0
+  - _action: 0
+    _newDialogue: {fileID: 0}
+    _nextLine:
+      _lineCharacters: []
+      _sfxBeforeLine: []
+      _lineString:
+        m_TableReference:
+          m_TableCollectionName: 
+        m_TableEntryReference:
+          m_KeyId: 0
+          m_Key: 
+        m_FallbackState: 0
+        m_WaitForCompletion: 1
+      _textCharactersPerSecond: 30
+      _sfxAfterLine: []
+      _ambientSoundToStartPlaying: {fileID: 0}
+      _backgroundSprite: {fileID: 0}
+      _playerInteraction: 0
+      _quizQuestion: {fileID: 0}
+      _storyQuestion: {fileID: 0}
+      _imageToScan: {fileID: 0}
+      _newDialogue: {fileID: 0}
+      _videoClip: {fileID: 0}
+      _videoClipStartDelay: 0
+      _timePassSFX: []
+      _newDialogueAfterTimePass: {fileID: 0}
+    _quizQuestion: {fileID: 0}
+    _storyQuestion: {fileID: 0}
+    _imageToScan: {fileID: 0}
+    _videoClip: {fileID: 0}
+    _videoClipStartDelay: 0
+  _onCorrectAnswerAction:
+    _action: 4
+    _newDialogue: {fileID: 0}
+    _nextLine:
+      _lineCharacters: []
+      _sfxBeforeLine: []
+      _lineString:
+        m_TableReference:
+          m_TableCollectionName: 
+        m_TableEntryReference:
+          m_KeyId: 0
+          m_Key: 
+        m_FallbackState: 0
+        m_WaitForCompletion: 1
+      _textCharactersPerSecond: 30
+      _sfxAfterLine: []
+      _ambientSoundToStartPlaying: {fileID: 0}
+      _backgroundSprite: {fileID: 0}
+      _playerInteraction: 0
+      _quizQuestion: {fileID: 0}
+      _storyQuestion: {fileID: 0}
+      _imageToScan: {fileID: 0}
+      _newDialogue: {fileID: 0}
+      _videoClip: {fileID: 0}
+      _videoClipStartDelay: 0
+      _timePassSFX: []
+      _newDialogueAfterTimePass: {fileID: 0}
+    _quizQuestion: {fileID: 11400000, guid: dbd92a6e8cb5195479b15715a3f220ae, type: 2}
+    _storyQuestion: {fileID: 0}
+    _imageToScan: {fileID: 0}
+    _videoClip: {fileID: 0}
+    _videoClipStartDelay: 0
+  _hints:
+  - m_TableReference:
+      m_TableCollectionName: GUID:82de1a07999f1af4ca4a7835a0b22930
+    m_TableEntryReference:
+      m_KeyId: 2578835032109056
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0

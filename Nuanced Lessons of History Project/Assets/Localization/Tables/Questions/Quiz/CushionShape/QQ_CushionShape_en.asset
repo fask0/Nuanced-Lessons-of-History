@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: QQ_CushionShape_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: 82de1a07999f1af4ca4a7835a0b22930, type: 2}
+  m_Metadata:
+    m_Items:
+    - id: 0
+  m_TableData:
+  - m_Id: 6270873600
+    m_Localized: What shape is the cushion next to the bedbox?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8917479424
+    m_Localized: Cylinder
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36960595968
+    m_Localized: Round
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11295649792
+    m_Localized: Square
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13954838528
+    m_Localized: Rectangle
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2578835032109056
+    m_Localized: Look on the <color={c}>ground</color> in front of the <color={c}>bed
+      box</color>.
+    m_Metadata:
+      m_Items:
+      - id: 0
+  references:
+    version: 1
+    00000000:
+      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries: 00f005d26f290900

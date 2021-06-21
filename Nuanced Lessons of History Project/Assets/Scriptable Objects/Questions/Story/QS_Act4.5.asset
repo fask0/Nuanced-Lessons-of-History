@@ -1,0 +1,153 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dae7d22ade2b1146bf00bd55c3b2878, type: 3}
+  m_Name: QS_Act4.5
+  m_EditorClassIdentifier: 
+  _question:
+    m_TableReference:
+      m_TableCollectionName: GUID:c7f2cfb2b36ccf146943b0fc7625471c
+    m_TableEntryReference:
+      m_KeyId: 6761607168
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 1
+  _answers:
+  - m_TableReference:
+      m_TableCollectionName: GUID:c7f2cfb2b36ccf146943b0fc7625471c
+    m_TableEntryReference:
+      m_KeyId: 9001365504
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 1
+  - m_TableReference:
+      m_TableCollectionName: GUID:c7f2cfb2b36ccf146943b0fc7625471c
+    m_TableEntryReference:
+      m_KeyId: 11773800448
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 1
+  - m_TableReference:
+      m_TableCollectionName: GUID:c7f2cfb2b36ccf146943b0fc7625471c
+    m_TableEntryReference:
+      m_KeyId: 16383340544
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 1
+  _onAnswerActions:
+  - _action: 2
+    _newDialogue: {fileID: 0}
+    _nextLine:
+      _lineCharacters:
+      - _characterScriptableObject: {fileID: 11400000, guid: bfe907f888a308f4eacdb3cdfded4fd2, type: 2}
+        _nameToUse: 0
+        _expression: 0
+        _hideCharacterImage: 0
+        _isSpeaker: 1
+      _sfxBeforeLine: []
+      _lineString:
+        m_TableReference:
+          m_TableCollectionName: GUID:c7f2cfb2b36ccf146943b0fc7625471c
+        m_TableEntryReference:
+          m_KeyId: 18681819136
+          m_Key: 
+        m_FallbackState: 0
+        m_WaitForCompletion: 1
+      _textCharactersPerSecond: 30
+      _sfxAfterLine: []
+      _ambientSoundToStartPlaying: {fileID: 0}
+      _backgroundSprite: {fileID: 0}
+      _playerInteraction: 5
+      _quizQuestion: {fileID: 0}
+      _storyQuestion: {fileID: 0}
+      _imageToScan: {fileID: 0}
+      _newDialogue: {fileID: 0}
+      _videoClip: {fileID: 32900000, guid: d754e4f86c95e5749be0da45039b6144, type: 3}
+      _videoClipStartDelay: 0
+      _timePassSFX: []
+      _newDialogueAfterTimePass: {fileID: 0}
+    _quizQuestion: {fileID: 0}
+    _storyQuestion: {fileID: 0}
+    _imageToScan: {fileID: 0}
+    _videoClip: {fileID: 0}
+    _videoClipStartDelay: 0
+  - _action: 2
+    _newDialogue: {fileID: 0}
+    _nextLine:
+      _lineCharacters:
+      - _characterScriptableObject: {fileID: 11400000, guid: 2d96134aedbda164c8d2a6bde96797c5, type: 2}
+        _nameToUse: 0
+        _expression: 0
+        _hideCharacterImage: 0
+        _isSpeaker: 1
+      _sfxBeforeLine: []
+      _lineString:
+        m_TableReference:
+          m_TableCollectionName: GUID:c7f2cfb2b36ccf146943b0fc7625471c
+        m_TableEntryReference:
+          m_KeyId: 21152264192
+          m_Key: 
+        m_FallbackState: 0
+        m_WaitForCompletion: 1
+      _textCharactersPerSecond: 30
+      _sfxAfterLine: []
+      _ambientSoundToStartPlaying: {fileID: 0}
+      _backgroundSprite: {fileID: 0}
+      _playerInteraction: 5
+      _quizQuestion: {fileID: 0}
+      _storyQuestion: {fileID: 0}
+      _imageToScan: {fileID: 0}
+      _newDialogue: {fileID: 0}
+      _videoClip: {fileID: 32900000, guid: 9b523aac8e19e794f8e339bb17b4d62f, type: 3}
+      _videoClipStartDelay: 0
+      _timePassSFX: []
+      _newDialogueAfterTimePass: {fileID: 0}
+    _quizQuestion: {fileID: 0}
+    _storyQuestion: {fileID: 0}
+    _imageToScan: {fileID: 0}
+    _videoClip: {fileID: 0}
+    _videoClipStartDelay: 0
+  - _action: 2
+    _newDialogue: {fileID: 0}
+    _nextLine:
+      _lineCharacters:
+      - _characterScriptableObject: {fileID: 11400000, guid: 9e8f2010cc514d345807680671826b95, type: 2}
+        _nameToUse: 0
+        _expression: 1
+        _hideCharacterImage: 0
+        _isSpeaker: 1
+      _sfxBeforeLine: []
+      _lineString:
+        m_TableReference:
+          m_TableCollectionName: GUID:c7f2cfb2b36ccf146943b0fc7625471c
+        m_TableEntryReference:
+          m_KeyId: 64471035904
+          m_Key: 
+        m_FallbackState: 0
+        m_WaitForCompletion: 1
+      _textCharactersPerSecond: 30
+      _sfxAfterLine: []
+      _ambientSoundToStartPlaying: {fileID: 0}
+      _backgroundSprite: {fileID: 0}
+      _playerInteraction: 5
+      _quizQuestion: {fileID: 0}
+      _storyQuestion: {fileID: 0}
+      _imageToScan: {fileID: 0}
+      _newDialogue: {fileID: 0}
+      _videoClip: {fileID: 32900000, guid: fc51c403189a292438d34dac563736f4, type: 3}
+      _videoClipStartDelay: 0
+      _timePassSFX: []
+      _newDialogueAfterTimePass: {fileID: 0}
+    _quizQuestion: {fileID: 0}
+    _storyQuestion: {fileID: 0}
+    _imageToScan: {fileID: 0}
+    _videoClip: {fileID: 0}
+    _videoClipStartDelay: 0

@@ -1,0 +1,129 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a96c5442fadcc94aaefb0193117d3f9, type: 3}
+  m_Name: D_Act4.1
+  m_EditorClassIdentifier: 
+  _lines:
+  - _lineCharacters:
+    - _characterScriptableObject: {fileID: 11400000, guid: 2d96134aedbda164c8d2a6bde96797c5, type: 2}
+      _nameToUse: 0
+      _expression: 0
+      _hideCharacterImage: 0
+      _isSpeaker: 1
+    _sfxBeforeLine: []
+    _soundsBeforeLine: []
+    _waitUntilFirstSoundBeforeLineEnds: 0
+    _lineString:
+      m_TableReference:
+        m_TableCollectionName: GUID:eb78135108b27724e991851cb4e07cea
+      m_TableEntryReference:
+        m_KeyId: 5281017856
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+    _textCharactersPerSecond: 0
+    _sfxAfterLine: []
+    _soundsAfterLine: []
+    _waitUntilFirstSoundAfterLineEnds: 0
+    _ambientSoundToStartPlaying: {fileID: 0}
+    _backgroundSprite: {fileID: 0}
+    _playerInteraction: 3
+    _quizQuestion: {fileID: 0}
+    _storyQuestion: {fileID: 0}
+    _imageToScan: {fileID: 11400000, guid: df1d7575e6829414c96251894ecf165d, type: 2}
+    _newDialogue: {fileID: 0}
+    _videoClip: {fileID: 0}
+    _videoClipStartDelay: 0
+    _timePassDuration: 0
+    _timePassSFX: []
+    _timePassSounds: []
+    _newDialogueAfterTimePass: {fileID: 0}
+  - _lineCharacters:
+    - _characterScriptableObject: {fileID: 11400000, guid: 2d96134aedbda164c8d2a6bde96797c5, type: 2}
+      _nameToUse: 0
+      _expression: 1
+      _hideCharacterImage: 0
+      _isSpeaker: 1
+    _sfxBeforeLine: []
+    _soundsBeforeLine: []
+    _waitUntilFirstSoundBeforeLineEnds: 0
+    _lineString:
+      m_TableReference:
+        m_TableCollectionName: GUID:eb78135108b27724e991851cb4e07cea
+      m_TableEntryReference:
+        m_KeyId: 7709519872
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+    _textCharactersPerSecond: 0
+    _sfxAfterLine: []
+    _soundsAfterLine: []
+    _waitUntilFirstSoundAfterLineEnds: 0
+    _ambientSoundToStartPlaying: {fileID: 0}
+    _backgroundSprite: {fileID: 0}
+    _playerInteraction: 2
+    _quizQuestion: {fileID: 0}
+    _storyQuestion: {fileID: 11400000, guid: b9748637b5437a449a12ae971532cb4b, type: 2}
+    _imageToScan: {fileID: 0}
+    _newDialogue: {fileID: 0}
+    _videoClip: {fileID: 0}
+    _videoClipStartDelay: 0
+    _timePassDuration: 0
+    _timePassSFX: []
+    _timePassSounds: []
+    _newDialogueAfterTimePass: {fileID: 0}
+  - _lineCharacters:
+    - _characterScriptableObject: {fileID: 11400000, guid: 2d96134aedbda164c8d2a6bde96797c5, type: 2}
+      _nameToUse: 0
+      _expression: 0
+      _hideCharacterImage: 0
+      _isSpeaker: 1
+    _sfxBeforeLine: []
+    _soundsBeforeLine: []
+    _waitUntilFirstSoundBeforeLineEnds: 0
+    _lineString:
+      m_TableReference:
+        m_TableCollectionName: GUID:eb78135108b27724e991851cb4e07cea
+      m_TableEntryReference:
+        m_KeyId: 10305794048
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+    _textCharactersPerSecond: 0
+    _sfxAfterLine: []
+    _soundsAfterLine: []
+    _waitUntilFirstSoundAfterLineEnds: 0
+    _ambientSoundToStartPlaying: {fileID: 0}
+    _backgroundSprite: {fileID: 0}
+    _playerInteraction: 6
+    _quizQuestion: {fileID: 0}
+    _storyQuestion: {fileID: 11400000, guid: b9748637b5437a449a12ae971532cb4b, type: 2}
+    _imageToScan: {fileID: 0}
+    _newDialogue: {fileID: 11400000, guid: b2bdcacac21bb1f43ba870a84e5f45da, type: 2}
+    _videoClip: {fileID: 0}
+    _videoClipStartDelay: 0
+    _timePassDuration: 2
+    _timePassSFX:
+    - _delayBefore: 0
+      _secondsBefore: 0
+      _clip: {fileID: 8300000, guid: 338ee98a72bad2544a03001c6ebc44ad, type: 3}
+      _delayAfter: 2
+      _secondsAfter: 0
+    - _delayBefore: 1
+      _secondsBefore: 1
+      _clip: {fileID: 8300000, guid: ffdde0e83fae01c45b9368119d58747b, type: 3}
+      _delayAfter: 2
+      _secondsAfter: 0
+    _timePassSounds:
+    - {fileID: 8300000, guid: 338ee98a72bad2544a03001c6ebc44ad, type: 3}
+    - {fileID: 8300000, guid: ffdde0e83fae01c45b9368119d58747b, type: 3}
+    _newDialogueAfterTimePass: {fileID: 11400000, guid: b2bdcacac21bb1f43ba870a84e5f45da, type: 2}

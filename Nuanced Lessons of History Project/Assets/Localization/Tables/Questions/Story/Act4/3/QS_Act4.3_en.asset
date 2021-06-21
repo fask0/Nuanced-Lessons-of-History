@@ -1,0 +1,52 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: QS_Act4.3_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: f0e794419a9e9eb45a06104fcabd69a3, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 4966445056
+    m_Localized: What should I say?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11819937792
+    m_Localized: "That\u2019s a bad idea."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7407529984
+    m_Localized: "You\u2019re going to worry everyone."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 33902948352
+    m_Localized: I agree. We need the money.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 38017560576
+    m_Localized: They will thank me for it later when I make it.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40269901824
+    m_Localized: "I\u2019m not going to stay here and do nothing. <size=0>|</size>Dad
+      was right to find work elsewhere."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 70976401408
+    m_Localized: "You agree with me? Thank you! <size=0>|</size>I knew you\u2019d
+      understand."
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 1

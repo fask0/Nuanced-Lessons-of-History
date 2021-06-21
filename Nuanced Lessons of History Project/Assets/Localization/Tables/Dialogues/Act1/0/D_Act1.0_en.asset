@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: D_Act1.0_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: 402929567b8ce6840acf8bd4282d85a0, type: 2}
+  m_Metadata:
+    m_Items:
+    - id: 0
+  m_TableData:
+  - m_Id: 7097151488
+    m_Localized: "I don\u2019t like this either, but what other choice do we have?
+      <size=0>|</size> If I don\u2019t get a job, we won\u2019t make it through winter."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9890557952
+    m_Localized: "You don\u2019t know if you will even find work!"
+    m_Metadata:
+      m_Items:
+      - id: 0
+  - m_Id: 12558135296
+    m_Localized: "I will be fine. Janke's family received a letter from Sikke from
+      overseas last week. <size=0>|</size>The west is booming with work right now,
+      I will find something.\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15255072768
+    m_Localized: "But it could be dangerous\u2026 Maybe there\u2019s another option.\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18128171008
+    m_Localized: There is no work here Froukje, the factories are shutting down and
+      who knows if there will be any work on the farms.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 163393695744
+    m_Localized: "\u2026\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 168254894080
+    m_Localized: "Just hold on.\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3615965049122816
+    m_Localized: "My parents are doing what they can, but this town is dying. <size=0>|</size>Trust
+      me. I will send you a letter as soon as I get my first pay.\r"
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 1
+    00000000:
+      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries: 00f0854d02000000

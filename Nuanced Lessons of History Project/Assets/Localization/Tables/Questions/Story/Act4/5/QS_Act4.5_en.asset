@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: QS_Act4.5_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: c7f2cfb2b36ccf146943b0fc7625471c, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 6761607168
+    m_Localized: What should I say?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9001365504
+    m_Localized: We should sell the goat.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11773800448
+    m_Localized: "We shouldn\u2019t sell the goat. Let\u2019s find a different solution. "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16383340544
+    m_Localized: "Let\u2019s wait a little longer for the letter."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18681819136
+    m_Localized: I will take her in the morning.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21152264192
+    m_Localized: I will talk to the neighbours and the church tomorrow. Maybe they
+      can help us more.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 64471035904
+    m_Localized: "Yes\u2026 Let\u2019s be hopeful. Pieter will send us a letter."
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 1

@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Localization-Locales
+  m_EditorClassIdentifier: 
+  m_GroupName: Localization-Locales
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 02aae88b7336ef1489636c753a6df294
+  m_SerializeEntries:
+  - m_GUID: 99e20a398fd819b4c8949b4371c21dff
+    m_Address: Dutch (nl)
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale
+    m_MainAsset: {fileID: 11400000, guid: 99e20a398fd819b4c8949b4371c21dff, type: 2}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 069a9c59cd467924cab595c510e52fb3
+    m_Address: English (en)
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale
+    m_MainAsset: {fileID: 11400000, guid: 069a9c59cd467924cab595c510e52fb3, type: 2}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 082967dd15f275a41816f12e54d8db8a
+    m_Address: German (de)
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale
+    m_MainAsset: {fileID: 11400000, guid: 082967dd15f275a41816f12e54d8db8a, type: 2}
+    m_TargetAsset: {fileID: 0}
+  m_ReadOnly: 1
+  m_Settings: {fileID: 11400000, guid: 7a182c8356cb7ce4a92349c520368361, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: fa846c67eb221e14ca49bbd2e3d0d1bd, type: 2}
+    - {fileID: 11400000, guid: 97875fe1ae745e548a6b23316f8983de, type: 2}

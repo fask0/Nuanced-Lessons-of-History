@@ -1,0 +1,238 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a96c5442fadcc94aaefb0193117d3f9, type: 3}
+  m_Name: D_Act4.4
+  m_EditorClassIdentifier: 
+  _lines:
+  - _lineCharacters:
+    - _characterScriptableObject: {fileID: 11400000, guid: b4441ef9acaa3334faac393c1195dc33, type: 2}
+      _nameToUse: 0
+      _expression: 2
+      _hideCharacterImage: 0
+      _isSpeaker: 1
+    _sfxBeforeLine: []
+    _lineString:
+      m_TableReference:
+        m_TableCollectionName: GUID:8f8d342c557cdd64098daa6790178d94
+      m_TableEntryReference:
+        m_KeyId: 4412796928
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+    _textCharactersPerSecond: 0
+    _sfxAfterLine: []
+    _ambientSoundToStartPlaying: {fileID: 8300000, guid: 344b464b93c65534bbcd0b714660d065, type: 3}
+    _backgroundSprite: {fileID: 21300000, guid: 25ca7d594ed7bfe4e9c7a0ded5ba983f, type: 3}
+    _playerInteraction: 0
+    _quizQuestion: {fileID: 0}
+    _storyQuestion: {fileID: 0}
+    _imageToScan: {fileID: 0}
+    _newDialogue: {fileID: 0}
+    _videoClip: {fileID: 0}
+    _videoClipStartDelay: 0
+    _timePassSFX: []
+    _newDialogueAfterTimePass: {fileID: 0}
+  - _lineCharacters:
+    - _characterScriptableObject: {fileID: 11400000, guid: b4441ef9acaa3334faac393c1195dc33, type: 2}
+      _nameToUse: 0
+      _expression: 2
+      _hideCharacterImage: 0
+      _isSpeaker: 1
+    _sfxBeforeLine: []
+    _lineString:
+      m_TableReference:
+        m_TableCollectionName: GUID:8f8d342c557cdd64098daa6790178d94
+      m_TableEntryReference:
+        m_KeyId: 2206192604934144
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+    _textCharactersPerSecond: 0
+    _sfxAfterLine: []
+    _ambientSoundToStartPlaying: {fileID: 0}
+    _backgroundSprite: {fileID: 0}
+    _playerInteraction: 0
+    _quizQuestion: {fileID: 0}
+    _storyQuestion: {fileID: 0}
+    _imageToScan: {fileID: 0}
+    _newDialogue: {fileID: 0}
+    _videoClip: {fileID: 0}
+    _videoClipStartDelay: 0
+    _timePassSFX: []
+    _newDialogueAfterTimePass: {fileID: 0}
+  - _lineCharacters:
+    - _characterScriptableObject: {fileID: 11400000, guid: b4441ef9acaa3334faac393c1195dc33, type: 2}
+      _nameToUse: 0
+      _expression: 2
+      _hideCharacterImage: 0
+      _isSpeaker: 0
+    - _characterScriptableObject: {fileID: 11400000, guid: 9e8f2010cc514d345807680671826b95, type: 2}
+      _nameToUse: 0
+      _expression: 0
+      _hideCharacterImage: 0
+      _isSpeaker: 1
+    _sfxBeforeLine: []
+    _lineString:
+      m_TableReference:
+        m_TableCollectionName: GUID:8f8d342c557cdd64098daa6790178d94
+      m_TableEntryReference:
+        m_KeyId: 6769995776
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+    _textCharactersPerSecond: 0
+    _sfxAfterLine: []
+    _ambientSoundToStartPlaying: {fileID: 0}
+    _backgroundSprite: {fileID: 0}
+    _playerInteraction: 0
+    _quizQuestion: {fileID: 0}
+    _storyQuestion: {fileID: 0}
+    _imageToScan: {fileID: 0}
+    _newDialogue: {fileID: 0}
+    _videoClip: {fileID: 0}
+    _videoClipStartDelay: 0
+    _timePassSFX: []
+    _newDialogueAfterTimePass: {fileID: 0}
+  - _lineCharacters:
+    - _characterScriptableObject: {fileID: 11400000, guid: b4441ef9acaa3334faac393c1195dc33, type: 2}
+      _nameToUse: 0
+      _expression: 2
+      _hideCharacterImage: 0
+      _isSpeaker: 1
+    - _characterScriptableObject: {fileID: 11400000, guid: 9e8f2010cc514d345807680671826b95, type: 2}
+      _nameToUse: 0
+      _expression: 0
+      _hideCharacterImage: 0
+      _isSpeaker: 0
+    _sfxBeforeLine: []
+    _lineString:
+      m_TableReference:
+        m_TableCollectionName: GUID:8f8d342c557cdd64098daa6790178d94
+      m_TableEntryReference:
+        m_KeyId: 8984588288
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+    _textCharactersPerSecond: 0
+    _sfxAfterLine: []
+    _ambientSoundToStartPlaying: {fileID: 0}
+    _backgroundSprite: {fileID: 0}
+    _playerInteraction: 0
+    _quizQuestion: {fileID: 0}
+    _storyQuestion: {fileID: 0}
+    _imageToScan: {fileID: 0}
+    _newDialogue: {fileID: 0}
+    _videoClip: {fileID: 0}
+    _videoClipStartDelay: 0
+    _timePassSFX: []
+    _newDialogueAfterTimePass: {fileID: 0}
+  - _lineCharacters:
+    - _characterScriptableObject: {fileID: 11400000, guid: b4441ef9acaa3334faac393c1195dc33, type: 2}
+      _nameToUse: 0
+      _expression: 2
+      _hideCharacterImage: 0
+      _isSpeaker: 0
+    - _characterScriptableObject: {fileID: 11400000, guid: 9e8f2010cc514d345807680671826b95, type: 2}
+      _nameToUse: 0
+      _expression: 2
+      _hideCharacterImage: 0
+      _isSpeaker: 1
+    _sfxBeforeLine: []
+    _lineString:
+      m_TableReference:
+        m_TableCollectionName: GUID:8f8d342c557cdd64098daa6790178d94
+      m_TableEntryReference:
+        m_KeyId: 11488587776
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+    _textCharactersPerSecond: 0
+    _sfxAfterLine: []
+    _ambientSoundToStartPlaying: {fileID: 0}
+    _backgroundSprite: {fileID: 0}
+    _playerInteraction: 0
+    _quizQuestion: {fileID: 0}
+    _storyQuestion: {fileID: 0}
+    _imageToScan: {fileID: 0}
+    _newDialogue: {fileID: 0}
+    _videoClip: {fileID: 0}
+    _videoClipStartDelay: 0
+    _timePassSFX: []
+    _newDialogueAfterTimePass: {fileID: 0}
+  - _lineCharacters:
+    - _characterScriptableObject: {fileID: 11400000, guid: 2d96134aedbda164c8d2a6bde96797c5, type: 2}
+      _nameToUse: 0
+      _expression: 1
+      _hideCharacterImage: 0
+      _isSpeaker: 1
+    _sfxBeforeLine: []
+    _lineString:
+      m_TableReference:
+        m_TableCollectionName: GUID:8f8d342c557cdd64098daa6790178d94
+      m_TableEntryReference:
+        m_KeyId: 13929672704
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+    _textCharactersPerSecond: 0
+    _sfxAfterLine: []
+    _ambientSoundToStartPlaying: {fileID: 0}
+    _backgroundSprite: {fileID: 21300000, guid: 6bc8696cbadc4ba499632075eedf17d6, type: 3}
+    _playerInteraction: 1
+    _quizQuestion: {fileID: 11400000, guid: 88ad91e47b4fdd6469cf9471239f22dd, type: 2}
+    _storyQuestion: {fileID: 0}
+    _imageToScan: {fileID: 0}
+    _newDialogue: {fileID: 0}
+    _videoClip: {fileID: 0}
+    _videoClipStartDelay: 0
+    _timePassSFX: []
+    _newDialogueAfterTimePass: {fileID: 0}
+  - _lineCharacters:
+    - _characterScriptableObject: {fileID: 11400000, guid: 2d96134aedbda164c8d2a6bde96797c5, type: 2}
+      _nameToUse: 0
+      _expression: 1
+      _hideCharacterImage: 0
+      _isSpeaker: 1
+    _sfxBeforeLine: []
+    _lineString:
+      m_TableReference:
+        m_TableCollectionName: GUID:8f8d342c557cdd64098daa6790178d94
+      m_TableEntryReference:
+        m_KeyId: 211447836672
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+    _textCharactersPerSecond: 0
+    _sfxAfterLine: []
+    _ambientSoundToStartPlaying: {fileID: 0}
+    _backgroundSprite: {fileID: 0}
+    _playerInteraction: 6
+    _quizQuestion: {fileID: 0}
+    _storyQuestion: {fileID: 0}
+    _imageToScan: {fileID: 0}
+    _newDialogue: {fileID: 11400000, guid: 837a4b80b657d0040b59d763b8f22241, type: 2}
+    _videoClip: {fileID: 0}
+    _videoClipStartDelay: 0
+    _timePassSFX:
+    - _delayBefore: 0
+      _secondsBefore: 0
+      _clip: {fileID: 8300000, guid: 338ee98a72bad2544a03001c6ebc44ad, type: 3}
+      _playDuringText: 0
+      _delayAfter: 2
+      _secondsAfter: 0
+    - _delayBefore: 1
+      _secondsBefore: 1
+      _clip: {fileID: 8300000, guid: ffdde0e83fae01c45b9368119d58747b, type: 3}
+      _playDuringText: 0
+      _delayAfter: 0
+      _secondsAfter: 0
+    _newDialogueAfterTimePass: {fileID: 11400000, guid: 837a4b80b657d0040b59d763b8f22241, type: 2}

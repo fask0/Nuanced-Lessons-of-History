@@ -1,0 +1,220 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Localization-String-Tables-German (de)
+  m_EditorClassIdentifier: 
+  m_GroupName: Localization-String-Tables-German (de)
+  m_Data:
+    m_SerializedData: []
+  m_GUID: ab591c3341d3c27458cf207c28720f97
+  m_SerializeEntries:
+  - m_GUID: b295f3cf4dae2844c95ee03363c0eb09
+    m_Address: S_Chair_de
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-de
+  - m_GUID: 4a4544b65ad6adb4eb80839fa027649f
+    m_Address: S_Heater_de
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-de
+  - m_GUID: e2473c155292c634e974c26ec6d0750e
+    m_Address: S_BucketOfManure_de
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-de
+  - m_GUID: 75719a7de3f32344890077bf66ade816
+    m_Address: QQ_FavouriteToy0_de
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-de
+  - m_GUID: 3754de2722c5b74458157f6435749429
+    m_Address: QQ_FavouriteToy1Material_de
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-de
+  - m_GUID: d68350af8c3b9284687910ca3c4cde5f
+    m_Address: QQ_FavouriteToy2Color_de
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-de
+  - m_GUID: b06202303e8596c42828f5a2c476790c
+    m_Address: S_WashingBoard_de
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-de
+  - m_GUID: f713779d8d015474aa4dea3c001eb054
+    m_Address: QQ_CushionPattern_de
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-de
+  - m_GUID: 0edcfdf805e619440964b6df259b1ed7
+    m_Address: S_BucketOfMilk_de
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-de
+  - m_GUID: 78a13b72f4b1cad408923907df1da1f4
+    m_Address: S_WateringCan_de
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-de
+  - m_GUID: 6c096239f1f32204aae35df7b3e3536b
+    m_Address: S_RoundCushion_de
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-de
+  - m_GUID: 2ca4ea8587c7c464382a261bb07a672b
+    m_Address: QQ_WaterCarrier_de
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-de
+  - m_GUID: 662de46c59965c048841b4bf54c977e2
+    m_Address: QS_Act2.0_de
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-de
+  - m_GUID: 403766429fa517f47aa3718b3c6dfb28
+    m_Address: QS_Act3.0_de
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-de
+  - m_GUID: ded5cddf7e6e6184387830c1397f5b7e
+    m_Address: QS_Act3.1_de
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-de
+  - m_GUID: fcf75910bd4defb41adf998ee56108c2
+    m_Address: QS_Ending0_de
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-de
+  - m_GUID: e54fffd5aa5a69947b0d6144e59e8269
+    m_Address: C_Pancakes_de
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-de
+  - m_GUID: 324801c71f2ebc148a943afba89a3e64
+    m_Address: D_Act1.0_de
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-de
+  - m_GUID: 3325ac60dfe129d4a878910fdb79a5cc
+    m_Address: D_Act2.0_de
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-de
+  - m_GUID: 669050e009a5d624885c8fbbb0f2a221
+    m_Address: D_Act2.1_de
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-de
+  - m_GUID: e55e53770433aeb40bba36c9f1fe7226
+    m_Address: D_Act3.0_de
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-de
+  - m_GUID: be917fc5e8a5fb64c8fda5685126642a
+    m_Address: D_Act3.1_de
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-de
+  - m_GUID: 74944d1574c5347499a1e017e920bb05
+    m_Address: D_Act4.0_de
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-de
+  - m_GUID: 705a2f8b08c31cc42a2c0546aedaef5f
+    m_Address: D_Act4.1_de
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-de
+  - m_GUID: cbeb499bdc1fa3d4a8d4df1dc20aa2ad
+    m_Address: D_Act4.2_de
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-de
+  - m_GUID: ca62e5d7985dd1147a05b7b66b8d8870
+    m_Address: D_Act4.3_de
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-de
+  - m_GUID: a3371b306c306e44bab2641e8495a075
+    m_Address: D_Act4.4_de
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-de
+  - m_GUID: df5d79e01fa980f4e8e4ad9a9165f98b
+    m_Address: D_Act4.5_de
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-de
+  - m_GUID: 8849d3d5c8e3d5543baadc7635945bfd
+    m_Address: QQ_CushionShape_de
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-de
+  - m_GUID: 5140bf2b85ede6742b90c7b87ea6924b
+    m_Address: QQ_ColorOfCircleHoe_de
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-de
+  - m_GUID: accaebb9900b2be4c9e29bbcf4ce45f1
+    m_Address: QS_Act4.1_de
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-de
+  - m_GUID: 9ab9fb2baaa65984d9fef1c595d2ba0e
+    m_Address: QS_Act4.2_de
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-de
+  - m_GUID: 0687cb1efa21dad4690b43195a9ab87d
+    m_Address: QQ_FootStove_de
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-de
+  - m_GUID: 6d5c285a0652bc34ab4eaef0a866b119
+    m_Address: QS_Act4.3_de
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-de
+  - m_GUID: d19c101a4ce9a0e4686ec6f4b3ff8212
+    m_Address: QQ_Pot_de
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-de
+  - m_GUID: c7c07ec73969e0342a6484c429f8cc09
+    m_Address: QS_Act4.5_de
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-de
+  - m_GUID: 3dd63dc7e156aa7429f324f83eb75d31
+    m_Address: ZZZ_EncapsulationTest_de
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-de
+  - m_GUID: 3db6b6043b1f75444a20e06cd1e21211
+    m_Address: S_LaundryRack_de
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-de
+  - m_GUID: 20ad70b46456c8341b800fcc9008a944
+    m_Address: S_FootStove_de
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-de
+  m_ReadOnly: 1
+  m_Settings: {fileID: 11400000, guid: 7a182c8356cb7ce4a92349c520368361, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: f0b9540c113f04445873ba42dd2f714a, type: 2}
+    - {fileID: 11400000, guid: 15e3af0a2d693b04d8e2b4898f11f92f, type: 2}

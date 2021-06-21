@@ -1,0 +1,150 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dae7d22ade2b1146bf00bd55c3b2878, type: 3}
+  m_Name: QS_Act4.3
+  m_EditorClassIdentifier: 
+  _question:
+    m_TableReference:
+      m_TableCollectionName: GUID:f0e794419a9e9eb45a06104fcabd69a3
+    m_TableEntryReference:
+      m_KeyId: 4966445056
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 1
+  _answers:
+  - m_TableReference:
+      m_TableCollectionName: GUID:f0e794419a9e9eb45a06104fcabd69a3
+    m_TableEntryReference:
+      m_KeyId: 7407529984
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 1
+  - m_TableReference:
+      m_TableCollectionName: GUID:f0e794419a9e9eb45a06104fcabd69a3
+    m_TableEntryReference:
+      m_KeyId: 11819937792
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 1
+  - m_TableReference:
+      m_TableCollectionName: GUID:f0e794419a9e9eb45a06104fcabd69a3
+    m_TableEntryReference:
+      m_KeyId: 33902948352
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 1
+  _onAnswerActions:
+  - _action: 2
+    _newDialogue: {fileID: 0}
+    _nextLine:
+      _lineCharacters:
+      - _characterScriptableObject: {fileID: 11400000, guid: 6bae2253e9e586c47a040d2cbf8270fd, type: 2}
+        _nameToUse: 0
+        _expression: 0
+        _hideCharacterImage: 0
+        _isSpeaker: 1
+      _soundBeforeLine: {fileID: 0}
+      _waitUntilSoundBeforeLineEnds: 0
+      _lineString:
+        m_TableReference:
+          m_TableCollectionName: GUID:f0e794419a9e9eb45a06104fcabd69a3
+        m_TableEntryReference:
+          m_KeyId: 38017560576
+          m_Key: 
+        m_FallbackState: 0
+        m_WaitForCompletion: 1
+      _textCharactersPerSecond: 30
+      _soundAfterLine: {fileID: 0}
+      _waitUntilSoundAfterLineEnds: 0
+      _backgroundSprite: {fileID: 0}
+      _playerInteraction: 0
+      _quizQuestion: {fileID: 0}
+      _storyQuestion: {fileID: 0}
+      _imageToScan: {fileID: 0}
+      _newDialogue: {fileID: 0}
+      _videoClip: {fileID: 0}
+      _videoClipStartDelay: 0
+    _quizQuestion: {fileID: 0}
+    _storyQuestion: {fileID: 0}
+    _imageToScan: {fileID: 0}
+    _videoClip: {fileID: 0}
+    _videoClipStartDelay: 0
+  - _action: 2
+    _newDialogue: {fileID: 0}
+    _nextLine:
+      _lineCharacters:
+      - _characterScriptableObject: {fileID: 11400000, guid: 6bae2253e9e586c47a040d2cbf8270fd, type: 2}
+        _nameToUse: 0
+        _expression: 2
+        _hideCharacterImage: 0
+        _isSpeaker: 1
+      _soundBeforeLine: {fileID: 0}
+      _waitUntilSoundBeforeLineEnds: 0
+      _lineString:
+        m_TableReference:
+          m_TableCollectionName: GUID:f0e794419a9e9eb45a06104fcabd69a3
+        m_TableEntryReference:
+          m_KeyId: 40269901824
+          m_Key: 
+        m_FallbackState: 0
+        m_WaitForCompletion: 1
+      _textCharactersPerSecond: 30
+      _soundAfterLine: {fileID: 0}
+      _waitUntilSoundAfterLineEnds: 0
+      _backgroundSprite: {fileID: 0}
+      _playerInteraction: 0
+      _quizQuestion: {fileID: 0}
+      _storyQuestion: {fileID: 0}
+      _imageToScan: {fileID: 0}
+      _newDialogue: {fileID: 0}
+      _videoClip: {fileID: 0}
+      _videoClipStartDelay: 0
+    _quizQuestion: {fileID: 0}
+    _storyQuestion: {fileID: 0}
+    _imageToScan: {fileID: 0}
+    _videoClip: {fileID: 0}
+    _videoClipStartDelay: 0
+  - _action: 2
+    _newDialogue: {fileID: 0}
+    _nextLine:
+      _lineCharacters:
+      - _characterScriptableObject: {fileID: 11400000, guid: 6bae2253e9e586c47a040d2cbf8270fd, type: 2}
+        _nameToUse: 0
+        _expression: 1
+        _hideCharacterImage: 0
+        _isSpeaker: 1
+      _soundBeforeLine: {fileID: 0}
+      _waitUntilSoundBeforeLineEnds: 0
+      _lineString:
+        m_TableReference:
+          m_TableCollectionName: GUID:f0e794419a9e9eb45a06104fcabd69a3
+        m_TableEntryReference:
+          m_KeyId: 70976401408
+          m_Key: 
+        m_FallbackState: 0
+        m_WaitForCompletion: 1
+      _textCharactersPerSecond: 30
+      _soundAfterLine: {fileID: 0}
+      _waitUntilSoundAfterLineEnds: 0
+      _backgroundSprite: {fileID: 0}
+      _playerInteraction: 0
+      _quizQuestion: {fileID: 0}
+      _storyQuestion: {fileID: 0}
+      _imageToScan: {fileID: 0}
+      _newDialogue: {fileID: 0}
+      _videoClip: {fileID: 0}
+      _videoClipStartDelay: 0
+    _quizQuestion: {fileID: 0}
+    _storyQuestion: {fileID: 0}
+    _imageToScan: {fileID: 0}
+    _videoClip: {fileID: 0}
+    _videoClipStartDelay: 0

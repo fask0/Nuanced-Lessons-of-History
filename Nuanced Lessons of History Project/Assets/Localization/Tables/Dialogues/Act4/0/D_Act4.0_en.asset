@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: D_Act4.0_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: 9202a4cdefb43e445ba0da1c3f49fa3b, type: 2}
+  m_Metadata:
+    m_Items:
+    - id: 0
+  m_TableData:
+  - m_Id: 8363831296
+    m_Localized: "You\u2019re back just in time.\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10532286464
+    m_Localized: "There we go. All done. <size=0>|</size>I\u2019m heading out to
+      the farmer\u2019s. Maybe there\u2019s still work to do there. Let me get my
+      tools."
+    m_Metadata:
+      m_Items:
+      - id: 0
+  - m_Id: 13053063168
+    m_Localized: "That\u2019s everything I need. See you later tonight.\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3606756370804736
+    m_Localized: "Can you check in the <color={c}>cupboard</color> if my <color={c}>circle
+      hoe</color> is there?\r"
+    m_Metadata:
+      m_Items:
+      - id: 0
+  references:
+    version: 1
+    00000000:
+      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries: 00f0c5730200000000f0456853d00c00

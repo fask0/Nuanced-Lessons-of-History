@@ -1,0 +1,126 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dae7d22ade2b1146bf00bd55c3b2878, type: 3}
+  m_Name: QS_Act2.0
+  m_EditorClassIdentifier: 
+  _question:
+    m_TableReference:
+      m_TableCollectionName: GUID:591677fc68a6bcc4d9df34a5c7f9f233
+    m_TableEntryReference:
+      m_KeyId: 248911360000
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 1
+  _answers:
+  - m_TableReference:
+      m_TableCollectionName: GUID:591677fc68a6bcc4d9df34a5c7f9f233
+    m_TableEntryReference:
+      m_KeyId: 253319573504
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 1
+  - m_TableReference:
+      m_TableCollectionName: GUID:591677fc68a6bcc4d9df34a5c7f9f233
+    m_TableEntryReference:
+      m_KeyId: 256599519232
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 1
+  - m_TableReference:
+      m_TableCollectionName: GUID:591677fc68a6bcc4d9df34a5c7f9f233
+    m_TableEntryReference:
+      m_KeyId: 6639969497088
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 1
+  _onAnswerActions:
+  - _action: 2
+    _newDialogue: {fileID: 0}
+    _nextLine:
+      _lineCharacters:
+      - _characterScriptableObject: {fileID: 11400000, guid: bfe907f888a308f4eacdb3cdfded4fd2, type: 2}
+        _nameToUse: 0
+        _expression: 2
+        _hideCharacterImage: 0
+        _isSpeaker: 1
+      _lineString:
+        m_TableReference:
+          m_TableCollectionName: GUID:591677fc68a6bcc4d9df34a5c7f9f233
+        m_TableEntryReference:
+          m_KeyId: 406926987227136
+          m_Key: 
+        m_FallbackState: 0
+        m_WaitForCompletion: 1
+      _textCharactersPerSecond: 30
+      _backgroundSprite: {fileID: 21300000, guid: e444540bd49b533408be364cff14d3f6, type: 3}
+      _playerInteraction: 0
+      _quizQuestion: {fileID: 0}
+      _storyQuestion: {fileID: 0}
+      _imageToScan: {fileID: 0}
+      _newDialogue: {fileID: 0}
+    _quizQuestion: {fileID: 11400000, guid: 2733c0dc0e2167045a117f6cda7cd77e, type: 2}
+    _storyQuestion: {fileID: 0}
+    _imageToScan: {fileID: 0}
+  - _action: 2
+    _newDialogue: {fileID: 0}
+    _nextLine:
+      _lineCharacters:
+      - _characterScriptableObject: {fileID: 11400000, guid: bfe907f888a308f4eacdb3cdfded4fd2, type: 2}
+        _nameToUse: 0
+        _expression: 0
+        _hideCharacterImage: 0
+        _isSpeaker: 1
+      _lineString:
+        m_TableReference:
+          m_TableCollectionName: GUID:591677fc68a6bcc4d9df34a5c7f9f233
+        m_TableEntryReference:
+          m_KeyId: 406987657834496
+          m_Key: 
+        m_FallbackState: 0
+        m_WaitForCompletion: 1
+      _textCharactersPerSecond: 30
+      _backgroundSprite: {fileID: 21300000, guid: e444540bd49b533408be364cff14d3f6, type: 3}
+      _playerInteraction: 0
+      _quizQuestion: {fileID: 0}
+      _storyQuestion: {fileID: 0}
+      _imageToScan: {fileID: 0}
+      _newDialogue: {fileID: 0}
+    _quizQuestion: {fileID: 0}
+    _storyQuestion: {fileID: 0}
+    _imageToScan: {fileID: 0}
+  - _action: 2
+    _newDialogue: {fileID: 0}
+    _nextLine:
+      _lineCharacters:
+      - _characterScriptableObject: {fileID: 11400000, guid: bfe907f888a308f4eacdb3cdfded4fd2, type: 2}
+        _nameToUse: 0
+        _expression: 0
+        _hideCharacterImage: 0
+        _isSpeaker: 1
+      _lineString:
+        m_TableReference:
+          m_TableCollectionName: GUID:591677fc68a6bcc4d9df34a5c7f9f233
+        m_TableEntryReference:
+          m_KeyId: 406995463434240
+          m_Key: 
+        m_FallbackState: 0
+        m_WaitForCompletion: 1
+      _textCharactersPerSecond: 30
+      _backgroundSprite: {fileID: 21300000, guid: e444540bd49b533408be364cff14d3f6, type: 3}
+      _playerInteraction: 0
+      _quizQuestion: {fileID: 0}
+      _storyQuestion: {fileID: 0}
+      _imageToScan: {fileID: 0}
+      _newDialogue: {fileID: 0}
+    _quizQuestion: {fileID: 0}
+    _storyQuestion: {fileID: 0}
+    _imageToScan: {fileID: 0}

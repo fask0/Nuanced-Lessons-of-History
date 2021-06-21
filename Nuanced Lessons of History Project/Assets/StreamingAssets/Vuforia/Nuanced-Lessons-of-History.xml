@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
+  <Tracking>
+    <ImageTarget name="bucketOfManure" size="20.000000 28.207886" />
+    <ImageTarget name="chair" size="0.200000 0.217215" />
+    <ImageTarget name="heater" size="0.200000 0.263198" />
+    <ImageTarget name="laundryRack" size="30.000000 45.093166" />
+    <ImageTarget name="footStove" size="30.000000 19.958677" />
+    <ImageTarget name="washingBoard" size="30.000000 19.958677" />
+    <ImageTarget name="milkBucket" size="30.000000 19.958677" />
+    <ImageTarget name="wateringCan" size="20.000000 13.305785" />
+  </Tracking>
+</QCARConfig>

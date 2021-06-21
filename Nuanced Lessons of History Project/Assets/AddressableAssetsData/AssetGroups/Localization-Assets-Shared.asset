@@ -1,0 +1,205 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Localization-Assets-Shared
+  m_EditorClassIdentifier: 
+  m_GroupName: Localization-Assets-Shared
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 1079a07f71d638b439cd5f1e8c873970
+  m_SerializeEntries:
+  - m_GUID: f6654ccbe4060094cbed314e9fb10b13
+    m_Address: Assets/Localization/Tables/ScannableImages/Chair/ScannableImageChair
+      Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+  - m_GUID: 73ab919fdaa5f3440996342e96e17c1f
+    m_Address: Assets/Localization/Tables/ScannableImages/Heater/ScannableImageHeater
+      Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+  - m_GUID: 8aea187e5b7d3c846a07ffc41692682c
+    m_Address: Assets/Localization/Tables/ScannableImages/BucketOfManure/S_BucketOfManure
+      Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+  - m_GUID: 58b9ae2c3e65e4040b67ef8441b01604
+    m_Address: Assets/Localization/Tables/Questions/Quiz/FavouriteToyQuestion Shared
+      Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+  - m_GUID: 310b47bd856e34e46851aac6d4f8d191
+    m_Address: Assets/Localization/Tables/Questions/Quiz/MaterialOfFavouriteToy/MaterialOfFavouriteToy
+      Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+  - m_GUID: 492d87ae7e8dcf74c86763f75dc2dcd8
+    m_Address: Assets/Localization/Tables/Questions/Quiz/ColorOfFavouriteToy/ColorOfFavouriteToy
+      Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+  - m_GUID: 656df10e334f5b44faadaacd585a1e53
+    m_Address: Assets/Localization/Tables/ScannableImages/WaterCan/WaterCan Shared
+      Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+  - m_GUID: 0578ef94dfedf0740aef58810832fdc0
+    m_Address: Assets/Localization/Tables/Questions/Quiz/Q_CushionPattern/Q_CushionPattern
+      Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+  - m_GUID: 0447a5019d4c88041819ed4b3905a7ca
+    m_Address: Assets/Localization/Tables/ScannableImages/S_Bucket/S_Bucket Shared
+      Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+  - m_GUID: 396c196ca6674384196fcce1c892b4da
+    m_Address: Assets/Localization/Tables/ScannableImages/WaterCarrier/S_WaterCarrier
+      Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+  - m_GUID: f2a4d32356938f74fa1069bdd1721ed8
+    m_Address: Assets/Localization/Tables/ScannableImages/S_RoundCushion/S_RoundCushion
+      Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+  - m_GUID: a487617bac243a742a6a994c4b60234c
+    m_Address: Assets/Localization/Tables/Questions/Quiz/Q_NumberOfRopesFromWaterCarrier/Q_NumberOfRopesFromWaterCarrier
+      Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+  - m_GUID: 591677fc68a6bcc4d9df34a5c7f9f233
+    m_Address: Assets/Localization/Tables/Questions/Story/Act2/QS_Act2 Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+  - m_GUID: a892e655bef972645b810f036acecb6d
+    m_Address: Assets/Localization/Tables/Questions/Story/Act3/QS_Act3 Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+  - m_GUID: 58039f7a9c09f894aac6363878bbfd49
+    m_Address: Assets/Localization/Tables/Questions/Story/Act3/1/QS_Act3_1 Shared
+      Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+  - m_GUID: 97829a0e8216479408c653259763a926
+    m_Address: Assets/Localization/Tables/Questions/Story/Ending/0/QS_Ending0 Shared
+      Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+  - m_GUID: 6d6dafefffd45534fb74b445bc7745c3
+    m_Address: Assets/Localization/Tables/Characters/Pancakes/C_Pancakes Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+  - m_GUID: 402929567b8ce6840acf8bd4282d85a0
+    m_Address: Assets/Localization/Tables/Dialogues/Act1/0/D_Act1.0 Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+  - m_GUID: bc40cae5112a9be4ebb460158854fad8
+    m_Address: Assets/Localization/Tables/Dialogues/Act2/0/D_Act2.0 Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+  - m_GUID: eb3890a7e27aa1d49b5c172256942c33
+    m_Address: Assets/Localization/Tables/Dialogues/Act2/1/D_Act2.1 Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+  - m_GUID: 2f239361558a1754592ed18385704f91
+    m_Address: Assets/Localization/Tables/Dialogues/Act3/0/D_Act3.0 Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+  - m_GUID: 8e96aa836a45b7a4ebc36ecc2780cfb4
+    m_Address: Assets/Localization/Tables/Dialogues/Act3/1/D_Act3.1 Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+  - m_GUID: 9202a4cdefb43e445ba0da1c3f49fa3b
+    m_Address: Assets/Localization/Tables/Dialogues/Act4/0/D_Act4.0 Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+  - m_GUID: eb78135108b27724e991851cb4e07cea
+    m_Address: Assets/Localization/Tables/Dialogues/Act4/1/D_Act4.1 Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+  - m_GUID: aad08b3803082cd4cbb8f2f5f975f5c5
+    m_Address: Assets/Localization/Tables/Dialogues/Act4/2/D_Act4.2 Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+  - m_GUID: 3d7b0b51465043b44a5fd2a5c58816e0
+    m_Address: Assets/Localization/Tables/Dialogues/Act4/3/D_Act4.3 Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+  - m_GUID: 8f8d342c557cdd64098daa6790178d94
+    m_Address: Assets/Localization/Tables/Dialogues/Act4/4/D_Act4.4 Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+  - m_GUID: 813444a174d7ed843811fe63a9b989ef
+    m_Address: Assets/Localization/Tables/Dialogues/Act4/5/D_Act4.5 Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+  - m_GUID: 82de1a07999f1af4ca4a7835a0b22930
+    m_Address: Assets/Localization/Tables/Questions/Quiz/CushionShape/QQ_CushionShape
+      Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+  - m_GUID: 04194fdb658912446bd73b7260075410
+    m_Address: Assets/Localization/Tables/Questions/Quiz/ColorOfCircleHoe/QQ_ColorOfCircleHoe
+      Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+  - m_GUID: 9870030942add144f9d6349d958c4311
+    m_Address: Assets/Localization/Tables/Questions/Story/Act4/1/QS_Act4.1 Shared
+      Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+  - m_GUID: 672a3f7bbd58a4d4b8b6af5807c728a8
+    m_Address: Assets/Localization/Tables/Questions/Story/Act4/2/QS_Act4.2 Shared
+      Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+  - m_GUID: 9ca6098aae3502c4a9345bf8cbe51bfc
+    m_Address: Assets/Localization/Tables/Questions/Quiz/FootStove/QQ_FootStove Shared
+      Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+  - m_GUID: f0e794419a9e9eb45a06104fcabd69a3
+    m_Address: Assets/Localization/Tables/Questions/Story/Act4/3/QS_Act4.3 Shared
+      Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+  - m_GUID: b2be93d1cd8bac5419819a0daacac0c4
+    m_Address: Assets/Localization/Tables/Questions/Quiz/Pot/QQ_Pot Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+  - m_GUID: c7f2cfb2b36ccf146943b0fc7625471c
+    m_Address: Assets/Localization/Tables/Questions/Story/Act4/5/QS_Act4.5 Shared
+      Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+  - m_GUID: ff32dc601a007104cb67382562db7a47
+    m_Address: Assets/Localization/Tables/Dialogues/Test/ZZZ_EncapsulationTest Shared
+      Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+  - m_GUID: af3e614f3a37b0b40947216a9d307f47
+    m_Address: Assets/Localization/Tables/ScannableImages/LaundryRack/S_LaundryRack
+      Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+  - m_GUID: 6e8f456aa4594984797277ac8a3cc476
+    m_Address: Assets/Localization/Tables/ScannableImages/FootStove/S_FootStove Shared
+      Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+  m_ReadOnly: 1
+  m_Settings: {fileID: 11400000, guid: 7a182c8356cb7ce4a92349c520368361, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: fab78e69e725e9f4990308c819571c0b, type: 2}
+    - {fileID: 11400000, guid: 60353cfca166aca42af541736e868284, type: 2}

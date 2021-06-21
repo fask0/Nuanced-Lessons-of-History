@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5be51871efa6c3e4eae1703925c8f5ac, type: 3}
+  m_Name: C_Pancakes
+  m_EditorClassIdentifier: 
+  m_SharedTableData: {fileID: 11400000, guid: 6d6dafefffd45534fb74b445bc7745c3, type: 2}
+  m_Tables:
+  - {fileID: 11400000, guid: 2d292bdacedc9624a974c3f9ee9851a6, type: 2}
+  - {fileID: 11400000, guid: 40c7f1ed0a2e5c040a328666b69788a6, type: 2}
+  - {fileID: 11400000, guid: e54fffd5aa5a69947b0d6144e59e8269, type: 2}
+  m_Extensions: []
+  m_Group: String Table
+  references:
+    version: 1

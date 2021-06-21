@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: D_Act4.1_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: eb78135108b27724e991851cb4e07cea, type: 2}
+  m_Metadata:
+    m_Items:
+    - id: 0
+  m_TableData:
+  - m_Id: 5281017856
+    m_Localized: "Ah, you\u2019re here. <size=0>|</size>I just sent Willem to take
+      care of the goat. Come, we have to get the laundry going. <size=0>|</size>I
+      will get the tub. Can you go find me the <color={c}>washing board</color> in
+      the <color={c}>storage room</color>?\r"
+    m_Metadata:
+      m_Items:
+      - id: 0
+  - m_Id: 7709519872
+    m_Localized: "That\u2019s it. Thank you dear.\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10305794048
+    m_Localized: "Now run along. There\u2019s still much to do.\r"
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 1
+    00000000:
+      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries: 00f0c53a01000000
